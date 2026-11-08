@@ -3,6 +3,8 @@
 # スナップショットの更新は、手元で `npm run snapshot` を実行し、差分を確かめてからコミットする。
 # 原稿を保存しただけでは公開されない。
 #
+# アクションはどれも Node.js 24 で動く版（checkout v7, setup-node v7, upload-pages-artifact v5, deploy-pages v5）。
+#
 # 使うには、リポジトリの Settings → Pages → Build and deployment → Source を
 # 「GitHub Actions」に切り替える（いまは main ブランチのルートから公開する設定）。
 name: Pages
@@ -25,15 +27,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: 22
+          node-version: 24
           cache: npm
       - run: npm ci
       - run: npm run build
       - run: npm test
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: dist
   deploy:
@@ -44,4 +46,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
