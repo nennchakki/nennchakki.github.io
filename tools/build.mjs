@@ -13,7 +13,8 @@ import { IrRenderer } from './site/render-ir.mjs';
 import { page, siteHeader } from './site/layout.mjs';
 import { html, raw, esc } from './site/html.mjs';
 import { haloOblique, haloMark } from './site/art/noa-halo.mjs';
-import { stringModes, hairpins } from './site/art/hiro-motifs.mjs';
+import { hairpins } from './site/art/hiro-motifs.mjs';
+import { hiroPlush } from './site/art/hiro-plush.mjs';
 import { PERMANENT } from '../content/permanent-urls.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
@@ -130,12 +131,12 @@ function sectionBlock(w, s, answersInfo) {
 }
 
 // 作品ページの図。work.json の hero で差し替えられる。
-//   { "type": "string-modes" }  … 両端固定の弦の固有振動の図（既定）
+//   { "type": "plush" }  … ちびぐるみ風の絵（既定。tools/site/art/hiro-plush.mjs）
 //   { "type": "image", "src": "...", "width": .., "height": .., "alt": "..." } … 用意した画像
 function heroFigure(w) {
-  const h = w.hero ?? { type: 'string-modes' };
-  if (h.type === 'string-modes') {
-    return html`<figure class="hero-figure">${raw(stringModes())}<figcaption>両端を固定した弦の固有振動 sin(nπx/ℓ)、n = 1〜4（別冊解答 第3章「固定端の正弦mode」）</figcaption></figure>`;
+  const h = w.hero ?? { type: 'plush' };
+  if (h.type === 'plush') {
+    return html`<figure class="hero-figure plush-figure">${raw(hiroPlush({ id: 'work-plush' }))}</figure>`;
   }
   if (h.type === 'image') {
     return html`<figure class="hero-figure"><img src="${h.src}" width="${h.width}" height="${h.height}" alt="${h.alt}" decoding="async" onerror="this.closest('figure').hidden=true"></figure>`;
