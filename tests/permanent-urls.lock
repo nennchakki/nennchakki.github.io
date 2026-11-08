@@ -1,0 +1,5 @@
+# 公開した固定 URL の記録。ここから行を消さない（消すとテストが失敗する）。
+# 新しい固定 URL を content/permanent-urls.mjs に足したら、ここにも1行足す。
+/q/hiro-string/
+/works/hiro-string/
+/works/hiro-string/answers/
