@@ -95,6 +95,8 @@ ${contributions.items.map((c) => html`<li>
 <p class="contrib-title">${c.title}${c.short ? html`<span class="contrib-short">（${c.short}）</span>` : ''}</p>
 <p class="contrib-meta"><span>${c.circle}</span>${c.event ? html`<span>${c.event}</span>` : ''}</p>
 <p class="contrib-topic">担当: ${c.topic}</p>
+${c.sequel ? html`<p class="contrib-sequel">${c.sequel}</p>` : ''}
+${c.outline ? html`<details class="contrib-outline"><summary>目次</summary><ol>${c.outline.map((o) => html`<li>${o}</li>`)}</ol></details>` : ''}
 <p class="contrib-src"><a href="${c.evidence[0].url}" rel="noopener">告知のポスト</a></p>
 </li>`)}
 </ul>`;
