@@ -14,7 +14,6 @@ import { page, siteHeader } from './site/layout.mjs';
 import { html, raw, esc } from './site/html.mjs';
 import { haloOblique, haloMark } from './site/art/noa-halo.mjs';
 import { hairpins } from './site/art/hiro-motifs.mjs';
-import { hiroPlush } from './site/art/hiro-plush.mjs';
 import { PERMANENT } from '../content/permanent-urls.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
@@ -70,40 +69,91 @@ const works = fs
 const report = { pages: [], answers: {} };
 
 // ---------------- 総合トップ ----------------
+const profile = readJson('content/profile.json');
+const contributions = readJson('content/contributions.json');
+
 function workEntry(w) {
   const published = w.sections.filter((s) => s.status === 'published');
+  const pending = w.sections.filter((s) => s.status !== 'published');
   return html`<li class="work-entry" data-theme-preview="${w.theme}">
-<a class="work-link" href="/works/${w.slug}/">
-<span class="work-circle">${w.circle}</span>
-<span class="work-title">${w.titleLines ? raw(w.titleLines.map(esc).join('<br>')) : w.title}</span>
-</a>
+<div class="work-swatch" aria-hidden="true">${w.theme === 'hiro' ? raw('<span></span><span></span><span></span><span></span><span></span><span></span>') : ''}</div>
+<div class="work-main">
+<p class="work-kind">${w.kind ?? '同人誌'}<span>${w.circle}</span></p>
+<a class="work-link" href="/works/${w.slug}/"><span class="work-title">${w.titleLines ? raw(w.titleLines.map(esc).join('<br>')) : w.title}</span></a>
 <p class="work-summary">${w.summary}</p>
-<ul class="work-sections" aria-label="公開中の資料">
+<ul class="work-sections" aria-label="資料">
 ${published.map((s) => html`<li><a href="${s.href}">${s.label}</a></li>`)}
+${pending.map((s) => html`<li class="pending">${s.label}<span>準備中</span></li>`)}
 </ul>
+</div>
 </li>`;
 }
 
+function contributionList() {
+  return html`<ul class="contrib-list">
+${contributions.items.map((c) => html`<li>
+<p class="contrib-title">${c.title}${c.short ? html`<span class="contrib-short">（${c.short}）</span>` : ''}</p>
+<p class="contrib-meta"><span>${c.circle}</span>${c.event ? html`<span>${c.event}</span>` : ''}</p>
+<p class="contrib-topic">担当: ${c.topic}</p>
+<p class="contrib-src"><a href="${c.evidence[0].url}" rel="noopener">告知のポスト</a></p>
+</li>`)}
+</ul>`;
+}
+
 function buildHome() {
+  const ev = profile.events[0];
   const body = html`${raw(siteHeader({ current: 'home' }))}
+<div class="home-wrap">
+<div class="home-halo-clip" aria-hidden="true"><div class="home-halo-box"><div class="home-halo">${raw(haloOblique({ id: 'home-halo' }))}</div></div></div>
 <main id="main" class="home">
-<div class="home-halo">${raw(haloOblique({ id: 'home-halo' }))}</div>
 <section class="home-intro" aria-labelledby="home-h">
-<h1 id="home-h">nennchakki</h1>
-<p>同人誌と原稿の資料置き場です。解答編・正誤表・補足資料を、作品ごとにまとめています。</p>
+<p class="home-circle">サークル</p>
+<h1 id="home-h">${profile.circle}</h1>
+<p class="home-lead">${profile.name} の同人誌と原稿の資料置き場です。解答編・正誤表・補足資料を、作品ごとにまとめています。</p>
+<ul class="home-links" aria-label="外部のページ">
+${profile.links.map((l) => html`<li><a href="${l.url}" rel="me noopener"><span class="ln">${l.label}</span><span class="lh">${l.handle}</span></a></li>`)}
+</ul>
 </section>
+
+${ev ? html`<section class="ledger notice" aria-labelledby="ev-h">
+<h2 id="ev-h">次の頒布</h2>
+<dl class="event">
+<dt>イベント</dt><dd>${ev.name}</dd>
+<dt>日付</dt><dd><time datetime="${ev.date}">${ev.date.replace(/-/g, '.')}</time>（火）</dd>
+<dt>スペース</dt><dd>${ev.space}</dd>
+<dt>サークル</dt><dd>${ev.circle}（<a href="${ev.catalog}" rel="noopener">Webカタログ</a>）</dd>
+</dl>
+</section>` : ''}
+
 <section class="ledger" aria-labelledby="works-h">
 <h2 id="works-h">作品一覧</h2>
 <ol class="work-list">
 ${works.map(workEntry)}
 </ol>
 </section>
+
+<div class="ledger-pair">
+<section class="ledger" aria-labelledby="contrib-h">
+<h2 id="contrib-h">寄稿した合同誌</h2>
+${contributionList()}
+<p class="ledger-note">寄稿した原稿のWeb公開は準備中です。</p>
+</section>
+<section class="ledger profile" aria-labelledby="prof-h">
+<h2 id="prof-h">書いている人</h2>
+<p class="prof-name">${profile.name}</p>
+<ul class="prof-lines">${profile.lines.map((l) => html`<li>${l}</li>`)}</ul>
+<p class="ledger-note">pixiv のプロフィールより。</p>
+</section>
+</div>
+
 <section class="ledger" aria-labelledby="log-h">
 <h2 id="log-h">更新記録</h2>
 ${updateLog()}
 </section>
-</main>`;
-  write('index.html', page({ site, title: null, path: '/', theme: 'noa', css: ['/assets/css/themes/noa.css'], body, assets }));
+</main>
+</div>`;
+  write('index.html', page({ site, title: null, path: '/', theme: 'noa', css: ['/assets/css/themes/noa.css'], body, assets,
+    description: `サークル ${profile.circle}（${profile.name}）の同人誌と原稿の資料置き場。` }));
   report.pages.push('/');
 }
 
@@ -130,14 +180,10 @@ function sectionBlock(w, s, answersInfo) {
   throw new Error(`資料の種類 ${s.kind} の表示は未実装`);
 }
 
-// 作品ページの図。work.json の hero で差し替えられる。
-//   { "type": "plush" }  … ちびぐるみ風の絵（既定。tools/site/art/hiro-plush.mjs）
-//   { "type": "image", "src": "...", "width": .., "height": .., "alt": "..." } … 用意した画像
+// 作品ページの図。work.json に cover（表紙）か hero（画像）を書いたときだけ出す。
 function heroFigure(w) {
-  const h = w.hero ?? { type: 'plush' };
-  if (h.type === 'plush') {
-    return html`<figure class="hero-figure plush-figure">${raw(hiroPlush({ id: 'work-plush' }))}</figure>`;
-  }
+  const h = w.hero;
+  if (!h) return '';
   if (h.type === 'image') {
     return html`<figure class="hero-figure"><img src="${h.src}" width="${h.width}" height="${h.height}" alt="${h.alt}" decoding="async" onerror="this.closest('figure').hidden=true"></figure>`;
   }

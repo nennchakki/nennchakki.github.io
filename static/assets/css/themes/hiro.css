@@ -4,7 +4,6 @@
      ページ上端の細い帯に、この順で並べる（帯の幅の比は図の見やすさで決めた）。
    - まつ毛の色（§2.3）: 淡いグレーベージュ #C3B6AA、輪郭 #857C74 → 罫線と区切り。黒の罫線は使わない。
    - ヘアピン 2 本（§4, §5.1）: 平行な濃い斜線 → サークル名の前の小さな記号。
-   - ちびぐるみ風の絵（tools/site/art/hiro-plush.mjs）: 髪・ヘアピン・瞳・カーディガン・編み上げの紐・デニムの色を公式立ち絵の観察から取った。
    - 橙赤の虹彩 #D85513 は1画面に少面積だけ（図の n=1 の線、ボタン）。
    - 原稿の組版はグレーのみ（別冊の TeX の色定義）→ 解答の本文は黒とグレーで組む。 */
 body[data-theme="hiro"] {
@@ -36,7 +35,7 @@ body[data-theme="hiro"] .site-header { background: var(--paper); border-bottom: 
 .work-inner { max-width: 64rem; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2.5rem); }
 .work-head {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 2rem 3rem;
   align-items: center;
   padding: clamp(2.5rem, 7vw, 5rem) 0 clamp(2rem, 5vw, 3.5rem);
@@ -63,12 +62,6 @@ body[data-theme="hiro"] .site-header { background: var(--paper); border-bottom: 
 .hero-figure { margin: 0; }
 .hero-figure svg, .hero-figure img { display: block; width: 100%; height: auto; }
 .hero-figure figcaption { margin-top: 0.4rem; font-size: 0.78rem; color: var(--ink-soft); text-align: center; }
-.plush-figure { justify-self: center; width: min(100%, 22rem); }
-@media (prefers-reduced-motion: no-preference) {
-  .plush-figure .plush-body { animation: hiro-plush 6s ease-in-out infinite; transform-origin: 50% 96%; transform-box: view-box; }
-}
-/* 座ったぬいぐるみが、ときどき少しだけ傾く */
-@keyframes hiro-plush { 0%, 70%, 100% { transform: rotate(0); } 80% { transform: rotate(-3deg); } 90% { transform: rotate(1.5deg); } }
 
 .w-secs { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 0 2.5rem; border-top: 1px solid var(--rule); }
 .w-sec { padding: 1.4rem 0 1.6rem; border-bottom: 1px solid var(--rule); }
@@ -91,6 +84,5 @@ body[data-theme="hiro"] .log li { border-bottom-color: var(--rule); }
 
 @media (max-width: 48rem) {
   .work-head { grid-template-columns: 1fr; gap: 1.5rem; }
-  .plush-figure { width: min(80%, 18rem); }
   .w-secs { grid-template-columns: 1fr; }
 }

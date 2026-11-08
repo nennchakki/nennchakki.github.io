@@ -1,8 +1,11 @@
 {
   "slug": "hiro-string",
   "title": "篠澤広に超弦理論を教えてもらう本",
-  "titleLines": ["篠澤広に", "超弦理論を教えてもらう本"],
-  "circle": "warm snow",
+  "titleLines": [
+    "篠澤広に",
+    "超弦理論を教えてもらう本"
+  ],
+  "circle": "Warm Snow",
   "theme": "hiro",
   "summary": "篠澤広が倉本千奈と花海佑芽に、次元解析から超弦理論までを教える場面を書いた本。本文と別冊解答の2冊からなる。",
   "summarySource": "作者の引き継ぎメモ（2026-11-08）の記述をもとにした。頒布前に作者が確認すること。",
@@ -12,13 +15,39 @@
   "cover": null,
   "permanentEntry": "/q/hiro-string/",
   "sections": [
-    { "id": "answers", "label": "解答編", "kind": "answers", "status": "published", "href": "/works/hiro-string/answers/" },
-    { "id": "errata", "label": "正誤表", "kind": "errata", "status": "pending" },
-    { "id": "supplements", "label": "補足資料", "kind": "list", "status": "pending" },
-    { "id": "pdf", "label": "PDF", "kind": "files", "status": "pending" }
+    {
+      "id": "answers",
+      "label": "解答編",
+      "kind": "answers",
+      "status": "published",
+      "href": "/works/hiro-string/answers/"
+    },
+    {
+      "id": "errata",
+      "label": "正誤表",
+      "kind": "errata",
+      "status": "pending"
+    },
+    {
+      "id": "supplements",
+      "label": "補足資料",
+      "kind": "list",
+      "status": "pending"
+    },
+    {
+      "id": "pdf",
+      "label": "PDF",
+      "kind": "files",
+      "status": "pending"
+    }
   ],
   "errata": [],
   "supplements": [],
   "files": [],
-  "history": []
+  "history": [
+    {
+      "date": "2026-11-09",
+      "text": "解答編（全15章・239問）を公開"
+    }
+  ]
 }

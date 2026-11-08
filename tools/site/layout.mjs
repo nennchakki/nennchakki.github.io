@@ -34,7 +34,7 @@ ${footer(site, breadcrumbs)}
 
 export function siteHeader({ current }) {
   return html`<header class="site-header">
-<a class="site-mark" href="/">${raw(haloMark({ size: 22 }))}<span>nennchakki</span></a>
+<a class="site-mark" href="/">${raw(haloMark({ size: 22 }))}<span>Warm Snow</span></a>
 <nav aria-label="サイト">
 <ul>
 <li><a href="/"${current === 'home' ? raw(' aria-current="page"') : ''}>作品一覧</a></li>

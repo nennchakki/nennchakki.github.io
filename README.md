@@ -3,7 +3,7 @@
 同人誌と原稿の資料（解答編・正誤表・補足資料・PDF）を公開する静的サイト。
 公開先は https://nennchakki.github.io/ 。
 
-いま載せている作品は『篠澤広に超弦理論を教えてもらう本』（warm snow）で、別冊解答の全 15 章を章ごとの Web ページにしている。
+サークル Warm Snow（ネンチャッキーG）のサイト。いま載せている作品は『篠澤広に超弦理論を教えてもらう本』で、別冊解答の全 15 章を章ごとの Web ページにしている。
 解答編のページは、別冊解答の TeX 原稿から生成する。手で HTML を直すことはしない。
 
 ## 必要なもの
@@ -22,6 +22,8 @@ npm ci
 | 場所 | 中身 |
 |---|---|
 | `content/site.json` | サイト名、注記、権利表記 |
+| `content/profile.json` | トップのプロフィール、外部リンク、次の頒布（出典つき） |
+| `content/contributions.json` | 寄稿した合同誌（本人の X のポストを出典に付ける） |
 | `content/permanent-urls.mjs` | 固定 URL（QR コードの行き先）の定義 |
 | `content/<作品>/work.json` | 作品の情報と、資料ごとの公開状態 |
 | `content/<作品>/answers/source/answers.tex` | 公開用スナップショット（別冊解答の TeX のコピー） |
@@ -119,7 +121,14 @@ GitHub Pages の公開元は、いま `main` ブランチのルート（従来�
 2. `main` に push すると、CI が `npm ci → npm run build → npm test` を通したうえで `dist/` を公開する。
 3. 公開後、総合トップ、作品ページ、解答編の目次、`/q/hiro-string/` を開いて確かめる。
 
+## X の情報を使うとき
+
+X のポストやプロフィールは、FxTwitter API v2（https://api.fxtwitter.com 、仕様 https://api.fxtwitter.com/2/openapi.json ）で取得する。
+`GET /2/status/{id}`、`/2/thread/{id}`、`/2/profile/{handle}`、`/2/profile/{handle}/statuses`（カーソルでページ送り）など。
+HTTP ステータスとレスポンスの `code` を確かめ、取れなかった情報は推測で埋めない。
+サイトに載せる情報には、元のポストの URL・ID・投稿者・投稿日時を `content/*.json` に残す。
+
 ## 権利について
 
-キャラクターの意匠（総合トップのヘイロー、作品ページのちびぐるみ風の絵・虹彩の色の帯・ヘアピンの記号）は、公式画像を使わず、公式資料の観察をもとに基本図形から描いた。
+キャラクターの意匠（総合トップのヘイロー、作品ページの虹彩の色の帯・ヘアピンの記号）は、公式画像を使わず、公式資料の観察をもとに基本図形から描いた。
 公式画像は転載しない（調査の結論は `docs/research/` を参照）。作品ページの図を表紙などの画像に差し替える場合は、`work.json` に `cover` か `hero` を書く（`docs/design.md` を参照）。

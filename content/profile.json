@@ -1,0 +1,26 @@
+{
+  "_note": "トップページのプロフィールと外部リンク。取得元と取得日を各項目に残す。推測で埋めない。",
+  "name": "ネンチャッキーG",
+  "circle": "Warm Snow",
+  "lines": [
+    "サークル『Warm Snow』代表してます",
+    "ノアが好きです、ユウカ×ノアも大好物です",
+    "学術系同人誌とか、ノアの小説とか書いてます"
+  ],
+  "linesSource": "pixiv プロフィール（https://www.pixiv.net/users/40706317 、/ajax/user/40706317 から 2026-11-09 取得）の本人の文。改行ごとに1行。",
+  "links": [
+    { "label": "X", "handle": "@nenchakki_san", "url": "https://x.com/nenchakki_san", "source": "FxTwitter API v2 GET /2/profile/nenchakki_san（2026-11-09、HTTP 200, code 200）" },
+    { "label": "pixiv", "handle": "users/40706317", "url": "https://www.pixiv.net/users/40706317", "source": "ユーザー指定。X のプロフィールの記載とも一致" }
+  ],
+  "events": [
+    {
+      "name": "コミックマーケット109",
+      "date": "2026-12-29",
+      "space": "火曜日 西地区 “し”ブロック－25b（西2ホール）",
+      "circle": "Warm Snow",
+      "catalog": "https://webcatalog.circle.ms/Circle/Map/24029788/1",
+      "source": { "url": "https://x.com/nenchakki_san/status/2118632272555606025", "id": "2118632272555606025", "author": "nenchakki_san", "createdAt": "2026-11-06T09:11:10Z", "via": "FxTwitter API v2 GET /2/status/2118632272555606025" },
+      "dateNote": "日付はポストの「火曜日」と、別冊解答の表紙の日付（2026年12月29日）から。12月29日は火曜日"
+    }
+  ]
+}
