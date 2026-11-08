@@ -142,7 +142,6 @@ ${contributionList()}
 <h2 id="prof-h">書いている人</h2>
 <p class="prof-name">${profile.name}</p>
 <ul class="prof-lines">${profile.lines.map((l) => html`<li>${l}</li>`)}</ul>
-<p class="ledger-note">pixiv のプロフィールより。</p>
 </section>
 </div>
 
