@@ -13,7 +13,7 @@ import { IrRenderer } from './site/render-ir.mjs';
 import { page, siteHeader } from './site/layout.mjs';
 import { html, raw, esc } from './site/html.mjs';
 import { haloOblique, haloMark } from './site/art/noa-halo.mjs';
-import { eyesWide, eyeTall } from './site/art/hiro-eye.mjs';
+import { stringModes, hairpins } from './site/art/hiro-motifs.mjs';
 import { PERMANENT } from '../content/permanent-urls.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
@@ -129,24 +129,16 @@ function sectionBlock(w, s, answersInfo) {
   throw new Error(`資料の種類 ${s.kind} の表示は未実装`);
 }
 
-// ファーストビュー。work.json の hero で差し替えられる。
-//   { "type": "svg-hiro-eyes" }  … 図形で描いた目元（既定）
-//   { "type": "image", "alt": "...", "pc": {src,width,height}, "sp": {src,width,height} }
-//     … 用意した画像。PC と SP で別の切り抜きを使う。画像が読めないときは図形の目元に戻る。
-function heroBlock(w) {
-  const h = w.hero ?? { type: 'svg-hiro-eyes' };
-  const svg = raw(eyesWide() + eyeTall());
-  if (h.type === 'svg-hiro-eyes') {
-    return html`<div class="hero hiro-hero" role="img" aria-label="${h.alt ?? '篠澤広の目元を図形で描いた装飾。淡い色のまつ毛と、橙赤の瞳。'}">${svg}</div>`;
+// 作品ページの図。work.json の hero で差し替えられる。
+//   { "type": "string-modes" }  … 両端固定の弦の固有振動の図（既定）
+//   { "type": "image", "src": "...", "width": .., "height": .., "alt": "..." } … 用意した画像
+function heroFigure(w) {
+  const h = w.hero ?? { type: 'string-modes' };
+  if (h.type === 'string-modes') {
+    return html`<figure class="hero-figure">${raw(stringModes())}<figcaption>両端を固定した弦の固有振動 sin(nπx/ℓ)、n = 1〜4（別冊解答 第3章「固定端の正弦mode」）</figcaption></figure>`;
   }
   if (h.type === 'image') {
-    return html`<div class="hero hiro-hero has-image">
-<div class="hero-fallback" aria-hidden="true">${svg}</div>
-<picture>
-<source media="(max-width: 48rem) and (max-aspect-ratio: 4/5)" srcset="${h.sp.src}" width="${h.sp.width}" height="${h.sp.height}">
-<img src="${h.pc.src}" width="${h.pc.width}" height="${h.pc.height}" alt="${h.alt}" decoding="async" onerror="this.closest('.hero').classList.add('img-failed')">
-</picture>
-</div>`;
+    return html`<figure class="hero-figure"><img src="${h.src}" width="${h.width}" height="${h.height}" alt="${h.alt}" decoding="async" onerror="this.closest('figure').hidden=true"></figure>`;
   }
   throw new Error(`hero の種類 ${h.type} は未対応`);
 }
@@ -157,18 +149,20 @@ function buildWork(w, answersInfo) {
     : '';
   const body = html`${raw(siteHeader({ current: 'work' }))}
 <main id="main" class="work">
-${heroBlock(w)}
+<div class="iris-band" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
 <div class="work-inner">
 <section class="work-head">
-<p class="work-circle">${w.circle}</p>
-<h1>${w.titleLines ? raw(w.titleLines.map(esc).join('<br>')) : w.title}</h1>
-${cover}
+<div class="work-title-block">
+<p class="work-circle">${raw(hairpins())}<span>${w.circle}</span></p>
+<h1>${w.titleLines ? raw(w.titleLines.map((l) => `<span class="tl">${esc(l)}</span>`).join('')) : w.title}</h1>
 <p class="work-summary">${w.summary}</p>
 <dl class="work-meta">
 <dt>頒布</dt><dd>${w.event ?? '未定'}</dd>
 <dt>公開日</dt><dd>${w.releaseDate ?? '未定'}</dd>
 <dt>固定URL</dt><dd><a href="${w.permanentEntry}">${site.baseUrl}${w.permanentEntry}</a></dd>
 </dl>
+</div>
+${cover || heroFigure(w)}
 </section>
 <div class="w-secs">
 ${w.sections.map((s) => sectionBlock(w, s, answersInfo))}

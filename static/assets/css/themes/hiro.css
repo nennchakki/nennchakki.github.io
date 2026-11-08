@@ -1,9 +1,11 @@
 /* 作品ページ：篠澤広に超弦理論を教えてもらう本
-   根拠（docs/research/hiro.md）
-   - ファーストビューは目元。PC は両目を水平に、スマホは左目だけ（§5.2, §5.3）
-   - まつ毛は黒ではなく淡いグレーベージュ（§2.3）→ 罫線と縁取りもこの色
-   - 虹彩の橙赤 #D85513 は1画面で少面積の強調だけに使う（§3）
-   - 原稿の組版はグレーのみ（別冊の TeX の色定義）→ 解答の本文は黒とグレーで組む */
+   根拠（docs/research/hiro.md）。顔や目は描かず、次の要素だけを使う。
+   - 虹彩の層の色（§2.2）: 縁 #55170A → 暗部 #6E2010 → 中間 #9F4024 → 代表色 #D85513 → 明部 #FD9E44 → 底の三日月 #FFF484。
+     ページ上端の細い帯に、この順で並べる（帯の幅の比は図の見やすさで決めた）。
+   - まつ毛の色（§2.3）: 淡いグレーベージュ #C3B6AA、輪郭 #857C74 → 罫線と区切り。黒の罫線は使わない。
+   - ヘアピン 2 本（§4, §5.1）: 平行な濃い斜線 → サークル名の前の小さな記号。
+   - 橙赤の虹彩 #D85513 は1画面に少面積だけ（図の n=1 の線、ボタン）。
+   - 原稿の組版はグレーのみ（別冊の TeX の色定義）→ 解答の本文は黒とグレーで組む。 */
 body[data-theme="hiro"] {
   --ink: #2a2422;
   --ink-soft: #6a5f59;
@@ -15,47 +17,55 @@ body[data-theme="hiro"] {
   --iris: #d85513;
   --iris-deep: #9f4024;
   --iris-light: #fd9e44;
-  --lid: #e29f99;
   --link: #9a3a12;
   --focus: #d85513;
   background: var(--paper);
 }
 body[data-theme="hiro"] .site-header { background: var(--paper); border-bottom: 1px solid var(--rule); }
 
-/* ---------- ファーストビュー ---------- */
-.hiro-hero {
-  position: relative;
-  height: min(64vh, 44rem);
-  min-height: 22rem;
-  overflow: hidden;
-  border-bottom: 1px solid var(--rule);
-  background: #fff2e8;
-}
-.hiro-hero svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-.hiro-hero picture img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
-.hiro-hero.img-failed picture { display: none; }
-.hiro-eyes-tall { display: none !important; }
-@media (max-width: 48rem) and (max-aspect-ratio: 4/5) {
-  .hiro-hero { height: min(66vh, 44rem); }
-  .hiro-eyes-wide { display: none !important; }
-  .hiro-eyes-tall { display: block !important; }
-}
+/* 虹彩の色の帯 */
+.iris-band { display: flex; height: 6px; }
+.iris-band span:nth-child(1) { flex: 2; background: #55170a; }
+.iris-band span:nth-child(2) { flex: 3; background: #6e2010; }
+.iris-band span:nth-child(3) { flex: 4; background: #9f4024; }
+.iris-band span:nth-child(4) { flex: 5; background: #d85513; }
+.iris-band span:nth-child(5) { flex: 4; background: #fd9e44; }
+.iris-band span:nth-child(6) { flex: 2; background: #fff484; }
 
-.work-inner { max-width: 60rem; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2.5rem); }
-.work-head { padding: 2.5rem 0 1.5rem; display: grid; gap: 0.2rem; }
-.work-head .work-circle { margin: 0; color: var(--ink-soft); font-size: 0.85rem; letter-spacing: 0.05em; }
+.work-inner { max-width: 64rem; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2.5rem); }
+.work-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 2rem 3rem;
+  align-items: center;
+  padding: clamp(2.5rem, 7vw, 5rem) 0 clamp(2rem, 5vw, 3.5rem);
+}
+.work-head .work-circle {
+  margin: 0; display: flex; align-items: center; gap: 0.5rem;
+  color: var(--ink-soft); font-size: 0.85rem; letter-spacing: 0.05em;
+}
 .work-head h1 {
-  margin: 0.2rem 0 0.8rem;
+  margin: 0.6rem 0 1.2rem;
   font-family: var(--serif);
-  font-size: clamp(1.7rem, 5vw, 2.6rem);
+  font-size: clamp(1.45rem, 3.1vw, 2.4rem);
   line-height: 1.35;
   font-weight: 600;
+  letter-spacing: 0.02em;
 }
-.work-head .cover { max-width: 16rem; height: auto; border: 1px solid var(--rule); }
-.work-head .work-summary { margin: 0; max-width: 36rem; }
-.work-meta { display: grid; grid-template-columns: auto 1fr; gap: 0.2rem 1.2rem; margin: 1.2rem 0 0; font-size: 0.9rem; }
+.work-head h1 .tl { display: block; white-space: nowrap; }
+@media (max-width: 22rem) { .work-head h1 .tl { white-space: normal; } }
+.work-head .work-summary { margin: 0; max-width: 32rem; }
+.work-meta { display: grid; grid-template-columns: auto 1fr; gap: 0.25rem 1.2rem; margin: 1.6rem 0 0; font-size: 0.9rem; }
 .work-meta dt { color: var(--ink-soft); }
 .work-meta dd { margin: 0; overflow-wrap: anywhere; }
+
+.hero-figure { margin: 0; }
+.hero-figure svg, .hero-figure img { display: block; width: 100%; height: auto; }
+.hero-figure figcaption { margin-top: 0.4rem; font-size: 0.78rem; color: var(--ink-soft); text-align: center; }
+@media (prefers-reduced-motion: no-preference) {
+  .string-modes .mode-1 { animation: hiro-mode 5s ease-in-out infinite alternate; transform-origin: 50% 58.8%; transform-box: view-box; }
+}
+@keyframes hiro-mode { from { transform: scaleY(1); } to { transform: scaleY(-1); } }
 
 .w-secs { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 0 2.5rem; border-top: 1px solid var(--rule); }
 .w-sec { padding: 1.4rem 0 1.6rem; border-bottom: 1px solid var(--rule); }
@@ -76,6 +86,8 @@ body[data-theme="hiro"] .site-header { background: var(--paper); border-bottom: 
 
 body[data-theme="hiro"] .log li { border-bottom-color: var(--rule); }
 
-@media (max-width: 40rem) {
+@media (max-width: 48rem) {
+  .work-head { grid-template-columns: 1fr; gap: 1.5rem; }
+  .hero-figure { max-width: 30rem; }
   .w-secs { grid-template-columns: 1fr; }
 }
