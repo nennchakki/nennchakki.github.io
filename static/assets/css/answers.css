@@ -1,0 +1,164 @@
+/* 解答編の組版。原稿（別冊解答の TeX）の構成をそのまま写す。
+   大問の枠 → 小問の問題文の枠 → 「考え方」 → 「解いてみる」 → □ */
+
+.answers-top {
+  max-width: 46rem; margin: 0 auto; padding: 0.8rem clamp(1rem, 4vw, 2rem) 0;
+  font-size: 0.85rem; color: var(--ink-soft);
+}
+.answers-top span { margin: 0 0.5em; color: var(--rule); }
+
+.chapter, .answers-index { max-width: 46rem; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2rem); }
+.chapter-head { padding: 2rem 0 1.2rem; border-bottom: 2px solid var(--ink); margin-bottom: 1.5rem; }
+.chapter-head .ch-no { margin: 0; font-size: 0.9rem; color: var(--ink-soft); letter-spacing: 0.08em; }
+.chapter-head h1 { margin: 0.2rem 0 0.2rem; font-family: var(--serif); font-size: clamp(1.4rem, 4.5vw, 2rem); line-height: 1.45; font-weight: 600; }
+.chapter-head .ch-count { margin: 0; font-size: 0.85rem; color: var(--ink-soft); }
+
+/* 目次 */
+.toc-part h2 { font-size: 1rem; margin: 2rem 0 0.5rem; display: flex; gap: 0.8rem; align-items: baseline; }
+.toc-part .part-no { color: var(--ink-soft); font-weight: 400; font-size: 0.9rem; }
+.toc-chapters { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+.toc-chapters li { border-bottom: 1px solid var(--rule); }
+.toc-chapters a {
+  display: grid; grid-template-columns: 4.2rem minmax(0, 1fr) auto; gap: 0.8rem;
+  padding: 0.75rem 0.3rem; color: var(--ink); text-decoration: none;
+}
+.toc-chapters a:hover { background: var(--plane); }
+.toc-chapters a:hover .tc-title { text-decoration: underline; }
+.tc-no { color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.tc-count { color: var(--ink-soft); font-size: 0.85rem; font-variant-numeric: tabular-nums; }
+.front-matter { margin: 2.5rem 0 0; border: 1px solid var(--rule); background: var(--plane); }
+.front-matter summary { padding: 0.8rem 1rem; cursor: pointer; }
+.front-matter .answer-body { padding: 0 1rem 1rem; }
+.source-note { margin-top: 2rem; font-size: 0.8rem; color: var(--ink-soft); }
+
+/* 章内目次 */
+.chapter-toc { margin: 0 0 2rem; font-size: 0.9rem; border: 1px solid var(--rule); background: var(--plane); }
+.chapter-toc summary { padding: 0.6rem 1rem; cursor: pointer; }
+.chapter-toc > details > ol { list-style: none; margin: 0; padding: 0 1rem 0.8rem; }
+.chapter-toc .toc-sec { display: block; margin-top: 0.6rem; font-weight: 600; color: var(--ink); }
+.chapter-toc .hnum { margin-right: 0.6em; font-variant-numeric: tabular-nums; color: var(--ink-soft); font-weight: 400; }
+.toc-probs { list-style: none; margin: 0.2rem 0 0; padding: 0 0 0 1rem; columns: 2 18rem; column-gap: 1.5rem; }
+.toc-probs li { break-inside: avoid; }
+.toc-probs .pnum { display: inline-block; min-width: 4em; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+
+/* 本文 */
+.answer-body { font-family: var(--serif); font-size: 1.03rem; line-height: 1.95; }
+.answer-body p { margin: 0; text-indent: 1em; }
+.answer-body p.cont { text-indent: 0; }
+.answer-body h2.h-l3 {
+  font-family: var(--sans); font-size: 1.15rem; line-height: 1.5;
+  margin: 3rem 0 1rem; padding-top: 1rem; border-top: 1px solid var(--rule);
+  scroll-margin-top: 1rem;
+}
+.answer-body h2.h-l3:first-child { margin-top: 0; border-top: 0; }
+.answer-body .hnum { margin-right: 0.8em; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+.answer-body h3.h-l4 { font-family: var(--sans); font-size: 1rem; margin: 2.5rem 0 0.6rem; }
+.answer-body h5 { font-family: var(--sans); font-size: 0.95rem; margin: 1.4rem 0 0.4rem; }
+.answer-body strong { font-family: var(--sans); }
+
+.record { margin: 1.5rem 0; }
+.record-title { font-family: var(--sans); font-size: 1rem; margin: 0 0 0.4rem; }
+
+/* 大問 */
+.problem { margin: 2.5rem 0 3.5rem; scroll-margin-top: 1rem; }
+.problem-head {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0 1rem;
+  padding: 0.7rem 0.9rem; background: #ece8e4; border: 1px solid #3a3330; border-bottom: 0;
+  font-family: var(--sans);
+}
+.problem-head h3 { margin: 0; font-size: 1.02rem; line-height: 1.6; }
+.problem-head .pnum { margin-right: 1em; }
+.problem-head .kind { font-weight: 400; color: var(--ink-soft); }
+.problem-head .sep { font-weight: 400; }
+.problem-head .pcode { font-size: 0.82rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.problem > .statement, .problem > .prelude {
+  padding: 0.6rem 0.9rem 0.8rem; background: #ece8e4; border-left: 1px solid #3a3330; border-right: 1px solid #3a3330;
+}
+.problem > .part:first-of-type, .problem > .statement + .part, .problem > .prelude + .part { border-top: 1px solid #3a3330; }
+.problem > *:last-child { border-bottom: 1px solid #3a3330; }
+.problem > .part, .problem > .prelude, .problem > .statement { border-left: 1px solid #3a3330; border-right: 1px solid #3a3330; }
+.problem > .part { padding: 0.8rem 0.9rem 0.6rem; background: var(--plane); }
+.problem > .part + .part { border-top: 1px dashed var(--rule); }
+.problem > :not(.problem-head) { padding-left: 0.9rem; padding-right: 0.9rem; }
+.problem > p, .problem > .math-display { background: var(--plane); }
+
+/* 小問 */
+.part-statement { border: 1px solid #8b817a; padding: 0.55rem 0.8rem 0.6rem; margin: 0.4rem 0 0.2rem; background: var(--plane); }
+.part-label { font-family: var(--sans); font-weight: 700; margin: 0 0 0.2rem !important; text-indent: 0 !important; }
+.part-h {
+  font-family: var(--sans); font-size: 0.92rem; margin: 1.1rem 0 0.3rem;
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.part-h::after { content: ""; flex: 1; border-top: 1px solid var(--rule); }
+.qed { text-align: right; margin: 0.4rem 0 0 !important; text-indent: 0 !important; font-family: var(--sans); }
+.conclusion { text-indent: 0 !important; margin-top: 0.4rem !important; }
+.therefore { margin-right: 1em; }
+
+.formulas { border-top: 1px solid #8b817a; border-bottom: 1px solid #8b817a; margin: 0.6rem 0; padding: 0.2rem 0; }
+.prelude { margin: 0.6rem 0; }
+
+/* 数式。長い式は横にスクロールする（式を折り返したり縮めたりしない） */
+.math-display {
+  margin: 0.7rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.1rem 0 0.3rem;
+  scroll-margin-top: 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+.math-display .katex-display { margin: 0; }
+.math-display .katex-display > .katex { text-align: center; }
+.math-display:focus-visible { outline-offset: 0; }
+.math-display.is-wide { box-shadow: inset -12px 0 10px -10px rgba(0,0,0,.18); }
+.katex { font-size: 1.08em; text-indent: 0; }
+.answer-body .katex .tag { font-family: KaTeX_Main, serif; }
+
+/* リスト・表・引用 */
+.answer-body ol, .answer-body ul { margin: 0.5rem 0; padding-left: 2em; }
+.answer-body li p { text-indent: 0; }
+.answer-body ol.enumerate { list-style: decimal; }
+.answer-body dl.desc { margin: 0.6rem 0; }
+.answer-body dl.desc dt { font-family: var(--sans); font-weight: 700; margin-top: 0.4rem; }
+.answer-body dl.desc dd { margin: 0 0 0 2em; }
+.answer-body dl.desc dd p { text-indent: 0; }
+.answer-body blockquote { margin: 0.8rem 0 0.8rem 1.5em; padding-left: 1em; border-left: 2px solid var(--rule); }
+.answer-body blockquote p { text-indent: 0; }
+.answer-body .center { margin: 0.8rem 0; }
+.answer-body .center > p { text-align: center; text-indent: 0; }
+.table-wrap { overflow-x: auto; margin: 0.8rem 0; }
+.tex-table { border-collapse: collapse; margin: 0 auto; font-size: 0.95em; }
+.tex-table td { padding: 0.2rem 0.7rem; vertical-align: top; }
+.tex-table .a-center { text-align: center; }
+.tex-table .a-right { text-align: right; }
+.tex-table .b { font-weight: 700; }
+.tex-table .sans { font-family: var(--sans); }
+.tex-table tr.rule-toprule td { border-top: 1.5px solid var(--ink); }
+.tex-table tr.rule-midrule td { border-top: 1px solid var(--ink); }
+.tex-table tr.rule-hline td { border-top: 1px solid var(--ink); }
+.tex-table tr.rule-below-bottomrule td { border-bottom: 1.5px solid var(--ink); }
+.tex-figure { margin: 1rem 0; text-align: center; }
+.tex-figure svg { width: min(100%, 26rem); height: auto; }
+
+/* 章の移動 */
+.pager {
+  display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: stretch;
+  margin: 4rem 0 0; padding: 1rem 0; border-top: 2px solid var(--ink); font-size: 0.9rem;
+}
+.pager a { text-decoration: none; color: var(--ink); }
+.pager a span { display: block; font-size: 0.78rem; color: var(--ink-soft); }
+.pager a:hover { text-decoration: underline; }
+.pager .next { text-align: right; }
+.pager .up { align-self: center; color: var(--link); }
+
+@media (max-width: 40rem) {
+  .answer-body { font-size: 1rem; }
+  .problem > :not(.problem-head), .problem-head { padding-left: 0.6rem; padding-right: 0.6rem; }
+  .part-statement { padding: 0.5rem 0.6rem; }
+  .pager { grid-template-columns: 1fr 1fr; }
+  .pager .up { grid-column: 1 / -1; grid-row: 2; text-align: center; }
+}
+
+@media print {
+  .site-header, .chapter-toc, .pager, .site-footer, .answers-top { display: none; }
+  .math-display { overflow: visible; }
+}

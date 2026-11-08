@@ -1,0 +1,132 @@
+/* 総合トップ：生塩ノア
+   根拠（docs/research/noa.md）
+   - 白と淡い灰色の広い面、濃紺の細い縁取り（§3.3, §5）
+   - 青は小面積の差し色だけ。ヘイローの青い区画は外環の約 1/6（§2.2）
+   - 内周の破線（周期 20°、デューティ比 0.5）を、区切り線の目盛りに使う
+   - シアンの細線（内側の円）をフォーカスと現在位置の印に使う
+   - 赤は袖の小さな記号だけ → 番号の小さな印にだけ使う
+   - 書記・記録の役割 → 議事録の罫線と、左に番号と日付を置く台帳の組み方 */
+body[data-theme="noa"] {
+  --ink: #142434;
+  --ink-soft: #4b5568;
+  --paper: #f7f7fb;
+  --plane: #ffffff;
+  --rule: #c4ccdc;
+  --band: #c5c5d4;
+  --blue: #548ed4;
+  --tie: #3c74cc;
+  --navy: #2a2a5c;
+  --dash: #4c7cbe;
+  --cyan: #8deffc;
+  --mark: #94040c;
+  --link: #24448c;
+  --focus: #3fb8d4;
+  background: var(--paper);
+}
+body[data-theme="noa"] .site-header { border-bottom: 1px solid var(--rule); background: var(--plane); }
+
+.home {
+  position: relative;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2.5rem);
+}
+/* ヘイローは右上に大きく、半分ほど画面外へはみ出させる */
+.home-halo {
+  position: absolute;
+  top: -1.5rem;
+  right: clamp(-14rem, -12vw, -4rem);
+  width: clamp(20rem, 52vw, 40rem);
+  pointer-events: none;
+  z-index: 0;
+}
+.home-halo svg { display: block; width: 100%; height: auto; }
+@media (prefers-reduced-motion: no-preference) {
+  .home-halo .halo-dash { animation: noa-dash 24s linear infinite; }
+}
+@keyframes noa-dash { to { stroke-dashoffset: -360; } }
+
+.home-intro {
+  position: relative; z-index: 1;
+  padding: clamp(5rem, 14vw, 9rem) 0 3rem;
+  max-width: 30rem;
+}
+.home-intro h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+}
+.home-intro p { margin: 0; color: var(--ink-soft); }
+
+/* 台帳。見出しの下に、ヘイロー内周の破線と同じ比率の目盛りを引く */
+.ledger { position: relative; z-index: 1; margin: 3rem 0 0; }
+.ledger > h2 {
+  margin: 0;
+  padding: 0 0 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  position: relative;
+}
+.ledger > h2::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: 0; height: 4px;
+  background:
+    linear-gradient(90deg, var(--blue) 0 calc(100% / 6), transparent calc(100% / 6)) bottom / 100% 2px no-repeat,
+    repeating-linear-gradient(90deg, var(--navy) 0 10px, transparent 10px 20px) top / 100% 2px no-repeat;
+}
+
+.work-list { list-style: none; margin: 0; padding: 0; counter-reset: work; }
+.work-entry {
+  counter-increment: work;
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr);
+  gap: 0.3rem 1.25rem;
+  padding: 1.6rem 0 1.8rem;
+  border-bottom: 1px solid var(--rule);
+  background: linear-gradient(90deg, transparent 3.5rem, var(--rule) 3.5rem, var(--rule) calc(3.5rem + 1px), transparent calc(3.5rem + 1px));
+}
+.work-entry::before {
+  content: counter(work, decimal-leading-zero);
+  grid-row: 1 / span 3;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  padding-top: 0.2rem;
+  border-top: 3px solid var(--mark);
+  width: 1.2rem;
+  line-height: 2;
+}
+.work-entry > * { grid-column: 2; }
+.work-link { color: var(--ink); text-decoration: none; display: block; }
+.work-link .work-circle { display: block; font-size: 0.8rem; color: var(--ink-soft); letter-spacing: 0.05em; }
+.work-link .work-title {
+  display: block;
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 3.6vw, 1.9rem);
+  line-height: 1.45;
+  font-weight: 600;
+}
+.work-link:hover .work-title { text-decoration: underline; text-decoration-color: var(--blue); text-decoration-thickness: 2px; text-underline-offset: 0.25em; }
+.work-summary { margin: 0.6rem 0 0; max-width: 36rem; color: var(--ink-soft); font-size: 0.95rem; }
+.work-sections { list-style: none; margin: 0.8rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.2rem; font-size: 0.9rem; }
+.work-sections a::before { content: "→ "; color: var(--blue); }
+
+body[data-theme="noa"] .log li { border-bottom-color: var(--rule); }
+body[data-theme="noa"] .log time { font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+body[data-theme="noa"] .empty { padding: 1rem 0; }
+
+body[data-theme="noa"] :focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+
+.notfound h1 { font-size: 1.4rem; }
+
+@media (max-width: 40rem) {
+  .home-halo { top: 0.5rem; right: -8rem; width: 24rem; opacity: 0.9; }
+  .home-intro { padding-top: 9rem; }
+  .work-entry { grid-template-columns: 2.4rem minmax(0, 1fr); background: none; gap: 0.3rem 0.8rem; }
+}
+
+/* ヘイローのはみ出しで横スクロールが出ないようにする */
+body[data-theme="noa"] main.home { overflow-x: clip; }

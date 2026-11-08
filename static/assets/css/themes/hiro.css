@@ -1,0 +1,81 @@
+/* 作品ページ：篠澤広に超弦理論を教えてもらう本
+   根拠（docs/research/hiro.md）
+   - ファーストビューは目元。PC は両目を水平に、スマホは左目だけ（§5.2, §5.3）
+   - まつ毛は黒ではなく淡いグレーベージュ（§2.3）→ 罫線と縁取りもこの色
+   - 虹彩の橙赤 #D85513 は1画面で少面積の強調だけに使う（§3）
+   - 原稿の組版はグレーのみ（別冊の TeX の色定義）→ 解答の本文は黒とグレーで組む */
+body[data-theme="hiro"] {
+  --ink: #2a2422;
+  --ink-soft: #6a5f59;
+  --paper: #fffaf6;
+  --plane: #ffffff;
+  --rule: #d8cbbc;
+  --lash: #c3b6aa;
+  --lash-line: #857c74;
+  --iris: #d85513;
+  --iris-deep: #9f4024;
+  --iris-light: #fd9e44;
+  --lid: #e29f99;
+  --link: #9a3a12;
+  --focus: #d85513;
+  background: var(--paper);
+}
+body[data-theme="hiro"] .site-header { background: var(--paper); border-bottom: 1px solid var(--rule); }
+
+/* ---------- ファーストビュー ---------- */
+.hiro-hero {
+  position: relative;
+  height: min(64vh, 44rem);
+  min-height: 22rem;
+  overflow: hidden;
+  border-bottom: 1px solid var(--rule);
+  background: #fff2e8;
+}
+.hiro-hero svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.hiro-hero picture img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.hiro-hero.img-failed picture { display: none; }
+.hiro-eyes-tall { display: none !important; }
+@media (max-width: 48rem) and (max-aspect-ratio: 4/5) {
+  .hiro-hero { height: min(66vh, 44rem); }
+  .hiro-eyes-wide { display: none !important; }
+  .hiro-eyes-tall { display: block !important; }
+}
+
+.work-inner { max-width: 60rem; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2.5rem); }
+.work-head { padding: 2.5rem 0 1.5rem; display: grid; gap: 0.2rem; }
+.work-head .work-circle { margin: 0; color: var(--ink-soft); font-size: 0.85rem; letter-spacing: 0.05em; }
+.work-head h1 {
+  margin: 0.2rem 0 0.8rem;
+  font-family: var(--serif);
+  font-size: clamp(1.7rem, 5vw, 2.6rem);
+  line-height: 1.35;
+  font-weight: 600;
+}
+.work-head .cover { max-width: 16rem; height: auto; border: 1px solid var(--rule); }
+.work-head .work-summary { margin: 0; max-width: 36rem; }
+.work-meta { display: grid; grid-template-columns: auto 1fr; gap: 0.2rem 1.2rem; margin: 1.2rem 0 0; font-size: 0.9rem; }
+.work-meta dt { color: var(--ink-soft); }
+.work-meta dd { margin: 0; overflow-wrap: anywhere; }
+
+.w-secs { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 0 2.5rem; border-top: 1px solid var(--rule); }
+.w-sec { padding: 1.4rem 0 1.6rem; border-bottom: 1px solid var(--rule); }
+.w-sec h2 { margin: 0 0 0.6rem; font-size: 1.05rem; display: flex; align-items: baseline; gap: 0.6rem; }
+.w-sec h2::before {
+  /* 目頭の鉤と同じ、上まつ毛の帯の短い弧 */
+  content: ""; width: 1.4rem; height: 0.55rem; flex: none;
+  border-top: 3px solid var(--lash); border-right: 3px solid var(--lash);
+  border-radius: 0 1.4rem 0 0; transform: translateY(-0.1rem);
+}
+.w-sec p { margin: 0.4rem 0; }
+.w-sec.pending h2 { color: var(--ink-soft); }
+.go {
+  display: inline-block; margin-top: 0.4rem; padding: 0.45rem 0.9rem;
+  color: var(--plane); background: var(--iris-deep); text-decoration: none;
+}
+.go:hover { background: var(--iris); }
+
+body[data-theme="hiro"] .log li { border-bottom-color: var(--rule); }
+
+@media (max-width: 40rem) {
+  .w-secs { grid-template-columns: 1fr; }
+}
