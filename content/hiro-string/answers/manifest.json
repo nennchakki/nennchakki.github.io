@@ -3,8 +3,8 @@
   "createdAt": "2026-11-09",
   "source": {
     "file": "hiro_string_theory_answers.tex",
-    "sha256": "73e7ea02d3198b9df7f8fd6fb4fda0b8bdc8ccad425368bf3a82dff61ef7aaf1",
-    "bytes": 976685
+    "sha256": "2677368c1047190096852c4a70bb096cb6231935be8761e044edf90f3542ead9",
+    "bytes": 981372
   },
   "counts": {
     "chapters": 15,
@@ -31,14 +31,14 @@
   "figures": [
     {
       "key": "b4e5cb863a55",
-      "line": 20239,
+      "line": 20265,
       "chapter": 14,
       "sha256": "b4e5cb863a5592f5e451d33ce43c1188c197b7b9796d0e0edba574b4c380c6a2"
     }
   ],
   "mainTextCheck": {
     "file": "hiro_string_theory.tex",
-    "sha256": "0ffa8d3cd85a9aa5b843dda7cf3aa311a6f1e2fe7d19b862c7a528cce2ead606",
+    "sha256": "71acc5954b0db8f6f371d7a68d65f40294bfd48debf1f2f826a5e57746f1365b",
     "mainExercises": 239,
     "answerProblems": 239,
     "chapterMismatches": [],

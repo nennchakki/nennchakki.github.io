@@ -210,23 +210,49 @@
 \pagenumbering{arabic}
 
 \begin{checkpointbox}{この別冊について}
-補習で宿題を出した次の日、広は二人の答案を返すとき、自分の解き方を書いた紙を一緒に渡した。
-この別冊は、その紙を章ごとに並べたものだ。
-解き方の文は、広が千奈と佑芽に宛てて書いたままにしてある。
+千奈、佑芽。宿題の解き方を、章ごとに束ねた。答案を返すときに渡した紙と、中身は同じ。
 
-大問ごとに頁を変えて、最初の枠に問題と、共通の条件を書いた。
-小問は問題文を省かずにもう一度書き、そのあとに「考え方」と「解いてみる」を置いた。
+「同じでしたら、頂いた紙で足りますのに」
 
-先に「考え方」だけを読んで、使う式を一つ手元に書いてみるとよい。
-そこで止まったら、「解いてみる」の同じところを読む。何を代入して、どの条件を使ったかが、行ごとに書いてある。
-計算の問題は、最後の数字に加えて、符号と単位と、成り立つ条件まで比べる。
-証明や考察の問題は、出発点の仮定から結論まで、つながっているかを見る。
+「束ねておくと、試験の前に一度に見返せる。だから、まとめた」
+
+大問ごとに頁を変えてある。最初の枠に、問題と、小問に共通の条件。
+小問は問題文を省かずにもう一度書いて、そのあとに「考え方」と「解いてみる」を置いた。
+
+「広ちゃん、答えだけのページってないの？」
+
+「ない。答えだけだと、どこで間違えたか分からないから」
+
+読む順番は決めてある。先に「考え方」だけを読んで、使う式を一つ、手元に書いてみて。
+そこで止まったら、「解いてみる」の同じ所を読む。何を代入して、どの条件を使ったかが、行ごとに書いてある。
+
+「止まった所から読めばよろしいのですね。最初から全部、ではなく」
+
+「うん。止まった所から」
+
+計算の問題は、最後の数字だけで決めない。符号と単位と、その式が成り立つ条件まで比べる。
+証明や考察の問題は、出発点の仮定から結論まで、途中が切れずにつながっているかを見る。
 小問の終わりの$\square$は、そこでその小問が終わる印。
 
-難しさの順は「確認」「誘導付き」「本気」。
-「追加」は条件を変える問題、「比較」は二つを並べる問題、
-「考察」は意味と限界を言葉にする問題、「総合」は節や章をまたぐ問題。
-「予告」と「発展」は先を少しのぞく問題で、解かなくても先へ進める。
+「数字が合ってたら、あたし、丸つけちゃうなあ」
+
+「単位が違ったら、数字が合ってても別の式。だから、そこまで比べて」
+
+見出しの言葉は、こう使ってる。
+\begin{description}[leftmargin=4.2em,labelsep=.8em,style=sameline]
+  \item[確認] 直前の定義や式を一つ使う。
+  \item[誘導付き] 段階を順につなぐ。
+  \item[本気] 式を自分で選び、条件と検算まで残す。
+  \item[追加] 条件を変える。
+  \item[比較] 同じ基準で並べる。
+  \item[考察] 計算と解釈を分ける。
+  \item[総合] 小問や章をつなぐ。
+  \item[予告・発展] 先を少しのぞく。解かなくても先へ進める。
+\end{description}
+
+「解かなくても、よろしいのですか」
+
+「うん。……でも、解いたら、わたしはうれしい」
 \end{checkpointbox}
 
 \begin{definitionbox}{記号で迷ったときに}
@@ -824,9 +850,9 @@ $N=4$では
 \solutionpart{1}{%
 $q_2$を含む項だけを書き出せ。
 }{$q_2$ を動かして変わるのは、$q_2$ が入ってる項だけ。
-運動の項 $(q_{i+1}-q_i)^2$ とpotentialの項 $V(q_i)$ で、どの $i$ に $q_2$ が入るかを別々に数える。
+運動の項 $(q_{i+1}-q_i)^2$ とポテンシャルの項 $V(q_i)$ で、どの $i$ に $q_2$ が入るかを別々に数える。
 $q_2$ が入ってない項は、$q_2$ を動かしても変わらないから、省いていい。}{%
-運動の項では$i=1,2$、potentialの項では$i=2$に、$q_2$が入る。
+運動の項では$i=1,2$、ポテンシャルの項では$i=2$に、$q_2$が入る。
 \begin{equation}
   S_4\big|_{q_2}
   =\frac{m}{2\Delta t}(q_2-q_1)^2
@@ -856,7 +882,7 @@ $q_2$が入っていない項は、省いた。
   =\frac m{2\Delta t}\cdot2(q_3-q_2)\cdot(-1)
   =-\frac m{\Delta t}(q_3-q_2).
 \end{equation*}
-三つ目はpotential。
+三つ目はポテンシャル。
 \begin{equation*}
   \pder{}{q_2}\bigl[-V(q_2)\Delta t\bigr]=-V'(q_2)\Delta t .
 \end{equation*}
@@ -927,7 +953,7 @@ $V=0$なら、内側のどの点でも
 \]
 を求めよ。
 }{Euler--Lagrange方程式に要るのは、$\frac{\partial L}{\partial z}$ と $\frac{\partial L}{\partial\dot z}$ の二つ。
-$L=m\dot z^2/2-mgz$ のうち、位置が入ってるのはpotentialの項だけ、速度が入ってるのは運動の項だけ。それぞれ微分する。}{%
+$L=m\dot z^2/2-mgz$ のうち、位置が入ってるのはポテンシャルの項だけ、速度が入ってるのは運動の項だけ。それぞれ微分する。}{%
 偏微分のときは、$L(z,\dot z)$の二つの引数を、別々のものとして扱う。
 $z$で微分するときは$\dot z$を止めて、$\dot z$で微分するときは$z$を止める。だから
 \begin{align*}
@@ -968,8 +994,8 @@ $z(0)=z_0$から$C_2=z_0$。
 \end{equation}
 }
 \solutionpart{4}{%
-各項のSI次元がenergyであることを確認せよ。
-}{Lagrangianの中で足したり引いたりする項は、どれもenergyの次元 $ML^2T^{-2}$ じゃないとだめ。
+各項のSI次元がエネルギーであることを確認せよ。
+}{Lagrangianの中で足したり引いたりする項は、どれもエネルギーの次元 $ML^2T^{-2}$ じゃないとだめ。
 $[\dot z]=LT^{-1}$, $[g]=LT^{-2}$, $[z]=L$ を使って、$m\dot z^2/2$ と $mgz$ を基本の次元に戻す。$\frac12$ は数だから、次元を持たない。}{%
 \begin{align}
   \left[\frac m2\dot z^2\right]_{\mathrm{SI}}
@@ -977,7 +1003,7 @@ $[\dot z]=LT^{-1}$, $[g]=LT^{-2}$, $[z]=L$ を使って、$m\dot z^2/2$ と $mgz
   [mgz]_{\mathrm{SI}}
   &=M(LT^{-2})L=ML^2T^{-2}.
 \end{align}
-どっちもenergyの次元。だから、Lagrangianの中で引き算できる。
+どっちもエネルギーの次元。だから、Lagrangianの中で引き算できる。
 }
 \end{solutionbox}
 
@@ -1034,9 +1060,9 @@ $A,B$が自由に残ったのは、2階の方程式の解に定数が二つあ�
 }
 \solutionpart{3}{%
 $[k]_{\mathrm{SI}}$と$[\omega]_{\mathrm{SI}}$を求めよ。
-}{ばね定数の次元は、potential energy $kq^2/2$ がenergyの次元を持つことから決める。
+}{ばね定数の次元は、位置エネルギー $kq^2/2$ がエネルギーの次元を持つことから決める。
 出てきた $[k]$ と $[m]=M$ を $\omega=\sqrt{k/m}$ に入れて、$\omega$ が時間の逆数になるか確かめる。}{%
-potential energy $\frac k2q^2$は、energyと同じ次元。
+位置エネルギー $\frac k2q^2$は、エネルギーと同じ次元。
 \begin{equation*}
   [k]\,[q]^2=ML^2T^{-2},\qquad [q]=L .
 \end{equation*}
@@ -1474,7 +1500,7 @@ $A^\mu A_\mu$と$A^\mu B_\mu$を求めよ。
   A^\mu A_\mu=\eta_{\mu\nu}A^\mu A^\nu=-(A^0)^2+(A^1)^2+(A^2)^2+(A^3)^2=-4+1+9+0=6 .
 \end{equation*}
 時間の成分だけ、負の符号で入る。
-$A^\mu A_\mu>0$なのは、空間の部分の長さ$1+9=10$が、時間の部分$4$より大きいから。$A^\mu$は空間的なvector。
+$A^\mu A_\mu>0$なのは、空間の部分の長さ$1+9=10$が、時間の部分$4$より大きいから。$A^\mu$は空間的なベクトル。
 }
 \solutionpart{3}{%
 $A^\mu B_\mu C^\mu$がEinstein規約で不適切な理由を説明せよ。
@@ -1495,7 +1521,7 @@ Einsteinの約束は、上に1回、下に1回の組を一つ足すこと。
   \quad\text{と}\quad
   A^\mu\,(B_\mu C^\mu)
 \end{equation*}
-は、片方は$C$の成分が残るvector、片方は$A$の成分が残るvectorで、違うもの。
+は、片方は$C$の成分が残るベクトル、片方は$A$の成分が残るベクトルで、違うもの。
 言いたいことに合わせて、残す添字を別の文字にする。
 \begin{equation*}
   (A^\mu B_\mu)\,C^\nu
@@ -1504,14 +1530,14 @@ Einsteinの約束は、上に1回、下に1回の組を一つ足すこと。
 \end{equation*}
 }
 \solutionpart{4}{%
-$A$と$B$からscalarを一つ、$C$との積を残すvectorを一つ書け。
-}{scalarは添字を全部縮約する。vectorは自由な添字を一つ残す。
+$A$と$B$からscalarを一つ、$C$との積を残すベクトルを一つ書け。
+}{scalarは添字を全部縮約する。ベクトルは自由な添字を一つ残す。
 $A$ と $B$ は別の文字 $\nu$ で $A^\nu B_\nu$ と縮約して、そのscalarを $C^\mu$ に掛ければいい。}{%
 scalarの例は
 \begin{equation}
   {A^\mu B_\mu}.
 \end{equation}
-$C$との積をvectorとして残すなら、縮約する文字を変えて
+$C$との積をベクトルとして残すなら、縮約する文字を変えて
 \begin{equation}
   {D^\mu=(A^\nu B_\nu)C^\mu}
 \end{equation}
@@ -1519,7 +1545,7 @@ $C$との積をvectorとして残すなら、縮約する文字を変えて
 }
 \end{solutionbox}
 
-\begin{solutionbox}{確認　vectorとcovectorの変換}
+\begin{solutionbox}{確認　ベクトルとcovectorの変換}
 2次元で
 \[
   x'^1=x^1+x^2,\qquad x'^2=x^2
@@ -1532,7 +1558,7 @@ Jacobian
   \frac{\partial x'^\mu}{\partial x^\nu}
 \]
 とその逆を求めよ。
-}{反変と共変のvectorの変換に要るから、まずJacobian $J^\mu{}_{\nu}=\frac{\partial x'^\mu}{\partial x^\nu}$ を作る。$x'^\mu(x)$ を各 $x^\nu$ で偏微分するだけ。
+}{反変と共変のベクトルの変換に要るから、まずJacobian $J^\mu{}_{\nu}=\frac{\partial x'^\mu}{\partial x^\nu}$ を作る。$x'^\mu(x)$ を各 $x^\nu$ で偏微分するだけ。
 逆Jacobianは、行列の逆を取るか、逆変換 $x(x')$ を偏微分する。}{%
 $x'^\mu(x)$を、それぞれの$x^\nu$で偏微分する。
 \begin{align*}
@@ -1570,9 +1596,9 @@ $x'^\mu(x)$を、それぞれの$x^\nu$で偏微分する。
 }
 \solutionpart{2}{%
 $V'^\mu$を求めよ。
-}{反変vectorは、座標と同じJacobianで $V'^\mu=J^\mu{}_{\nu}V^\nu$ と変わる。
+}{反変ベクトルは、座標と同じJacobianで $V'^\mu=J^\mu{}_{\nu}V^\nu$ と変わる。
 設問(1)の $J$ を $V$ に掛けて、行ごとに足す。}{%
-反変vectorは、座標の小さな差$\dd x^\mu$と同じように変わる。
+反変ベクトルは、座標の小さな差$\dd x^\mu$と同じように変わる。
 \begin{equation*}
   \dd x'^\mu=\pd{x'^\mu}{x^\nu}\dd x^\nu
   \quad\longrightarrow\quad
@@ -1595,7 +1621,7 @@ $V'^\mu$を求めよ。
 }
 \solutionpart{3}{%
 $\omega'_\mu$を求めよ。
-}{共変vectorは、組 $\omega_\mu V^\mu$ を座標変換で変えないように、逆Jacobianで変わる。
+}{共変ベクトルは、組 $\omega_\mu V^\mu$ を座標変換で変えないように、逆Jacobianで変わる。
 縦に並べて書くと $\omega'=(J^{-1})^{\mathsf T}\omega$。設問(1)の逆行列を転置して掛ける。}{%
 下の添字には、逆Jacobianが掛かる。縦に並べると
 \begin{equation}
@@ -1808,7 +1834,7 @@ $\beta\to0$で何もしない変換$t'=t,x'=x$に、なめらかにつながっ�
 設問(1)のboost形へ設問(2)の$A=\gamma$を入れて作った
 変換行列$\Lambda$について
     $\Lambda^\trans\eta\Lambda=\eta$を直接確かめよ。
-}{Lorentz変換の条件は、行列で書くと $\Lambda^{\mathsf T}\eta\Lambda=\eta$。どんなvectorの内積も変わらない、ということ。
+}{Lorentz変換の条件は、行列で書くと $\Lambda^{\mathsf T}\eta\Lambda=\eta$。どんなベクトルの内積も変わらない、ということ。
 設問(1)の形に設問(2)の $A=\gamma$ を入れた $\Lambda$ と、$\eta=\operatorname{diag}(-1,1)$ を順に掛けて、元の計量に戻るか見る。}{%
 \[
   \Lambda=\gamma
@@ -1911,9 +1937,9 @@ $U^\mu$を求め、$U^\mu U_\mu=-1$を確かめよ。
 \end{equation}
 }
 \solutionpart{3}{%
-$p^\mu=(E,p)$を求めよ。
-}{質量 $m$ の粒子の4元運動量は $p^\mu=mU^\mu$。止まっている系でenergyが質量になるように決めてある。
-設問(2)の $U^\mu$ に $m=4$ を掛けて、時間成分を $E$、空間成分を $p$ と読む。}{%
+$p^\mu=(E,p_x,0,0)$を求めよ。
+}{質量 $m$ の粒子の4元運動量は $p^\mu=mU^\mu$。止まっている系でエネルギーが質量になるように決めてある。
+設問(2)の $U^\mu$ に $m=4$ を掛けて、時間成分を $E$、空間成分を $p_x$ と読む。}{%
 $p^\mu=mU^\mu$に、設問(2)の$U^\mu=(5/4,3/4)$と$m=4$を入れる。
 \begin{equation}
   p^\mu=mU^\mu
@@ -1921,37 +1947,37 @@ $p^\mu=mU^\mu$に、設問(2)の$U^\mu=(5/4,3/4)$と$m=4$を入れる。
   =\left(4\cdot\frac54,\ 4\cdot\frac34\right)
   ={(5,3)}.
 \end{equation}
-時間成分がenergy、空間成分が運動量。
+時間成分がエネルギー、空間成分が運動量。$y,z$成分はゼロなので、4成分で書けば$p^\mu=(5,3,0,0)$。
 \begin{equation*}
   E=\gamma m=\frac54\cdot4=5,\qquad
-  p=\gamma mv=\frac54\cdot4\cdot\frac35=3 .
+  p_x=\gamma mv=\frac54\cdot4\cdot\frac35=3 .
 \end{equation*}
-止まってるときのenergyは$m=4$で、動いた分だけ$E-m=1$増えた。
-遅いときのNewtonの運動energy$\frac12mv^2=\frac12\cdot4\cdot\frac9{25}=0.72$と比べると、$1$と$0.72$で三割ほど違う。$v=3/5$では、相対論の補正はもう小さくない。
+止まってるときのエネルギーは$m=4$で、動いた分だけ$E-m=1$増えた。
+遅いときのNewtonの運動エネルギー$\frac12mv^2=\frac12\cdot4\cdot\frac9{25}=0.72$と比べると、$1$と$0.72$で三割ほど違う。$v=3/5$では、相対論の補正はもう小さくない。
 }
 \solutionpart{4}{%
-$E^2=p^2+m^2$を数値で確かめよ。
-}{$p^\mu p_\mu=-m^2$ を成分で書くと $-E^2+p^2=-m^2$、つまり $E^2=p^2+m^2$。
-設問(3)の $E,p$ と $m$ を両辺に入れて、数が合うか見る。}{%
+$E^2=p_x^2+m^2$を数値で確かめよ。
+}{$p^\mu p_\mu=-m^2$ を成分で書くと $-E^2+p_x^2=-m^2$、つまり $E^2=p_x^2+m^2$。
+設問(3)の $E,p_x$ と $m$ を両辺に入れて、数が合うか見る。}{%
 \begin{equation}
   E^2=25,
   \qquad
-  p^2+m^2=3^2+4^2=25.
+  p_x^2+m^2=3^2+4^2=25.
 \end{equation}
 よって
 \begin{equation}
-  {E^2=p^2+m^2}
+  {E^2=p_x^2+m^2}
 \end{equation}
 が、数でも成り立つ。$5^2=3^2+4^2$。
 }
 \solutionpart{5}{%
 設問(4)のmass-shell条件
-$E^2=p^2+m^2$に$c$を戻した形を書け。
-}{$c=1$ の式に単位を戻すときは、全部の項をenergyの2乗にそろえる。
-$pc$ と $mc^2$ がどっちもenergy。だから $p^2$ と $m^2$ に、足りない $c$ のべきを補う。}{%
-運動量の項と質量の項を、energyの次元に戻す。
+$E^2=p_x^2+m^2$に$c$を戻した形を書け。
+}{$c=1$ の式に単位を戻すときは、全部の項をエネルギーの2乗にそろえる。
+$p_xc$ と $mc^2$ がどっちもエネルギー。だから $p_x^2$ と $m^2$ に、足りない $c$ のべきを補う。}{%
+運動量の項と質量の項を、エネルギーの次元に戻す。
 \begin{align}
-  [pc]_{\mathrm{SI}}
+  [p_xc]_{\mathrm{SI}}
   &=(\mathsf{M}\mathsf{L}\mathsf{T}^{-1})
     (\mathsf{L}\mathsf{T}^{-1})
    =\mathsf{M}\mathsf{L}^2\mathsf{T}^{-2}
@@ -1963,9 +1989,9 @@ $pc$ と $mc^2$ がどっちもenergy。だから $p^2$ と $m^2$ に、足り�
 \end{align}
 だから、それぞれ2乗して
 \begin{equation}
-  {E^2=p^2c^2+m^2c^4}.
+  {E^2=p_x^2c^2+m^2c^4}.
 \end{equation}
-左辺の$E$はenergy、右辺の$p$は3次元の運動量の大きさ。
+左辺の$E$はエネルギー、右辺の$p$は3次元の運動量の大きさ。
 }
 \end{solutionbox}
 
@@ -2053,10 +2079,10 @@ $0\leq\beta_1,\beta_2<1$なら分母は正で
   \tag{A}
 \end{equation*}
 }
-二つのvectorから$T^{\mu\nu}=A^\mu B^\nu$を作る。
+二つのベクトルから$T^{\mu\nu}=A^\mu B^\nu$を作る。
 \solutionpart{1}{%
 $T^{\mu\nu}$が式\textup{(A)}に従うことを示せ。
-}{$T^{\mu\nu}=A^\mu B^\nu$ の二つの添字は、それぞれ反変vectorとして変わる。
+}{$T^{\mu\nu}=A^\mu B^\nu$ の二つの添字は、それぞれ反変ベクトルとして変わる。
 $A'^\mu=(\frac{\partial x'^\mu}{\partial x^\rho})A^\rho$ と $B'^\nu=(\frac{\partial x'^\nu}{\partial x^\sigma})B^\sigma$ を掛ければ、Jacobianが二つ掛かる、2階tensorの変換になる。}{%
 \begin{align}
   T'^{\mu\nu}
@@ -2145,7 +2171,7 @@ Jacobianと逆Jacobianが打ち消し合って、添字のないscalarだけ残�
 
 この節の宿題では、時間の成分の符号を一つ落とすだけで答えが変わる。
 計量で添字を下げると、時間成分の符号だけが変わるから、$A^\mu A_\mu$でも$\Delta s^2$でも、時間の項は引き算で入る。
-$U^\mu U_\mu$が$-1$にならなかったり、$E^2=p^2+m^2$が合わなかったりしたら、最初に疑うのはそこ。
+$U^\mu U_\mu$が$-1$にならなかったり、$E^2=p_x^2+m^2$が合わなかったりしたら、最初に疑うのはそこ。
 添字の数も、同じくらい落としやすい。和を取るのは上に1回・下に1回の組だけで、同じ文字が3回目に出てきたら、どこかで文字を替える。
 
 
@@ -2169,10 +2195,10 @@ $U^\mu U_\mu$が$-1$にならなかったり、$E^2=p^2+m^2$が合わなかっ�
 を考える。$a$は定数。
 \solutionpart{1}{%
 SI単位で$[L]$、$[S]$、$[a]$を求めよ。
-}{Lagrangianはenergy、作用 $S=\int L\,\dd t$ はenergyかける時間。
+}{Lagrangianはエネルギー、作用 $S=\int L\,\dd t$ はエネルギーかける時間。
 $L$ に足す $\frac{\dd F}{\dd t}$ がLagrangianと同じ次元なら、$F$ は作用と同じ次元。
 $F=aqt$、$[q]=\mathrm m$、$[t]=\mathrm s$ から $[a]$ を解く。}{%
-Lagrangianはenergy、作用はenergyかける時間だから
+Lagrangianはエネルギー、作用はエネルギーかける時間だから
 \begin{equation}
   {[L]=\mathrm{J},\qquad [S]=\mathrm{J\,s}}.
 \end{equation}
@@ -2246,7 +2272,7 @@ $a$の入った二つの項が消し合って、元の$L$と同じ式になっ�
 }
 \end{solutionbox}
 
-\begin{solutionbox}{確認　一様力とenergy保存}
+\begin{solutionbox}{確認　一様力とエネルギー保存}
 \[
   L(q,\dot q)=\frac12m\dot q^2+fq
 \]
@@ -2270,7 +2296,7 @@ Euler--Lagrange方程式に入れる。
 \begin{equation}
   {m\ddot q=f}.
 \end{equation}
-$+fq$の項は、potential $V(q)=-fq$と同じ。力は$-V'(q)=f$で、一定。Newtonの式がそのまま出た。
+$+fq$の項は、ポテンシャル $V(q)=-fq$と同じ。力は$-V'(q)=f$で、一定。Newtonの式がそのまま出た。
 }
 \solutionpart{2}{%
 $q(0)=q_0$、$\dot q(0)=v_0$を満たす解を求めよ。
@@ -2292,22 +2318,22 @@ $q(0)=q_0$から$C_2=q_0$。
 \end{equation}
 }
 \solutionpart{3}{%
-energy function$E=\dot q\,p-L$を求めよ。
-}{energy functionは、共役運動量 $p=\frac{\partial L}{\partial\dot q}$ を使って $E=\dot q\,p-L$ と決めたもの。
-まず $p=m\dot q$ を出して入れる。設問(1)で、$+fq$ は potential $-fq$ と読めた。$E$ が運動のenergyとそのpotentialの和になるかを見る。}{%
+エネルギー関数$E=\dot q\,p-L$を求めよ。
+}{エネルギー関数は、共役運動量 $p=\frac{\partial L}{\partial\dot q}$ を使って $E=\dot q\,p-L$ と決めたもの。
+まず $p=m\dot q$ を出して入れる。設問(1)で、$+fq$ は ポテンシャル $-fq$ と読めた。$E$ が運動のエネルギーとそのポテンシャルの和になるかを見る。}{%
 $p=m\dot q$だから
 \begin{equation}
   E=\dot q\,p-L
   =m\dot q^2-\left(\frac12m\dot q^2+fq\right)
   ={\frac12m\dot q^2-fq}.
 \end{equation}
-運動のenergyと、potential $V=-fq$ の和になった。
+運動のエネルギーと、ポテンシャル $V=-fq$ の和になった。
 }
 \solutionpart{4}{%
 設問(2)で得た$q(t)$と$\dot q(t)$を
-設問(3)のenergy function $E$へ代入し、
+設問(3)のエネルギー関数 $E$へ代入し、
 時間に依存しないことを確かめよ。
-}{energyが本当に保存してるか、解で確かめる。設問(2)の $q(t)$ と $\dot q(t)$ を、設問(3)の $E=m\dot q^2/2-fq$ に入れる。
+}{エネルギーが本当に保存してるか、解で確かめる。設問(2)の $q(t)$ と $\dot q(t)$ を、設問(3)の $E=m\dot q^2/2-fq$ に入れる。
 展開して、$t$ の1次と2次の項がそれぞれ消えて、初期値だけ残るか見る。}{%
 \begin{align}
   E(t)
@@ -2419,7 +2445,7 @@ $T<\pi/\omega$なら$n\geq1$に対して
 }
 \end{solutionbox}
 
-\begin{solutionbox}{誘導付き　energy identityを自分で導く}
+\begin{solutionbox}{誘導付き　エネルギー恒等式を自分で導く}
 一般の$L(q^i,\dot q^i,t)$について
 \[
   p_i=\frac{\partial L}{\partial\dot q^i},\qquad
@@ -2503,9 +2529,9 @@ Euler--Lagrange方程式は$\dot p_i=\frac{\partial L}{\partial q^i}$だから
 \end{equation}
 }
 \solutionpart{4}{%
-$L=\frac12m(t)\dot q^2-V(q)$ではenergyが一般に保存しないことを式で示せ。
+$L=\frac12m(t)\dot q^2-V(q)$ではエネルギーが一般に保存しないことを式で示せ。
 }{$L$ が時間そのものによるときは、設問(3)の $\frac{\dd E}{\dd t}=-\frac{\partial L}{\partial t}$ を使う。
-$m=m(t)$ のまま $L$ を $t$ で偏微分すると $\dot m\dot q^2/2$ が残る。$\dot m\ne0$ なら、energyはふつう一定じゃない。}{%
+$m=m(t)$ のまま $L$ を $t$ で偏微分すると $\dot m\dot q^2/2$ が残る。$\dot m\ne0$ なら、エネルギーはふつう一定じゃない。}{%
 \begin{equation}
   L=\frac12m(t)\dot q^2-V(q)
 \end{equation}
@@ -2529,7 +2555,7 @@ $\dot m\neq0$なら、ふつうは保存しない。
 \end{solutionbox}
 
 \begin{solutionbox}{本気　極座標の循環座標}
-平面上の質量$m$の粒子を極座標$(r,\phi)$で表し、中心力potential$V(r)$のもとで
+平面上の質量$m$の粒子を極座標$(r,\phi)$で表し、中心力ポテンシャル$V(r)$のもとで
 \[
   L=\frac m2(\dot r^2+r^2\dot\phi^2)-V(r)
 \]
@@ -2564,7 +2590,7 @@ Noetherで言えば、$\phi\to\phi+\varepsilon$で$L$が変わらない、回転
 \solutionpart{2}{%
 $r$のEuler--Lagrange方程式を導け。
 }{半径方向の運動は、$r$ のEuler--Lagrange方程式 $\frac{\dd}{\dd t}\left(\frac{\partial L}{\partial\dot r}\right)-\frac{\partial L}{\partial r}=0$ から。
-$r$ は、potentialのほかに、運動の項 $r^2\dot\phi^2$ にも入っている。そこも含めて、二つの偏微分を出す。}{%
+$r$ は、ポテンシャルのほかに、運動の項 $r^2\dot\phi^2$ にも入っている。そこも含めて、二つの偏微分を出す。}{%
 $r$で偏微分するときは、$\dot r$、$\phi$、$\dot\phi$を止める。項ごとに見る。
 \begin{align*}
   \pder{}{\dot r}\left(\frac m2\dot r^2\right)&=m\dot r,\\
@@ -2588,15 +2614,15 @@ $m\ddot r=mr\dot\phi^2-V'(r)$と書くと、右の一つ目が外向きの遠心
 $r^2\dot\phi^2$の項を$r$で微分するのを忘れると、遠心力が抜ける。
 }
 \solutionpart{3}{%
-$\dot\phi=\frac{\ell}{mr^2}$をenergyへ代入し、
+$\dot\phi=\frac{\ell}{mr^2}$をエネルギーへ代入し、
     \[
       E=\frac m2\dot r^2+V_{\mathrm{eff}}(r),
       \qquad
       V_{\mathrm{eff}}(r)=V(r)+\frac{\ell^2}{2mr^2}
     \]
     を示せ。
-}{時刻そのものによらないから、まずenergy $E=\dot r\,p_r+\dot\phi\,p_\phi-L$ を出す。
-角運動量 $\ell=mr^2\dot\phi$ から $\dot\phi=\ell/(mr^2)$ を入れると、回転の項が、$r$ だけの遠心力のpotentialになる。}{%
+}{時刻そのものによらないから、まずエネルギー $E=\dot r\,p_r+\dot\phi\,p_\phi-L$ を出す。
+角運動量 $\ell=mr^2\dot\phi$ から $\dot\phi=\ell/(mr^2)$ を入れると、回転の項が、$r$ だけの遠心力のポテンシャルになる。}{%
 時刻そのものにはよらないから
 \begin{align}
   E
@@ -2645,7 +2671,7 @@ $m(x\dot y-y\dot x)=xp_y-yp_x$は、回転のNoether量を$z$軸のまわりで�
 \solutionpart{1}{%
 $V$が定数の場合、$\delta\vct r=\varepsilon\vct a$で$\delta L=0$を示し、
     保存量を求めよ。
-}{potentialが定数なら、Lagrangianは位置 $\boldsymbol r$ によらない。だから、全体をずらす $\delta\boldsymbol r=\varepsilon\boldsymbol a$ で $\delta L=0$。
+}{ポテンシャルが定数なら、Lagrangianは位置 $\boldsymbol r$ によらない。だから、全体をずらす $\delta\boldsymbol r=\varepsilon\boldsymbol a$ で $\delta L=0$。
 Noetherの式 $Q=p_i\Delta q^i-B$ で $B=0$, $\Delta\boldsymbol r=\boldsymbol a$。どんな $\boldsymbol a$ にも掛かる係数が、保存する運動量。}{%
 $V$が定数なら、$L$は$\vct r$によらない。
 \begin{equation}
@@ -2663,9 +2689,9 @@ $\vct a$はなんでもいいから
 \end{equation}
 }
 \solutionpart{2}{%
-一般の中心力potentialについて、
+一般の中心力ポテンシャルについて、
     $\delta\vct r=\varepsilon\vct\theta\times\vct r$で$\delta|\vct r|=0$を示せ。
-}{中心力のpotentialは $|\boldsymbol r|$ だけで決まる。だから、小さく回しても半径が変わらないことを示せば、対称性になる。
+}{中心力のポテンシャルは $|\boldsymbol r|$ だけで決まる。だから、小さく回しても半径が変わらないことを示せば、対称性になる。
 $\delta|\boldsymbol r|=(\boldsymbol r/|\boldsymbol r|)\cdot\delta\boldsymbol r$ に $\delta\boldsymbol r=\varepsilon\boldsymbol\theta\times\boldsymbol r$ を入れる。外積 $\boldsymbol\theta\times\boldsymbol r$ は $\boldsymbol r$ に直角。}{%
 まず、長さの2乗を変分する。
 \begin{align}
@@ -2692,7 +2718,7 @@ $\delta\vct r=\varepsilon\vct\theta\times\vct 0=\vct 0$だから、
 \solutionpart{3}{%
 その回転に対するNoether量から$\vct J=\vct r\times\vct p$を得よ。
 }{回転のNoether量は $Q_{\boldsymbol\theta}=\boldsymbol p\cdot\Delta\boldsymbol r$。$\Delta\boldsymbol r=\boldsymbol\theta\times\boldsymbol r$ を入れる。
-三つのvectorの積を $\boldsymbol\theta\cdot(\boldsymbol r\times\boldsymbol p)$ に並べ替えれば、どんな軸 $\boldsymbol\theta$ にも掛かる係数が、角運動量。}{%
+三つのベクトルの積を $\boldsymbol\theta\cdot(\boldsymbol r\times\boldsymbol p)$ に並べ替えれば、どんな軸 $\boldsymbol\theta$ にも掛かる係数が、角運動量。}{%
 \begin{align}
   Q_{\vct\theta}
   &=\vct p\cdot(\vct\theta\times\vct r)\\
@@ -2854,7 +2880,7 @@ $q'=q+ut$、$\dot q'=\dot q+u$だから
 }
 \solutionpart{2}{%
 $E=\vct v\cdot\vct p-L=\gamma mc^2$を示せ。
-}{相対論のenergyも、energy functionの定義 $E=\boldsymbol v\cdot\boldsymbol p-L$ で出す。$L$ は時刻を含まないから、この $E$ は保存する。
+}{相対論のエネルギーも、エネルギー関数の定義 $E=\boldsymbol v\cdot\boldsymbol p-L$ で出す。$L$ は時刻を含まないから、この $E$ は保存する。
 設問(1)の $\boldsymbol p=\gamma m\boldsymbol v$ と $\sqrt{1-v^2/c^2}=1/\gamma$ を入れて、$\gamma^2(1-v^2/c^2)=1$ で $\gamma mc^2$ にまとめる。}{%
 \begingroup\postdisplaypenalty=10000
 \begin{align}
@@ -2881,7 +2907,7 @@ $\gamma^2m^2c^4$ でくくって、$\gamma^2(1-v^2/c^2)=1$ で速度を消す。
 \solutionpart{4}{%
 $L$を$\frac{v^2}{c^2}$の2次まで展開し、非相対論的Lagrangianを読み取れ。
 }{遅いときは $z=\boldsymbol v^2/c^2\ll1$。$\sqrt{1-z}$ を $z$ で二つ目まで展開した $1-z/2-z^2/8+O(z^3)$ を使う。$\gamma$ を展開したときと同じやり方。
-$L=-mc^2\sqrt{1-z}$ に入れて、静止energyの定数、$v^2$、$v^4/c^2$ の項に分けて読む。}{%
+$L=-mc^2\sqrt{1-z}$ に入れて、静止エネルギーの定数、$v^2$、$v^4/c^2$ の項に分けて読む。}{%
 \begin{equation}
   \sqrt{1-z}=1-\frac z2-\frac{z^2}{8}+O(z^3),
   \qquad z=\frac{\vct v^2}{c^2}
@@ -2897,9 +2923,9 @@ $L=-mc^2\sqrt{1-z}$ に入れて、静止energyの定数、$v^2$、$v^4/c^2$ の
 $m\vct v^2/2$。この項が正で出るのは、作用の前に負号を付けたから。次の$m\vct v^4/(8c^2)$が、相対論のいちばん小さい補正。
 }
 \solutionpart{5}{%
-$L$へ定数を加えても運動方程式は変わらないのに、energy functionの値は変わる理由を式で説明せよ。
+$L$へ定数を加えても運動方程式は変わらないのに、エネルギー関数の値は変わる理由を式で説明せよ。
 }{定数 $C$ は $q^i,\dot q^i$ によらない。だから $L'=L+C$ の偏微分は $L$ と同じで、Euler--Lagrange方程式は変わらない。
-一方、energy $E'=\dot q^ip_i-L'$ には $-C$ がそのまま残る。運動方程式と、energyの基準のずれを、分けて計算する。}{%
+一方、エネルギー $E'=\dot q^ip_i-L'$ には $-C$ がそのまま残る。運動方程式と、エネルギーの基準のずれを、分けて計算する。}{%
 $L'=L+C$とすると
 \begin{equation}
   \pder{L'}{q^i}=\pder{L}{q^i},
@@ -2911,12 +2937,12 @@ $L'=L+C$とすると
   E'=\dot q^ip_i-L'=E-C.
 \end{equation}
 だから
-Lagrangianに定数を足すと、energyの基準が $-C$ だけずれる。
-相対論の$L$から$-mc^2$を落とすのは、energyから静止energyを落として、
-運動のenergyを基準にする、ということ。
+Lagrangianに定数を足すと、エネルギーの基準が $-C$ だけずれる。
+相対論の$L$から$-mc^2$を落とすのは、エネルギーから静止エネルギーを落として、
+運動のエネルギーを基準にする、ということ。
 }
 \solutionpart{6}{%
-$c=1$で世界線作用を$S=-m\int\dd\lambda\sqrt{-\dot x^2}$と書き、
+$c=1$で世界線作用を$S=-m\int\dd\lambda\sqrt{-\eta_{\mu\nu}\dot x^\mu\dot x^\nu}$と書き、
     $\lambda\to\lambda'(\lambda)$のもとで不変なことを示せ。
 }{目盛りを付け替えると、$\dd\lambda'$ と速度 $\frac{\dd x^\mu}{\dd\lambda'}$ には、逆向きのJacobianが掛かる。
 chain rule $\frac{\dd x}{\dd\lambda'}=\frac{\dd\lambda}{\dd\lambda'}\frac{\dd x}{\dd\lambda}$ を根号に入れる。向きを保つ変換ならJacobianは正だから、測り方の因子と消し合って、元の作用に戻る。}{%
@@ -2964,7 +2990,7 @@ chain rule $\frac{\dd x}{\dd\lambda'}=\frac{\dd\lambda}{\dd\lambda'}\frac{\dd x}
 \end{equation}
 1本目からは運動方程式が、2本目からは保存量が出る。
 2本目の$B$は、ずらしたときに$L$が全微分だけ変わる分で、$L$がまったく変わらなければ$B=0$。Galilei boostで$B=mq$を落とすと、残る$pt$は、$p\ne0$なら時間とともに増えるから、保存量にならない。
-もう一つ落としやすいのは、$\frac{\dd}{\dd t}$と$\pder{}{t}$の区別。energy identityの設問(1)のとおり、$\pder Lt$は$L$に$t$が式として入っている分だけで、energyが保存するかどうかはこの項で決まる。
+もう一つ落としやすいのは、$\frac{\dd}{\dd t}$と$\pder{}{t}$の区別。エネルギー恒等式の設問(1)のとおり、$\pder Lt$は$L$に$t$が式として入っている分だけで、エネルギーが保存するかどうかはこの項で決まる。
 
 
 \clearpage
@@ -3549,7 +3575,7 @@ $k_2=4\pi/\ell$、波長$\lambda=\ell/2$。
 }
 \end{solutionbox}
 
-\begin{solutionbox}{本気　energyの局所保存}
+\begin{solutionbox}{本気　エネルギーの局所保存}
 \problemformulas{%
 \begin{align*}
 0
@@ -3608,7 +3634,7 @@ $k_2=4\pi/\ell$、波長$\lambda=\ell/2$。
 \solutionpart{2}{%
 $\Eden$と$\Jflux$を用いて
     $\partial_t\Eden+\partial_x\Jflux=0$を示せ。
-}{設問(1)の式を、連続の式 $\partial_t\Eden+\partial_x\Jflux=0$ の形と並べる。時間微分の中身がenergyの密度$\Eden$、空間微分の中身がenergyの流れ$\Jflux$。$\partial_x$の前の符号を$\Jflux$の中に入れる。}{%
+}{設問(1)の式を、連続の式 $\partial_t\Eden+\partial_x\Jflux=0$ の形と並べる。時間微分の中身がエネルギーの密度$\Eden$、空間微分の中身がエネルギーの流れ$\Jflux$。$\partial_x$の前の符号を$\Jflux$の中に入れる。}{%
 設問(1)の式を、時間の微分と空間の微分に分けて読む。
 \begin{equation*}
   \partial_t\underbrace{\left(\frac{\mu}{2}y_t^2+\frac{\Tens}{2}y_x^2\right)}_{\Eden}
@@ -3624,13 +3650,13 @@ $\Eden$と$\Jflux$を用いて
 \begin{equation}
   {\partial_t\Eden+\partial_x\Jflux=0}.
 \end{equation}
-$\Eden$の一つ目は動く運動のenergy、二つ目は伸びた分のばねのenergy。
+$\Eden$の一つ目は動く運動のエネルギー、二つ目は伸びた分のばねのエネルギー。
 $\Jflux$は、左の部分が右の部分にする仕事の速さ。張力の上下の成分$-\Tens y_x$に、上下の速さ$y_t$を掛けたもの。
-「ある場所のenergyが減ったら、その分が隣に流れ出た」という、局所的な保存。
+「ある場所のエネルギーが減ったら、その分が隣に流れ出た」という、局所的な保存。
 }
 \solutionpart{3}{%
 区間$[0,\ell]$で積分し、式\textup{(B)}を導け。
-}{全energyは $E=\int_0^\ell\Eden\,\dd x$。設問(2)の局所の保存則を$[0,\ell]$で積分する。$\partial_x\Jflux$の積分は、端の値の差になる。}{%
+}{全エネルギーは $E=\int_0^\ell\Eden\,\dd x$。設問(2)の局所の保存則を$[0,\ell]$で積分する。$\partial_x\Jflux$の積分は、端の値の差になる。}{%
 \begin{align}
   \frac{\dd E}{\dd t}
   &=\int_0^\ell\partial_t\Eden\,\dd x\\
@@ -3640,8 +3666,8 @@ $\Jflux$は、左の部分が右の部分にする仕事の速さ。張力の上
 \end{align}
 }
 \solutionpart{4}{%
-固定端、自由端、周期境界のそれぞれで全energyが保存する理由を答えよ。
-}{全energyが保存するのは、設問(3)の端の項 $\Jflux(0,t)-\Jflux(\ell,t)$ が0のとき。固定端、自由端、周期の条件を、それぞれ $\Jflux=-\Tens y_ty_x$ に入れる。}{%
+固定端、自由端、周期境界のそれぞれで全エネルギーが保存する理由を答えよ。
+}{全エネルギーが保存するのは、設問(3)の端の項 $\Jflux(0,t)-\Jflux(\ell,t)$ が0のとき。固定端、自由端、周期の条件を、それぞれ $\Jflux=-\Tens y_ty_x$ に入れる。}{%
 \begin{itemize}
   \item 固定端では$y$が端で一定なので$y_t=0$、したがって$\Jflux=0$。
   \item 自由端では$y_x=0$、したがって$\Jflux=0$。
@@ -3680,7 +3706,7 @@ $\Tens=\mu v^2$を使うと
   {\langle\Jflux\rangle
   =v\langle\Eden\rangle}.
 \end{equation}
-$\langle\Jflux\rangle>0$だから、energyは波と同じ右向きに流れてる。流れの平均は、密度の平均に波の速さ$v$を掛けたもの。
+$\langle\Jflux\rangle>0$だから、エネルギーは波と同じ右向きに流れてる。流れの平均は、密度の平均に波の速さ$v$を掛けたもの。
 }
 \end{solutionbox}
 
@@ -3725,7 +3751,7 @@ $\partial_ty$と$\partial_xy$をmode和で書け。
     \cos\frac{n\pi x}{\ell}.
 \end{equation}
 二つ目は、sineがcosineに変わった。次の設問でこれを2乗して積分するとき、cosineどうしの直交性を使う。
-番号の大きいmodeほど、係数$n\pi/\ell$で傾きが大きくなる。細かい波ほど、ばねのenergyが高い。
+番号の大きいmodeほど、係数$n\pi/\ell$で傾きが大きくなる。細かい波ほど、ばねのエネルギーが高い。
 }
 \solutionpart{2}{%
 正弦の直交性から$\int_0^\ell(\partial_ty)^2\dd x$を求めよ。
@@ -3789,8 +3815,8 @@ $\Tens=\mu v^2$と$\omega_n=n\pi v/\ell$を使って
 }
 \solutionpart{5}{%
 $Q_n=\sqrt{\frac{\mu\ell}{2}}\,q_n$で規格化し、
-    各modeの共役運動量とenergyを求めよ。
-}{$Q_n=\sqrt{\mu\ell/2}\,q_n$ を式(B)に入れると、modeごとの運動の項が $\dot Q_n^2/2$ になる。共役運動量は $P_n=\pder{L}{\dot Q_n}$。energyは、試験の前に作ったenergy function $E=P\dot Q-L$ と同じ作り方。}{%
+    各modeの共役運動量とエネルギーを求めよ。
+}{$Q_n=\sqrt{\mu\ell/2}\,q_n$ を式(B)に入れると、modeごとの運動の項が $\dot Q_n^2/2$ になる。共役運動量は $P_n=\pder{L}{\dot Q_n}$。エネルギーは、試験の前に作ったエネルギー関数 $E=P\dot Q-L$ と同じ作り方。}{%
 \begin{equation}
   Q_n=\sqrt{\frac{\mu\ell}{2}}q_n
 \end{equation}
@@ -3802,13 +3828,13 @@ $Q_n=\sqrt{\frac{\mu\ell}{2}}\,q_n$で規格化し、
 \begin{equation}
   {P_n=\pder{L}{\dot Q_n}=\dot Q_n}.
 \end{equation}
-時刻そのものにはよらないから、modeごとのenergyは
+時刻そのものにはよらないから、modeごとのエネルギーは
 \begin{equation}
   {
   E_n=P_n\dot Q_n-L_n
   =\frac12P_n^2+\frac12\omega_n^2Q_n^2}.
 \end{equation}
-全部のenergyは、独立な振動子の和
+全部のエネルギーは、独立な振動子の和
 \begin{equation}
   {E=\sum_{n=1}^{\infty}E_n}
 \end{equation}
@@ -3845,7 +3871,7 @@ $Q_n=\sqrt{\frac{\mu\ell}{2}}\,q_n$で規格化し、
 
 
 \begin{solutionbox}{確認　2次元状態とBorn確率}
-Orthonormal基底$|0\rangle,|1\rangle$と状態
+直交規格化基底$|0\rangle,|1\rangle$と状態
 \[
   |\psi\rangle
   =\frac{2|0\rangle+\imunit|1\rangle}{\sqrt5}
@@ -3860,7 +3886,7 @@ Orthonormal基底$|0\rangle,|1\rangle$と状態
 \solutionpart{1}{%
 $|\psi\rangle$が正規化されていることを確かめよ。
 }{正規化は、内積 $\langle\psi|\psi\rangle=1$ で確かめる。$\langle\psi|$を作るとき、係数を複素共役する。基底は $\langle i|j\rangle=\delta_{ij}$。}{%
-$|\psi\rangle$は縦に並べたvector、$\langle\psi|$はそれを転置して複素共役した横のvector。
+$|\psi\rangle$は縦に並べたベクトル、$\langle\psi|$はそれを転置して複素共役した横のベクトル。
 だから係数の$\imunit$は$-\imunit$になる。正規化されている、は、内積$\langle\psi|\psi\rangle$が1、ということ。
 
 \begin{align*}
@@ -3954,7 +3980,7 @@ $\hat B^\dagger=\hat B$を確かめよ。
 }
 \solutionpart{2}{%
 固有値を求めよ。
-}{固有値は、ゼロじゃない固有vectorがある条件 $\det(\hat B-\lambda\hat1)=0$ から出す。$2\times2$の行列式を展開すると、$\lambda$の2次方程式になる。}{%
+}{固有値は、ゼロじゃない固有ベクトルがある条件 $\det(\hat B-\lambda\hat1)=0$ から出す。$2\times2$の行列式を展開すると、$\lambda$の2次方程式になる。}{%
 固有値は、$(\hat B-\lambda\hat1)v=0$にゼロじゃない解$v$がある$\lambda$。行列が逆を持たないこと、つまり行列式がゼロ。
 \begin{equation*}
   \hat B-\lambda\hat1
@@ -3981,7 +4007,7 @@ $(-\imunit)(\imunit)=-\imunit^2=1$。これを$-1$と取ると、$\lambda^2+1=0$
 確かめに、traceは固有値の和、行列式は積。$\operatorname{tr}\hat B=0=1+(-1)$、$\det\hat B=-1=1\cdot(-1)$。
 }
 \solutionpart{3}{%
-それぞれに対する正規化固有vectorを1組求めよ。
+それぞれに対する正規化固有ベクトルを1組求めよ。
 }{固有値ごとに $(\hat B-\lambda\hat1)v=0$ を解いて、二つの成分の比を決める。比だけでは全体の大きさが決まらないから、$v^\dagger v=1$ で決める。}{%
 $v=(x,y)^{\mathsf T}$と置く。二つの固有値について
 \begin{align*}
@@ -4012,9 +4038,9 @@ $\lambda=1$なら$y=\imunit x$、$\lambda=-1$なら$y=-\imunit x$だから
 \]
 }
 \solutionpart{4}{%
-二つの固有vectorが直交することを確かめよ。
-}{複素のvectorの直交は、内積 $\langle+|-\rangle=v_+^\dagger v_-$ で見る。左のvectorを複素共役してから、成分の積を足す。}{%
-複素のvectorでは、内積は左を複素共役して転置する。
+二つの固有ベクトルが直交することを確かめよ。
+}{複素のベクトルの直交は、内積 $\langle+|-\rangle=v_+^\dagger v_-$ で見る。左のベクトルを複素共役してから、成分の積を足す。}{%
+複素のベクトルでは、内積は左を複素共役して転置する。
 \begin{equation*}
   \langle+|=\bigl(|+\rangle\bigr)^\dagger
   =\frac1{\sqrt2}\begin{pmatrix}1&\imunit\end{pmatrix}^*
@@ -4031,7 +4057,7 @@ $\lambda=1$なら$y=\imunit x$、$\lambda=-1$なら$y=-\imunit x$だから
   ={0}.
 \end{align*}
 共役を忘れて$(1,\imunit)\cdot(1,-\imunit)$とすると$1+1=2$で、直交しないように見えてしまう。
-エルミート行列の、違う固有値の固有vectorは、いつも直交する。この例はその一つ。
+エルミート行列の、違う固有値の固有ベクトルは、いつも直交する。この例はその一つ。
 }
 \end{solutionbox}
 
@@ -4453,7 +4479,7 @@ $\langle n|\hat p^2|n\rangle=m\hbar\omega\left(n+\frac{1}{2}\right)$を示し、
   =\hbar\left(n+\frac12\right)}.
 \]
 $n=0$のときだけ、Robertsonの下限$\hbar/2$ぴったり。励起するほど、積は$\hbar$ずつ大きくなる。
-確かめに、energyの期待値。$\frac{\avg{\hat p^2}}{2m}+\frac{m\omega^2}2\avg{\hat q^2}=\frac{\hbar\omega}2(n+\frac12)\cdot2=\hbar\omega(n+\frac12)$。前の問題「生成消滅演算子の代数」の式(C)、$\hat H=\hbar\omega(\hat N+\frac12)$と合ってる。
+確かめに、エネルギーの期待値。$\frac{\avg{\hat p^2}}{2m}+\frac{m\omega^2}2\avg{\hat q^2}=\frac{\hbar\omega}2(n+\frac12)\cdot2=\hbar\omega(n+\frac12)$。前の問題「生成消滅演算子の代数」の式(C)、$\hat H=\hbar\omega(\hat N+\frac12)$と合ってる。
 }
 \end{solutionbox}
 
@@ -4521,8 +4547,8 @@ $n=0$のときだけ、Robertsonの下限$\hbar/2$ぴったり。励起するほ
 \]
 }
 \solutionpart{4}{%
-Schrodinger方程式へ代入し、energyが$\frac{\hbar\omega}{2}$であることを直接確かめよ。
-}{設問(2)の$\psi_0$を2回微分して、$\hat H=-\frac{\hbar^2}{2m}\frac{\dd^2}{\dd q^2}+\frac12m\omega^2q^2$ に入れる。$\hat H\psi_0$が$\psi_0$の定数倍になれば、その定数がenergy。そのためには、$q^2$に比例する項が消えないといけない。}{%
+Schr\"odinger方程式へ代入し、エネルギーが$\frac{\hbar\omega}{2}$であることを直接確かめよ。
+}{設問(2)の$\psi_0$を2回微分して、$\hat H=-\frac{\hbar^2}{2m}\frac{\dd^2}{\dd q^2}+\frac12m\omega^2q^2$ に入れる。$\hat H\psi_0$が$\psi_0$の定数倍になれば、その定数がエネルギー。そのためには、$q^2$に比例する項が消えないといけない。}{%
 $\beta=m\omega/\hbar$と置くと
 \[
   \psi_0''=(-\beta+\beta^2q^2)\psi_0.
@@ -4541,11 +4567,11 @@ $\beta=m\omega/\hbar$と置くと
   \right]\psi_0\\
   &={\frac{\hbar\omega}{2}\psi_0}.
 \end{align*}
-だから$E_0=\hbar\omega/2$。いちばん下の状態でも、energyはゼロにならない。
+だから$E_0=\hbar\omega/2$。いちばん下の状態でも、エネルギーはゼロにならない。
 }
 \end{solutionbox}
 
-\begin{solutionbox}{本気　複数modeの占有数と零点energy}
+\begin{solutionbox}{本気　複数modeの占有数と零点エネルギー}
 $M$個のmodeを残し、$\omega_n=n\omega$とする。
 \[
   \hat H_M
@@ -4554,8 +4580,8 @@ $M$個のmodeを残し、$\omega_n=n\omega$とする。
 \]
 を考える。
 \solutionpart{1}{%
-真空$|0,0,\ldots\rangle$のenergyを$M$の式で求めよ。
-}{modeごとのenergy $\hbar n\omega(N_n+\frac12)$ に、真空の$N_n=0$を入れて、$n=1$から$M$まで足す。和は $\sum_{n=1}^M n=M(M+1)/2$。}{%
+真空$|0,0,\ldots\rangle$のエネルギーを$M$の式で求めよ。
+}{modeごとのエネルギー $\hbar n\omega(N_n+\frac12)$ に、真空の$N_n=0$を入れて、$n=1$から$M$まで足す。和は $\sum_{n=1}^M n=M(M+1)/2$。}{%
 全部の$N_n=0$だから
 \begin{align*}
   E_{\mathrm{vac}}(M)
@@ -4565,9 +4591,9 @@ $M$個のmodeを残し、$\omega_n=n\omega$とする。
 \end{align*}
 }
 \solutionpart{2}{%
-$|2,1,0,\ldots\rangle$の真空からの励起energyを求めよ。
-}{励起energyは、その状態のenergyから真空のenergyを引いたもの。引き算で$\frac12$の項がどうなるかを先に見てから、$|2,1,0,\ldots\rangle$の占有数を読む。}{%
-全energyから、どの状態にも共通の真空のenergyを引く。
+$|2,1,0,\ldots\rangle$の真空からの励起エネルギーを求めよ。
+}{励起エネルギーは、その状態のエネルギーから真空のエネルギーを引いたもの。引き算で$\frac12$の項がどうなるかを先に見てから、$|2,1,0,\ldots\rangle$の占有数を読む。}{%
+全エネルギーから、どの状態にも共通の真空のエネルギーを引く。
 \begin{equation*}
   E-E_{\mathrm{vac}}
   =\sum_n\hbar n\omega\left(N_n+\frac12\right)-\sum_n\hbar n\omega\cdot\frac12
@@ -4584,7 +4610,7 @@ $|2,1,0,\ldots\rangle$は$N_1=2$、$N_2=1$、ほかは$0$。modeごとに足す�
   =\hbar\omega(1\cdot2+2\cdot1)
   ={4\hbar\omega}.
 \]
-$M\geq2$なら、$M$がいくつでも、この差は変わらない。真空のenergyは$M$で大きくなるけど、差には入ってこない。
+$M\geq2$なら、$M$がいくつでも、この差は変わらない。真空のエネルギーは$M$で大きくなるけど、差には入ってこない。
 }
 \solutionpart{3}{%
 設問(2)の状態$|2,1,0,\ldots\rangle$へ
@@ -4605,7 +4631,7 @@ $\hat a_1\hat a_2^\dagger$を作用させよ。
 \]
 }
 \solutionpart{4}{%
-$M\to\infty$で真空energyがどの速さで発散するか説明せよ。
+$M\to\infty$で真空エネルギーがどの速さで発散するか説明せよ。
 }{設問(1)の $E_{\mathrm{vac}}(M)$ を$M$のべきに展開して、$M\to\infty$でいちばん速く大きくなる項を探す。ほかの項は、その項との比を取って比べる。}{%
 設問(1)の式を展開する。
 \[
@@ -4623,14 +4649,14 @@ $M$が大きいと、$M^2$に比べて$M$は小さい。比を取ると
   \sim{\frac{\hbar\omega}{4}M^2}
   \qquad(M\to\infty).
 \]
-真空energyは、残したmodeの数の2乗で発散する。
-2乗になるのは、modeの数が$M$個で、しかも一つ一つの零点energy$\hbar n\omega/2$が$n$に比例して大きくなるから。授業で千奈が気づいた、足したら無限大、の速さがこれ。
+真空エネルギーは、残したmodeの数の2乗で発散する。
+2乗になるのは、modeの数が$M$個で、しかも一つ一つの零点エネルギー$\hbar n\omega/2$が$n$に比例して大きくなるから。授業で千奈が気づいた、足したら無限大、の速さがこれ。
 }
 \solutionpart{5}{%
-励起energyと真空energyを区別する必要がある理由を書け。
-}{全energyを、占有数で変わる励起energy $\sum_n\hbar\omega_nN_n$ と、どの状態にも共通の零点energy $\frac12\sum_n\hbar\omega_n$ に分ける。二つのうち、どっちが$M\to\infty$で有限に残るかを、設問(2)と(4)から読む。}{%
+励起エネルギーと真空エネルギーを区別する必要がある理由を書け。
+}{全エネルギーを、占有数で変わる励起エネルギー $\sum_n\hbar\omega_nN_n$ と、どの状態にも共通の零点エネルギー $\frac12\sum_n\hbar\omega_n$ に分ける。二つのうち、どっちが$M\to\infty$で有限に残るかを、設問(2)と(4)から読む。}{%
 $\sum_n\hbar\omega_nN_n$は、どのmodeに振動量子をいくつ入れたかで変わる。
-有限個のmodeしか励起しないなら、真空とのenergy差は有限。
+有限個のmodeしか励起しないなら、真空とのエネルギー差は有限。
 
 一方、$\frac12\sum_n\hbar\omega_n$はどの状態にも共通だけど、
 modeを無限にすると発散する。前の有限な差を出すことと、
@@ -4857,7 +4883,7 @@ $J$は外から場を揺らす「源」。$J\neq0$の場所があると、$\phi=
 \begin{solutionbox}{誘導付き　区間上のスカラー場}
 $0<x<L$の実スカラー場を考え、端で$\phi(0,t)=\phi(L,t)=0$とする。
 \solutionpart{1}{%
-$u_n(x)=\sqrt{\frac{2}{L}}\sin(\frac{n\pi x}{L})$がOrthonormalであり、
+$u_n(x)=\sqrt{\frac{2}{L}}\sin(\frac{n\pi x}{L})$が直交規格化であり、
     $-u_n''=\left(\frac{n\pi}{L}\right)^2u_n$を満たすことを示せ。
 }{二つを別々に確かめる。一つは$u_n$を2回微分して、$-\frac{\dd^2}{\dd x^2}$を当てると$u_n$の何倍になるか。もう一つは$\int_0^Lu_nu_m\,\dd x$で、正弦の直交の積分$\frac L2\delta_{nm}$に、係数$\sqrt{2/L}$の2乗を掛ける。}{%
 2回微分すると
@@ -4877,7 +4903,7 @@ $u_n(0)=u_n(L)=0$だから、境界条件も満たす。
 }
 \solutionpart{2}{%
 $\phi(x,t)=\sum_{n=1}^\infty q_n(t)u_n(x)$を作用へ代入せよ。
-}{展開を作用に入れて、空間の積分を三つの項ごとに計算する。運動の項と質量の項には、設問(1)のOrthonormal性。空間微分の項は、部分積分で$u_n'u_m'$を$-u_nu_m''$に替えてから、設問(1)の固有値の式を使う。部分積分の端の項は、$u_n(0)=u_n(L)=0$で消える。}{%
+}{展開を作用に入れて、空間の積分を三つの項ごとに計算する。運動の項と質量の項には、設問(1)の直交規格化性。空間微分の項は、部分積分で$u_n'u_m'$を$-u_nu_m''$に替えてから、設問(1)の固有値の式を使う。部分積分の端の項は、$u_n(0)=u_n(L)=0$で消える。}{%
 空間1次元の作用を
 \[
   S=\frac12\int\dd t\int_0^L\dd x\,
@@ -4978,7 +5004,7 @@ $m\ne0$なら比は
 $\comm{\hat q_r}{\hat p_s}=\imunit\delta_{rs}$から
     $\comm{\hat\phi(\xvec)}{\hat\pi(\yvec)}
       =\imunit\delta^{(3)}(\xvec-\yvec)$を導け。
-}{場と共役運動量を、同じOrthonormalな基底$u_r$で展開する。$u_r$は数だから交換子の外に出せて、交換子は二重の和$\sum_{r,s}$になる。$[\hat q_r,\hat p_s]=\imunit\delta_{rs}$ で、二重の和を一重の和に縮める。そこで問題の完全性の式を使う。}{%
+}{場と共役運動量を、同じ直交規格化な基底$u_r$で展開する。$u_r$は数だから交換子の外に出せて、交換子は二重の和$\sum_{r,s}$になる。$[\hat q_r,\hat p_s]=\imunit\delta_{rs}$ で、二重の和を一重の和に縮める。そこで問題の完全性の式を使う。}{%
 \[
   \hat\phi(\xvec)=\sum_r\hat q_ru_r(\xvec),
   \qquad
@@ -5018,9 +5044,9 @@ $u_r$はただの関数（数）だから、交換子の外に出せる。交換
 設問(1)の$\phi$と$\pi$では$\delta^{(3)}$が出た。ゼロじゃないのは、同じ場所の「位置と運動量」の組だけ。粒子の量子力学で、$[\hat q,\hat q]=0$、$[\hat q,\hat p]=\imunit\hbar$だったのと同じ並び。
 }
 \solutionpart{3}{%
-Orthonormal性と完全性が、それぞれどちら向きの変換に使われたか説明せよ。
-}{二つの式で、何について足したり積分したりしているかを比べる。Orthonormal性は空間で積分して、mode番号のKronecker delta $\delta_{rs}$を作る。完全性はmode番号で足して、空間のDiracのdelta $\delta^{(3)}(\xvec-\yvec)$を作る。設問(1)のどこで、どっちを使ったかを探す。}{%
-Orthonormal性
+直交規格化性と完全性が、それぞれどちら向きの変換に使われたか説明せよ。
+}{二つの式で、何について足したり積分したりしているかを比べる。直交規格化性は空間で積分して、mode番号のKronecker delta $\delta_{rs}$を作る。完全性はmode番号で足して、空間のDiracのdelta $\delta^{(3)}(\xvec-\yvec)$を作る。設問(1)のどこで、どっちを使ったかを探す。}{%
+直交規格化性
 $\int\dd^3x\,u_ru_s=\delta_{rs}$は、場からmodeへの向き。
 場に$u_r$を掛けて積分して、modeの係数を取り出すときに使う。
 $\hat q_r=\int\dd^3x\,u_r\hat\phi$、$\hat p_r=\int\dd^3x\,u_r\hat\pi$。作用をmodeごとの振動子に分けて、$[\hat q_r,\hat p_s]=\imunit\delta_{rs}$を置くところまでが、こっちの向き。
@@ -5097,9 +5123,9 @@ $[\hat a,\hat a^\dagger]=1$を2回使うと
 が、規格化した状態。
 }
 \solutionpart{4}{%
-各状態の真空からの励起energyを求めよ。
-}{真空とのenergy差は $\hat H-E_0=\sum_j\omega_j\hat N_j$。三つの状態それぞれで、modeごとの占有数$N_j$を読む。}{%
-Hamiltonianを、真空のenergy$E_0$とその差に分ける。
+各状態の真空からの励起エネルギーを求めよ。
+}{真空とのエネルギー差は $\hat H-E_0=\sum_j\omega_j\hat N_j$。三つの状態それぞれで、modeごとの占有数$N_j$を読む。}{%
+Hamiltonianを、真空のエネルギー$E_0$とその差に分ける。
 \begin{equation*}
   \hat H=E_0+\sum_j\omega_j\hat N_j,
   \qquad
@@ -5120,7 +5146,7 @@ Hamiltonianを、真空のenergy$E_0$とその差に分ける。
   \Delta E(|2_r\rangle)
   &={2\omega_r}.
 \end{align*}
-energyは、粒子一つ一つのenergyの足し算になる。場の励起を「粒子」と呼べる理由の一つが、これ。
+エネルギーは、粒子一つ一つのエネルギーの足し算になる。場の励起を「粒子」と呼べる理由の一つが、これ。
 }
 \end{solutionbox}
 
@@ -5973,13 +5999,13 @@ Christoffelの$i00$成分に入れると、$\Phi$の空間の勾配が出てく�
 \[
   {\frac{\dd^2x^i}{\dd t^2}=-\partial_i\Phi}.
 \]
-Newtonの式。$\Phi$がNewtonのpotentialの役をしてる。
+Newtonの式。$\Phi$がNewtonのポテンシャルの役をしてる。
 使ったのは$g_{00}$のずれ、つまり時間の進み方のずれだけ。遅い物体にとっては、時計の進み方が場所でずれることが、物を落とす重力になる。
 }
 \solutionpart{3}{%
-$\Phi=-\frac{G_NM}{r}$を代入し、加速度vectorを求めよ。
-}{加速度は$-\nabla\Phi$。点の質量のpotential $\Phi=-G_NM/r$ を空間で微分する。
-$\partial_i(1/r)=-x_i/r^3$を使って成分を出して、vectorでまとめる。}{%
+$\Phi=-\frac{G_NM}{r}$を代入し、加速度ベクトルを求めよ。
+}{加速度は$-\nabla\Phi$。点の質量のポテンシャル $\Phi=-G_NM/r$ を空間で微分する。
+$\partial_i(1/r)=-x_i/r^3$を使って成分を出して、ベクトルでまとめる。}{%
 $r=(x^jx_j)^{1/2}$で
 $\partial_i(1/r)=-x_i/r^3$だから
 \[
@@ -6007,11 +6033,11 @@ $\Phi\to\Phi+C$（$C$は定数）を入れると
   -\partial_i(\Phi+C)=-\partial_i\Phi-\partial_iC=-\partial_i\Phi .
 \end{equation*}
 定数の微分は$\partial_iC=0$だから、加速度は変わらない。
-計量で見ると$g_{00}=-(1+2\Phi)\to-(1+2C)-2\Phi$で、時間の目盛りを$\sqrt{1+2C}$倍に取り直すのと同じ。測れるのは、potentialの差だけ。
+計量で見ると$g_{00}=-(1+2\Phi)\to-(1+2C)-2\Phi$で、時間の目盛りを$\sqrt{1+2C}$倍に取り直すのと同じ。測れるのは、ポテンシャルの差だけ。
 }
 \end{solutionbox}
 
-\begin{solutionbox}{本気　$n$次元Gauss則とpotential}
+\begin{solutionbox}{本気　$n$次元Gauss則とポテンシャル}
 \problemformulas{%
 \begin{equation*}
 \oint_{S_r^{n-1}}\vct{g}\cdot\dd\vct{S}
@@ -6071,10 +6097,10 @@ $n=3$なら$-G_3M/r^2$で、逆2乗の法則。
 補習で電球の光から数えたのと同じ形。同じ量の光が、半径$r$の球面に薄く広がる。面積が$r^{n-1}$で増えるから、強さは$r^{n-1}$で割った分に薄まる。
 }
 \solutionpart{3}{%
-$n>2$のpotentialを積分して求めよ。
+$n>2$のポテンシャルを積分して求めよ。
 }{$g_r=-\dd\Phi/\dd r$に、設問(2)の$g_r$を入れる。$n>2$なら$r^{-(n-1)}$を積分する。
 積分したら、微分して元に戻るかで符号を確かめる。積分定数$C$も残す。}{%
-potentialと力の関係は$\vct g=-\nabla\Phi$。球対称なら$g_r=-\dd\Phi/\dd r$。設問(2)を入れると
+ポテンシャルと力の関係は$\vct g=-\nabla\Phi$。球対称なら$g_r=-\dd\Phi/\dd r$。設問(2)を入れると
 \[
   \frac{\dd\Phi}{\dd r}
   =-g_r=\frac{G_nM}{r^{n-1}}.
@@ -6091,7 +6117,7 @@ $r^{-(n-1)}$を積分する。$n>2$なら指数$-(n-1)\ne-1$だから、べき�
   \qquad n>2}.
 \]
 確かめ。微分すると$-\frac{G_nM}{n-2}\cdot(-(n-2))r^{-(n-1)}=G_nM/r^{n-1}$。合ってる。
-$C=0$に選べば、$r\to\infty$で$\Phi\to0$。$n=3$なら$-G_3M/r$で、いつものNewtonのpotential。
+$C=0$に選べば、$r\to\infty$で$\Phi\to0$。$n=3$なら$-G_3M/r$で、いつものNewtonのポテンシャル。
 }
 \solutionpart{4}{%
 $n=2$を別に積分し、基準長さ$r_0$が必要な理由を説明せよ。
@@ -6156,11 +6182,11 @@ U_{\mathrm{eff}}(r)
   \tag{C}
 \end{equation*}
 }
-$n>2$の有効potentialとして式\textup{(A)}を使う。
+$n>2$の有効ポテンシャルとして式\textup{(A)}を使う。
 \solutionpart{1}{%
 円軌道条件\textup{(B)}を導け。
-}{円軌道は、有効potentialが止まる点。$U_{\mathrm{eff}}'(r_c)=0$。
-遠心力の項と、$n>2$の重力のpotentialを微分して、二つを等しいと置く。角運動量と$r_c$の関係にする。}{%
+}{円軌道は、有効ポテンシャルが止まる点。$U_{\mathrm{eff}}'(r_c)=0$。
+遠心力の項と、$n>2$の重力のポテンシャルを微分して、二つを等しいと置く。角運動量と$r_c$の関係にする。}{%
 円軌道では$r$が一定だから$\dot r=0$、$\ddot r=0$。動径の運動方程式$m\ddot r=-U_{\mathrm{eff}}'(r)$から
 \begin{equation*}
   U_{\mathrm{eff}}'(r_c)=0 .
@@ -6233,12 +6259,12 @@ $n=3,4,5$をそれぞれ判定せよ。
   n=5:\quad&U_{\mathrm{eff}}''(r_c)<0
   &&\text{不安定}.
 \end{align*}
-$n=4$なら、有効potential全体が$r^{-2}$に比例する。
+$n=4$なら、有効ポテンシャル全体が$r^{-2}$に比例する。
 係数がたまたま0になっても、ある半径を選ぶ谷はない。
 }
 \solutionpart{4}{%
-$n=2$の対数potentialについて、円軌道半径と2階微分を求めよ。
-}{2次元は、対数のpotentialの$U_{\mathrm{eff}}$を使う。1回微分を0にして$r_c$を出す。
+$n=2$の対数ポテンシャルについて、円軌道半径と2階微分を求めよ。
+}{2次元は、対数のポテンシャルの$U_{\mathrm{eff}}$を使う。1回微分を0にして$r_c$を出す。
 2回微分にその条件を入れて、正なら安定。}{%
 \[
   U_{\mathrm{eff}}(r)
@@ -6266,8 +6292,8 @@ $n=2$の対数potentialについて、円軌道半径と2階微分を求めよ�
   U_{\mathrm{eff}}''(r_c)
   =\frac{2\ell^2}{mr_c^4}>0}.
 \]
-だから、対数のpotentialでも安定に回れる。
-設問(3)から言えるのは、$n>2$のべきのpotentialの中では$n=3$だけ、というところまで。佑芽が線を引いて残した「3次元だけ！」は、「$n>2$のべきのpotentialの中では」をつければ合ってる。
+だから、対数のポテンシャルでも安定に回れる。
+設問(3)から言えるのは、$n>2$のべきのポテンシャルの中では$n=3$だけ、というところまで。佑芽が線を引いて残した「3次元だけ！」は、「$n>2$のべきのポテンシャルの中では」をつければ合ってる。
 }
 \end{solutionbox}
 
@@ -6297,7 +6323,7 @@ Einstein--Hilbertの作用のいちばん大事な項は
 \solutionpart{2}{%
 $M_D=G_D^{-\frac{1}{D-2}}$が質量次元1を持つことを示せ。
 }{$G_D$の次元$2-D$を、$M_D=G_D^{-1/(D-2)}$の指数に掛ける。
-1になれば、$M_D$はenergyか質量の大きさとして使える。}{%
+1になれば、$M_D$はエネルギーか質量の大きさとして使える。}{%
 べきの次元は、指数を掛ければいい。$[A^p]=p[A]$。
 設問(1)の$[G_D]=2-D$を使う。
 \begin{align*}
@@ -6313,15 +6339,15 @@ $M_D=G_D^{-\frac{1}{D-2}}$が質量次元1を持つことを示せ。
 \]
 は質量の次元を持つ。$D$次元のPlanck質量。
 $D=4$なら$M_4=G_4^{-1/2}$で、いつもの$M_{\mathrm{Pl}}\simeq1.2\times10^{19}\ \mathrm{GeV}$。
-GeVはenergyの単位で、$1\ \mathrm{GeV}=10^9\ \mathrm{eV}$。$1\ \mathrm{eV}$は、電子1個を$1\ \mathrm V$の電圧で加速したときのenergy。$c=1$だから、質量も同じ単位で言える。
+GeVはエネルギーの単位で、$1\ \mathrm{GeV}=10^9\ \mathrm{eV}$。$1\ \mathrm{eV}$は、電子1個を$1\ \mathrm V$の電圧で加速したときのエネルギー。$c=1$だから、質量も同じ単位で言える。
 $8\pi$を入れて$M_D^{D-2}=1/(8\pi G_D)$と決める流儀もあるけど、次元は同じ。
 }
 \solutionpart{3}{%
-energy $E$での無次元重力結合が$G_DE^{D-2}$となる理由を説明せよ。
-}{重力の強さを無次元にしたいなら、$[G_D]=2-D$を、energyのべきで打ち消す。
+エネルギー $E$での無次元重力結合が$G_DE^{D-2}$となる理由を説明せよ。
+}{重力の強さを無次元にしたいなら、$[G_D]=2-D$を、エネルギーのべきで打ち消す。
 $E^{D-2}$を掛ける。設問(2)の$M_D$で、$(E/M_D)^{D-2}$とも書ける。}{%
 $G_D$は質量次元$2-D$を持つから、それだけでは「強い」「弱い」が言えない。単位を変えると数が変わる。
-比べるには、見るenergy $E$で次元を打ち消した、次元のない数を作る。
+比べるには、見るエネルギー $E$で次元を打ち消した、次元のない数を作る。
 \begin{equation*}
   [G_DE^{p}]=(2-D)+p=0
   \quad\Longrightarrow\quad
@@ -6334,12 +6360,12 @@ $G_D$は質量次元$2-D$を持つから、それだけでは「強い」「弱�
 \]
 二つ目の等号は、設問(2)の$G_D=M_D^{-(D-2)}$。
 読み方。$E\ll M_D$なら、この数はすごく小さい。重力は弱い。$E\to M_D$で1に近づいて、重力が強くなる。$D=4$なら$(E/M_{\mathrm{Pl}})^2$で、いまいちばん大きい加速器（LHC）の$E\sim10^4\ \mathrm{GeV}$でも$10^{-30}$くらい。
-energyが上がるほど強くなるのは、$D>2$で指数が正だから。高いenergyで摂動が壊れるのは、このため。
+エネルギーが上がるほど強くなるのは、$D>2$で指数が正だから。高いエネルギーで摂動が壊れるのは、このため。
 }
 \solutionpart{4}{%
-$D=4$で高energyほど摂動展開が悪化することを説明せよ。
+$D=4$で高エネルギーほど摂動展開が悪化することを説明せよ。
 }{4次元なら、無次元の結合は $g_{\mathrm{grav}}(E)\sim G_4E^2=(E/M_4)^2$。
-energyを上げると大きくなる。$E\sim M_4$では、小さい補正、という前提がなくなる。}{%
+エネルギーを上げると大きくなる。$E\sim M_4$では、小さい補正、という前提がなくなる。}{%
 設問(3)の式に$D=4$を入れる。
 \[
   g_{\mathrm{grav}}(E)\sim G_4E^{4-2}=G_4E^2
@@ -6355,9 +6381,9 @@ energyを上げると大きくなる。$E\sim M_4$では、小さい補正、と
   E=10^{-1}M_4&:\ (E/M_4)^2=10^{-2},\\
   E=M_4&:\ (E/M_4)^2=1 .
 \end{align*}
-energyを上げるほど、展開のparameterが大きくなる。
+エネルギーを上げるほど、展開のparameterが大きくなる。
 $E\sim M_4$では、どの項も同じくらいの大きさになって、次の項が前の項より小さい、という前提がなくなる。摂動展開を、小さい補正の列として扱えない。
-遠くから（低いenergyで）見ればちゃんとしてるのに、近づかれたら、ばれる。
+遠くから（低いエネルギーで）見ればちゃんとしてるのに、近づかれたら、ばれる。
 }
 \end{solutionbox}
 
@@ -6365,10 +6391,10 @@ $E\sim M_4$では、どの項も同じくらいの大きさになって、次の
 
 $\Gamma$が0じゃないことと、曲がっていることは、別。
 平面の極座標では$\Gamma\ne0$なのに、Riemannは0だった。球面では、座標をどう替えても$R=2/a^2$が残る。
-接続は、離れた点のvectorを比べる規則で、座標の選び方でも出てくる。曲率は、その比べ方が回り道でずれる分で、座標を替えても消えない。
+接続は、離れた点のベクトルを比べる規則で、座標の選び方でも出てくる。曲率は、その比べ方が回り道でずれる分で、座標を替えても消えない。
 $R_{\mu\nu}=0$から言えるのは、Ricciの成分が0、まで。Riemannには縮めると見えなくなる成分があって、ものがない真空でも、時空は曲がっていられる。
 
-空間が$n$次元なら、重力の場は$r^{-(n-1)}$で薄まって、potentialは$n>2$で$r^{-(n-2)}$。
+空間が$n$次元なら、重力の場は$r^{-(n-1)}$で薄まって、ポテンシャルは$n>2$で$r^{-(n-2)}$。
 $n=2$だけは対数になるから、円軌道の判定も$n>2$の式から持ってこないで、別に数える。
 
 答えが合わなかったら、まず計量の符号、Riemannの符号の規約、Gauss則で決めた$G_n$の規格化を見る。
@@ -6500,7 +6526,7 @@ $J$の質量次元を積分前後で確認せよ。
 $A(\mu,\Lambda)=g_R(\mu)$から$g_0(\Lambda)$を求めよ。
 }{繰り込んだ結合は、$A(\mu,\Lambda)=g_R(\mu)$で決める。
 観測量の式に$E=\mu$を入れて、cutoffによる部分をbare parameter$g_0(\Lambda)$の方に押し込んで解く。}{%
-繰り込みの条件は、決めたenergy $\mu$で測った値を$g_R(\mu)$と呼ぶこと。
+繰り込みの条件は、決めたエネルギー $\mu$で測った値を$g_R(\mu)$と呼ぶこと。
 \begin{equation*}
   A(\mu,\Lambda)\equiv g_R(\mu).
 \end{equation*}
@@ -6520,7 +6546,7 @@ $\Lambda\to\infty$で、$g_0$は$-b\ln\Lambda^2$で発散する。$g_0$は直接
 }
 \solutionpart{2}{%
 $A(E)$を$g_R(\mu)$で書き、$\Lambda$が消えることを示せ。
-}{どのenergyの$A(E,\Lambda)$にも、設問(1)の$g_0(\Lambda)$を入れる。
+}{どのエネルギーの$A(E,\Lambda)$にも、設問(1)の$g_0(\Lambda)$を入れる。
 二つの$\ln\Lambda^2$が消し合うのを、ちゃんと書く。残るのは有限な$g_R(\mu)$と$E/\mu$だけ。}{%
 \begin{align*}
   A(E,\Lambda)
@@ -6528,7 +6554,7 @@ $A(E)$を$g_R(\mu)$で書き、$\Lambda$が消えることを示せ。
     +b\ln\frac{\Lambda^2}{E^2}\\
   &={g_R(\mu)+b\ln\frac{\mu^2}{E^2}}.
 \end{align*}
-$\Lambda$は消えた。1回測っておけば、ほかのenergyでの値は$\Lambda$を知らなくても言える。
+$\Lambda$は消えた。1回測っておけば、ほかのエネルギーでの値は$\Lambda$を知らなくても言える。
 }
 \solutionpart{3}{%
 \[
@@ -6565,7 +6591,7 @@ $b>0$なら右は負。積分すると
   g_R(\mu)=g_R(\mu_0)-2b\ln\frac{\mu}{\mu_0}.
 \end{equation*}
 $\mu>\mu_0$なら$\ln(\mu/\mu_0)>0$だから、$g_R(\mu)<g_R(\mu_0)$。
-$\mu$を上げると、$g_R$は対数でゆっくり小さくなる。補習の図でいえば下がっていく線で、高いenergyで弱くなる、漸近自由の側。
+$\mu$を上げると、$g_R$は対数でゆっくり小さくなる。補習の図でいえば下がっていく線で、高いエネルギーで弱くなる、漸近自由の側。
 この符号は、ここで選んだ模型の$A(E,\Lambda)$の$b$から出たもの。ほかの理論で同じとは限らない。
 }
 \end{solutionbox}
@@ -6739,12 +6765,12 @@ $D=6$なら
 \solutionpart{1}{%
 $H$を$M^{-4}$まで求めよ。
 }{重い場の運動方程式を、形だけ $H=(g/2)(\partial^2-M^2)^{-1}\phi^2$ と解く。
-低いenergyなら$\partial^2/M^2$は小さい。逆演算子を等比級数で展開して、$M^{-4}$まで当てる。}{%
+低いエネルギーなら$\partial^2/M^2$は小さい。逆演算子を等比級数で展開して、$M^{-4}$まで当てる。}{%
 重い場$H$の運動方程式を、形だけ解いた式は
 \begin{equation*}
   H=\frac g2\,\frac1{\partial^2-M^2}\,\phi^2 .
 \end{equation*}
-低いenergyでは$\partial^2\sim E^2\ll M^2$だから、式(A)の等比級数を使う。
+低いエネルギーでは$\partial^2\sim E^2\ll M^2$だから、式(A)の等比級数を使う。
 \begin{equation*}
   \frac1{\partial^2-M^2}
   =-\frac1{M^2}
@@ -6762,7 +6788,7 @@ $\phi^2$に当てて、$g/2$を掛ける。
     -\frac g{2M^4}\partial^2\phi^2
     +O(gM^{-6}(\partial^2)^2\phi^2)}.
 \end{equation*}
-低いenergyでは、重い場$H$の値は、同じ場所の$\phi^2$でほとんど決まる。一つ目がその主な部分。二つ目は、$\phi^2$が場所や時刻で変わる分の補正で、微分が二つつく。
+低いエネルギーでは、重い場$H$の値は、同じ場所の$\phi^2$でほとんど決まる。一つ目がその主な部分。二つ目は、$\phi^2$が場所や時刻で変わる分の補正で、微分が二つつく。
 }
 \solutionpart{2}{%
 有効Lagrangianに現れる
@@ -6816,12 +6842,12 @@ $\phi^2$に当てて、$g/2$を掛ける。
 \end{equation*}
 }
 \solutionpart{4}{%
-energy $E$で、設問(3)の
+エネルギー $E$で、設問(3)の
 $(\partial_\mu\phi^2)^2$項が最低次の$\phi^4$項より
     $\frac{E^2}{M^2}$だけ小さいことを説明せよ。
-}{energy$E$なら、微分一つを$E$と数える。2回の微分は$E^2$。
+}{エネルギー$E$なら、微分一つを$E$と数える。2回の微分は$E^2$。
 いちばん低い$M^{-2}\phi^4$との係数の比$M^{-4}/M^{-2}$も取って、$E^2/M^2$だけ小さい、にまとめる。}{%
-energy $E$の状態では、微分一つが$E$くらいの大きさ。
+エネルギー $E$の状態では、微分一つが$E$くらいの大きさ。
 \begin{equation*}
   \partial_\mu\ \sim\ E,\qquad
   \bigl(\partial_\mu\phi^2\bigr)^2\ \sim\ E^2\phi^4 .
@@ -7028,7 +7054,7 @@ $[G_D]=2-D=-(D-2)$を入れる。
 \begin{equation*}
   [M_D]=-\frac{1}{D-2}\cdot\bigl(-(D-2)\bigr)={1}.
 \end{equation*}
-質量の次元。だから$M_D$を、$D$次元の重力のenergyの目盛りとして使える。
+質量の次元。だから$M_D$を、$D$次元の重力のエネルギーの目盛りとして使える。
 $D=4$なら$M_4=G_4^{-1/2}$で、Planck質量。
 }
 \solutionpart{2}{%
@@ -7067,31 +7093,31 @@ $E/M_4=10^{-3}$を入れる。
   ={10^{-6}}.
 \end{equation*}
 1-loopの補正が$10^{-6}$、2-loopが$10^{-12}$くらい。どんどん小さくなる。
-$M_4\simeq10^{19}\ \mathrm{GeV}$なら$E\simeq10^{16}\ \mathrm{GeV}$で、加速器よりずっと高いenergyでも、まだ重力の摂動は十分使える。
+$M_4\simeq10^{19}\ \mathrm{GeV}$なら$E\simeq10^{16}\ \mathrm{GeV}$で、加速器よりずっと高いエネルギーでも、まだ重力の摂動は十分使える。
 }
 \solutionpart{4}{%
 「非繰り込み可能」と
 「設問(3)の$E=10^{-3}M_4$で摂動論が破綻する」を
 区別して説明せよ。
 }{二つの文が、それぞれ何についての話かを分ける。
-繰り込み不可能、は、全部のloopの発散を有限個のparameterで吸い取れない、という理論のつくりの話で、energyを決めなくても言える。
-あるenergyで摂動論が使えるかは、$(E/M_D)^{D-2}$が小さいかで決まる。後の方の判定には、設問(3)の数を使う。}{%
+繰り込み不可能、は、全部のloopの発散を有限個のparameterで吸い取れない、という理論のつくりの話で、エネルギーを決めなくても言える。
+あるエネルギーで摂動論が使えるかは、$(E/M_D)^{D-2}$が小さいかで決まる。後の方の判定には、設問(3)の数を使う。}{%
 「摂動的に繰り込み不可能」は、どのloopまでも有限個のparameterで吸い取れない、という
 理論全体のつくりの話。
-「このenergyで摂動論が壊れる」は、無次元の展開parameterが小さくなくて、
+「このエネルギーで摂動論が壊れる」は、無次元の展開parameterが小さくなくて、
 高次の補正を抑えられない、という、決まった大きさでの話。
 
 $E=10^{-3}M_4$なら$\epsilon_G=10^{-6}$で、補正はとても小さい。
-だから、前の方（理論のつくり）は成り立ったままで、後の方（このenergyで壊れる）は成り立たない。
-低energyの有効理論として、決めた精度まで予言できる。遠くからなら、ちゃんと使える。
+だから、前の方（理論のつくり）は成り立ったままで、後の方（このエネルギーで壊れる）は成り立たない。
+低エネルギーの有効理論として、決めた精度まで予言できる。遠くからなら、ちゃんと使える。
 }
 \end{solutionbox}
 
 \subsubsection*{解答を閉じる前に}
 
-いちばん混ざりやすいのは、「繰り込み不可能」と「このenergyで摂動論が壊れる」。
+いちばん混ざりやすいのは、「繰り込み不可能」と「このエネルギーで摂動論が壊れる」。
 前の方は理論のつくりの話で、後の方は$(E/M_D)^{D-2}$の大きさの話。
-重力は前の方に当たる。後の方に当たるかは$E/M_D$で決まって、$E\ll M_D$なら当たらない。だから、低いenergyでは有効理論として使える。
+重力は前の方に当たる。後の方に当たるかは$E/M_D$で決まって、$E\ll M_D$なら当たらない。だから、低いエネルギーでは有効理論として使える。
 
 正則化は、発散する式を、regulatorによる有限の式に直すところまで。
 繰り込みで、測った$g_R(\mu)$を一つ入れると、観測量から$\Lambda$が消える。
@@ -7139,7 +7165,7 @@ $\psi(y+2\pi R)=\psi(y)$から$p_5=\frac{n}{R}$を導け。
 \end{equation*}
 間隔は$n$によらない。どこでも同じ幅の階段。
 $R$が大きいほど細かく、小さいほど粗い。
-数で言うと、$R=1\ \mu\mathrm m$なら$\hbar c/R\simeq0.2\ \mathrm{eV}$（eVは、問題「重力結合の質量次元」の設問(2)で言ったenergyの単位）。$R$がPlanckの長さくらいなら、間隔はPlanck質量くらいで、とても見えない。
+数で言うと、$R=1\ \mu\mathrm m$なら$\hbar c/R\simeq0.2\ \mathrm{eV}$（eVは、問題「重力結合の質量次元」の設問(2)で言ったエネルギーの単位）。$R$がPlanckの長さくらいなら、間隔はPlanck質量くらいで、とても見えない。
 }
 \solutionpart{3}{%
 $R\to\infty$で連続運動量へ近づくことを説明せよ。
@@ -7453,7 +7479,7 @@ $[\lambda_5]+4[\Phi]=5$に、設問(1)の$[\Phi]=3/2$を入れる。結合は、
   ={-1}.
 \end{equation*}
 結合が負の質量次元、つまり長さの次元を持つ。
-energy $E$での無次元の強さは$\lambda_5E$。energyを上げるほど強くなって、$E\sim1/\lambda_5$で摂動が壊れる。5次元の$\Phi^4$は、4次元の重力と同じで、摂動的に繰り込み不可能。
+エネルギー $E$での無次元の強さは$\lambda_5E$。エネルギーを上げるほど強くなって、$E\sim1/\lambda_5$で摂動が壊れる。5次元の$\Phi^4$は、4次元の重力と同じで、摂動的に繰り込み不可能。
 }
 \solutionpart{3}{%
 零modeだけを残して
@@ -7499,7 +7525,7 @@ $\Phi=\phi_0/\sqrt{2\pi R}$を入れると
 }
 \end{solutionbox}
 
-\begin{solutionbox}{本気　energy以下のmode数}
+\begin{solutionbox}{本気　エネルギー以下のmode数}
 5次元で零質量のscalarを考える。
 \solutionpart{1}{%
 質量が$E$以下のmodeが満たす整数条件を書け。
@@ -7515,7 +7541,7 @@ $m_n\le E$に入れる。
   {|n|\le ER}.
 \end{equation*}
 両辺に$R>0$を掛けただけ。
-$ER$は「energy $E$の波長$1/E$に比べて、円がどれだけ大きいか」。その数だけ、正と負の番号のmodeが入る。
+$ER$は「エネルギー $E$の波長$1/E$に比べて、円がどれだけ大きいか」。その数だけ、正と負の番号のmodeが入る。
 }
 \solutionpart{2}{%
 $N=\lfloor ER\rfloor$として、$n=0$を含むmode数を求めよ。
@@ -7558,9 +7584,9 @@ $|n|\le ER$を満たす整数のうち、いちばん大きい非負の数が$N=
 \solutionpart{4}{%
 $ER\gg1$でmode数が$2ER$に近づく意味を説明せよ。
 }{$ER\gg1$なら、$N=\lfloor ER\rfloor$を$ER$で近似して、$2N+1\simeq2ER$。
-modeの間隔が細かくなって、決まったenergyの幅で、5次元の運動量の連続な分布に近づく。}{%
+modeの間隔が細かくなって、決まったエネルギーの幅で、5次元の運動量の連続な分布に近づく。}{%
 質量ゼロの5次元のscalarを円で丸めると、4次元の質量は$|n|/R$。
-energy $E$以下のmodeは
+エネルギー $E$以下のmodeは
 \begin{equation*}
   \frac{|n|}R\le E
   \quad\Longleftrightarrow\quad
@@ -7654,7 +7680,7 @@ $G_5$を止めて$R$だけを動かすと
 }
 \end{solutionbox}
 
-\begin{solutionbox}{本気　重いKK towerの低energy展開}
+\begin{solutionbox}{本気　重いKK towerの低エネルギー展開}
 Euclid momentum $q$について
 \[
   K(q)=\sum_{n\ne0}\frac1{q^2+\frac{n^2}{R^2}}
@@ -7693,7 +7719,7 @@ $\sum_{n\ne0}n^{-2}=\frac{\pi^2}{3}$、
 \solutionpart{3}{%
 第1項が局所的な接触相互作用の係数として読める理由を説明せよ。
 }{Fourier変換すると、運動量によらない定数は、位置ではDiracのdelta。$q^2$は2回微分のついたdelta。
-だから低energyの展開は、どの項も局所的な接触の演算子として読める。}{%
+だから低エネルギーの展開は、どの項も局所的な接触の演算子として読める。}{%
 $qR\ll1$で、$n$ごとに展開する。
 \begin{equation*}
   \frac1{q^2+n^2/R^2}
@@ -7711,7 +7737,7 @@ $n\ne0$で足すと、$\sum_{n\ne0}1/n^2=\pi^2/3$だから第1項は
 二つの源が、同じ点にいるときだけ働く。接触の相互作用。
 作用で書けば$\frac{\pi^2R^2}3\int\dd^4x\,J(x)^2$みたいな局所的な項。
 $q^2$の項は$\partial^2\delta^{(4)}$で、2回微分のついた局所演算子。
-重いKK modeをやりとりする効果が、低いenergyでは局所演算子の列として書ける。作れない重いmodeの影響は、$\pi^2R^2/3$のような係数の中に入っている。
+重いKK modeをやりとりする効果が、低いエネルギーでは局所演算子の列として書ける。作れない重いmodeの影響は、$\pi^2R^2/3$のような係数の中に入っている。
 }
 \solutionpart{4}{%
 展開が$q\sim\frac{1}{R}$で使えなくなる理由を述べよ。
@@ -7743,7 +7769,7 @@ $\phi_{-n}=\phi_n^*$だから、二つ合わせて、cosとsinの、同じ質量
 
 円で丸めると、周期の条件が整数$n$を作って、運動量の間隔は$1/R$になる。
 5次元の$p_5$は、4次元から見ると、質量$m_n$の一部。
-$E\ll1/R$で作れるのは零modeだけ。重いKK modeの影響は、結合の$2\pi R$や、低energyの作用の係数として残る。
+$E\ll1/R$で作れるのは零modeだけ。重いKK modeの影響は、結合の$2\pi R$や、低エネルギーの作用の係数として残る。
 
 答えが合わなかったら、円周の長さ$2\pi R$、Fourier基底の前の$1/\sqrt{2\pi R}$、実数の場の条件、5次元と4次元の質量次元を見直して。
 
@@ -7791,7 +7817,7 @@ $\sigma$を固定して$\tau$を動かすと何が得られるか。
 }
 \solutionpart{3}{%
 $\partial_aX^\mu$の添字$a$と$\mu$が属する空間をそれぞれ述べよ。
-}{$\partial_aX^\mu$は、帯から時空への写像の微分。添字が2種類ある。$a=0,1$は帯の方向、$\mu=0,\ldots,D-1$は時空のvectorの成分。数えている場所が違う。}{%
+}{$\partial_aX^\mu$は、帯から時空への写像の微分。添字が2種類ある。$a=0,1$は帯の方向、$\mu=0,\ldots,D-1$は時空のベクトルの成分。数えている場所が違う。}{%
 $X^\mu(\tau,\sigma)$は、帯の点$(\tau,\sigma)$を、時空の点$X^\mu$に写す。その微分は
 \begin{equation*}
   \partial_aX^\mu=\frac{\partial X^\mu}{\partial\sigma^a},
@@ -7801,7 +7827,7 @@ $X^\mu(\tau,\sigma)$は、帯の点$(\tau,\sigma)$を、時空の点$X^\mu$に�
 添字は2種類。
 \begin{align*}
   a&=0,1&&\text{帯（世界面）の方向},\\
-  \mu&=0,1,\dots,D-1&&\text{時空のvectorの成分}.
+  \mu&=0,1,\dots,D-1&&\text{時空のベクトルの成分}.
 \end{align*}
 帯の座標を変えると$a$が変わって、時空のLorentz変換をすると$\mu$が変わる。
 \begin{equation*}
@@ -8012,7 +8038,7 @@ $J^a{}_c=\frac{\partial\sigma^a}{\partial\widetilde\sigma^c}$と置くと
   \qquad
   J^a{}_c=\frac{\partial\sigma^a}{\partial\widetilde\sigma^c}.
 \end{equation*}
-$\det J=0$なら、$J$にはゼロの固有値がある。そのvectorを$v$とすると
+$\det J=0$なら、$J$にはゼロの固有値がある。そのベクトルを$v$とすると
 \begin{equation*}
   J v=0,\qquad v\ne0 .
 \end{equation*}
@@ -8080,7 +8106,7 @@ Minkowskiの内積で成分を作る。
 }
 \solutionpart{3}{%
 $P_2$と$E$をLegendre変換から導け。
-}{並進の速さ$v$の共役運動量は$P_2=\frac{\partial L_{\mathrm{eff}}}{\partial v}$。energyはLegendre変換$E=P_2v-L_{\mathrm{eff}}$。分母をそろえる。}{%
+}{並進の速さ$v$の共役運動量は$P_2=\frac{\partial L_{\mathrm{eff}}}{\partial v}$。エネルギーはLegendre変換$E=P_2v-L_{\mathrm{eff}}$。分母をそろえる。}{%
 \begin{equation*}
   {
   P_2=\frac{\partial L_{\mathrm{eff}}}{\partial v}
@@ -8096,7 +8122,7 @@ Legendre変換から
 }
 \solutionpart{4}{%
 $E^2-P_2^2=(TL)^2$を示し、$v\to1$の極限を説明せよ。
-}{設問(3)の$E$と$P_2$を2乗して引く。分母$1-v^2$でまとめると、止まったひものenergy$TL$が質量として残る。$v\to1$ではLorentz因子が発散する。}{%
+}{設問(3)の$E$と$P_2$を2乗して引く。分母$1-v^2$でまとめると、止まったひものエネルギー$TL$が質量として残る。$v\to1$ではLorentz因子が発散する。}{%
 設問(3)の二つを2乗する。
 \begin{equation*}
   E^2=\frac{(TL)^2}{1-v^2},\qquad
@@ -8108,12 +8134,12 @@ $E^2-P_2^2=(TL)^2$を示し、$v\to1$の極限を説明せよ。
   =\frac{(TL)^2(1-v^2)}{1-v^2}
   ={(TL)^2}.
 \end{equation*}
-$E^2-P^2=M^2$と比べると、このひもは質量$M=TL$の粒子みたいに振る舞う。$TL$は、止まったひもの全energy。張力（単位長さあたりのenergy）かける長さ。
+$E^2-P^2=M^2$と比べると、このひもは質量$M=TL$の粒子みたいに振る舞う。$TL$は、止まったひもの全エネルギー。張力（単位長さあたりのエネルギー）かける長さ。
 $v\to1$では$\sqrt{1-v^2}\to0$だから
 \begin{equation*}
   E=\frac{TL}{\sqrt{1-v^2}}\to\infty,\qquad P_2\to\infty .
 \end{equation*}
-有限のenergyでは、時間的なひもは光の速さまで加速できない。ふつうの重い粒子と同じ。
+有限のエネルギーでは、時間的なひもは光の速さまで加速できない。ふつうの重い粒子と同じ。
 }
 \end{solutionbox}
 
@@ -8160,7 +8186,7 @@ $\sigma$で積分して
 \end{equation*}
 }
 \solutionpart{2}{%
-共役運動量$p_r$と保存energyを求めよ。
+共役運動量$p_r$と保存エネルギーを求めよ。
 }{$\dot r$の共役運動量は$\frac{\partial L_{\mathrm{eff}}}{\partial\dot r}$。Lagrangianは$\tau$そのものによらないから、$E=p_r\dot r-L_{\mathrm{eff}}$が保存する。}{%
 \begin{equation*}
   {
@@ -8175,9 +8201,9 @@ $\sigma$で積分して
 \end{equation*}
 }
 \solutionpart{3}{%
-初期条件$r(0)=R_0$、$\dot r(0)=0$からenergyを定めよ。
-}{energyの式に、初めの半径$r=R_0$と、止まってる$\dot r=0$を入れる。周$2\pi R_0$かける張力$T$になるはず。}{%
-設問(2)のenergyは
+初期条件$r(0)=R_0$、$\dot r(0)=0$からエネルギーを定めよ。
+}{エネルギーの式に、初めの半径$r=R_0$と、止まってる$\dot r=0$を入れる。周$2\pi R_0$かける張力$T$になるはず。}{%
+設問(2)のエネルギーは
 \begin{equation*}
   E=\frac{2\pi Tr}{\sqrt{1-\dot r^2}}.
 \end{equation*}
@@ -8186,13 +8212,13 @@ $\tau=0$で$r=R_0$、$\dot r=0$を入れる。
   E=\frac{2\pi TR_0}{\sqrt{1-0}}
   ={2\pi TR_0}.
 \end{equation*}
-読み方。$2\pi R_0$は輪の長さ、$T$は単位長さあたりのenergy。止まってる瞬間は、全部が張力のenergy。
-energyは保存するから、あとで輪が縮んでも、この値のまま。縮んだ分の張力のenergyは、動きのenergyに変わる。
+読み方。$2\pi R_0$は輪の長さ、$T$は単位長さあたりのエネルギー。止まってる瞬間は、全部が張力のエネルギー。
+エネルギーは保存するから、あとで輪が縮んでも、この値のまま。縮んだ分の張力のエネルギーは、動きのエネルギーに変わる。
 }
 \solutionpart{4}{%
-energy保存を使い、$\dot r^2=1-\frac{r^2}{R_0^2}$を導け。
-}{どの時刻のenergyも、設問(3)の$2\pi TR_0$と等しいと置く。共通の因子を消して2乗して、$\dot r^2$について解く。縮む方では、負の平方根を選ぶ。}{%
-energyの保存から
+エネルギー保存を使い、$\dot r^2=1-\frac{r^2}{R_0^2}$を導け。
+}{どの時刻のエネルギーも、設問(3)の$2\pi TR_0$と等しいと置く。共通の因子を消して2乗して、$\dot r^2$について解く。縮む方では、負の平方根を選ぶ。}{%
+エネルギーの保存から
 \begin{equation*}
   \frac{r}{\sqrt{1-\dot r^2}}=R_0.
 \end{equation*}
@@ -8220,7 +8246,7 @@ S_{\mathrm{NG}}
 }
 2次作用\textup{(A)}を使う。
 \solutionprelude{%
-定数の静止energyを除いた2次Lagrangian密度は
+定数の静止エネルギーを除いた2次Lagrangian密度は
 \begin{equation*}
   \Lag^{(2)}
   =\frac T2
@@ -8280,7 +8306,7 @@ $T>0$を掛けて足しても、負にはならない。
   {\mathcal H^{(2)}\ge0}.
 \end{equation*}
 全体のHamiltonianは$\int\dd\sigma\,\mathcal H^{(2)}\ge0$。
-等号は、どの点でも$\dot Y^I=Y^{\prime I}=0$のとき。つまり、ひもがまっすぐで、横に一様にずれて止まってるだけ。energyの一番下は、ちゃんとある。
+等号は、どの点でも$\dot Y^I=Y^{\prime I}=0$のとき。つまり、ひもがまっすぐで、横に一様にずれて止まってるだけ。エネルギーの一番下は、ちゃんとある。
 もし時間の方向$X^0$も揺れに入れてたら、Minkowskiの符号で負の項が出てくる。横だけ見てるから、正になってる。
 }
 \solutionpart{4}{%
@@ -8307,7 +8333,7 @@ $Y^I=A^I\cos(k\sigma-\omega\tau)$を微分する。$u=k\sigma-\omega\tau$とす�
 \end{equation*}
 波の速さは$\omega/k=1$。ひもの横揺れは、光の速さで伝わる。
 手毬の倍音の日のふつうの弦は、張力$\mathcal T$と線密度$\mu$で、波の速さが$v=\sqrt{\mathcal T/\mu}$だった。
-相対論のひもでは、張力も、単位長さあたりの質量（止まったひもの単位長さあたりのenergy）も同じ$T$。比が$1$だから、$v=1$。
+相対論のひもでは、張力も、単位長さあたりの質量（止まったひもの単位長さあたりのエネルギー）も同じ$T$。比が$1$だから、$v=1$。
 }
 \end{solutionbox}
 
@@ -8497,7 +8523,7 @@ $T_1=T$と書けばNambu--Goto。
   \item $(\tau,\sigma)$は世界面のラベルで、$X^\mu$は標的時空への埋め込み。
   \item 誘導計量は独立な場じゃない。$\partial_aX^\mu$の内積から決まる。
   \item $\sqrt{-\det\gamma}\,\dd^2\sigma$は再パラメータ化に不変。
-  \item 張力は静止energy $E=TL$と横揺らぎの運動を同時に決める。
+  \item 張力は静止エネルギー $E=TL$と横揺らぎの運動を同時に決める。
 \end{enumerate}
 答えが合わなければ、最初に計量符号、2種類の添字、
 Jacobianの向き、$\gamma=\det\gamma_{ab}<0$を確認する。
@@ -9867,7 +9893,7 @@ $\sigma$の1次関数だから、1回微分は定数、2回微分は0。
 }
 \solutionpart{3}{%
 $y_\pi^i-y_0^i=\Delta y^i$とし、振動のない弦の長さを求めよ。
-}{振動を全部0にすると、$y_0$から$y_\pi$への直線。差のvector$\Delta\boldsymbol y$の長さが、ひもの長さ。}{%
+}{振動を全部0にすると、$y_0$から$y_\pi$への直線。差のベクトル$\Delta\boldsymbol y$の長さが、ひもの長さ。}{%
 振動の係数を全部0にすると、展開に残るのは直線だけ。
 \begin{equation*}
   X^i(\sigma)=y_0^i+\frac{\Delta y^i}{\pi}\sigma .
@@ -9887,9 +9913,9 @@ $0$から$\pi$まで積分して
 両端を留めた場所のあいだの距離、そのもの。その留める場所が何なのかは、ずっと先で。
 }
 \solutionpart{4}{%
-その静止energyが$T|\Delta\boldsymbol y|$になることを説明せよ。
-}{張力$T$は長さあたりのenergyだから、まっすぐなひもなら$E=T|\Delta\boldsymbol y|$。$T=1/(2\pi\alpha')$を入れて、端の間隔によるenergyを書く。共形gaugeの制約からも、同じ値が出る。}{%
-張力$T$は、長さあたりのenergy。
+その静止エネルギーが$T|\Delta\boldsymbol y|$になることを説明せよ。
+}{張力$T$は長さあたりのエネルギーだから、まっすぐなひもなら$E=T|\Delta\boldsymbol y|$。$T=1/(2\pi\alpha')$を入れて、端の間隔によるエネルギーを書く。共形gaugeの制約からも、同じ値が出る。}{%
+張力$T$は、長さあたりのエネルギー。
 止まったまっすぐなひもなら
 \begin{equation*}
   {
@@ -10014,7 +10040,7 @@ traceは自動的にゼロだから、独立なのは二つ。
 残る条件は一つ、端で$\dot X^2=0$。端の時間方向の矢印が、長さゼロ。その意味は、設問(3)で読む。
 }
 \solutionpart{3}{%
-端点の接vector$\dot X^\mu$がnullになることを示せ。
+端点の接ベクトル$\dot X^\mu$がnullになることを示せ。
 }{端の世界線$X_{\mathrm{end}}^\mu(\tau)$の矢印は$\dot X_{\mathrm{end}}^\mu$。設問(2)の$\dot X^2=0$は、その長さがゼロ、ということ。光の通り道。}{%
 端の世界線を$X^\mu_{\mathrm{end}}(\tau)$と書くと、矢印は
 $\dot X^\mu_{\mathrm{end}}$。だから
@@ -10149,7 +10175,7 @@ $n$番目の項に、設問(1)の定義$\alpha_n^i=\sqrt n\,a_n^i$、$\alpha_{-n
 \begin{equation*}
   N\,a_n^{i\dagger}|0\rangle=n\,a_n^{i\dagger}|0\rangle .
 \end{equation*}
-番号$n$のmodeは周波数$n$の振動子で、量子一つのenergyが$n$。levelへの寄与が$n$なのは、そのため。
+番号$n$のmodeは周波数$n$の振動子で、量子一つのエネルギーが$n$。levelへの寄与が$n$なのは、そのため。
 }
 \end{solutionbox}
 
@@ -10414,8 +10440,8 @@ $M^2$について解く。
 \begin{solutionbox}{本気　正規順序定数}
 横振動が$D-2$個ある光錐gaugeを考える。
 \solutionpart{1}{%
-mode $n$の零点energyを求めよ。
-}{周波数$\omega_n=n$の横のmodeは、どれも調和振動子。零点energyは$\omega_n/2$だから、mode $n$一つで$n/2$。}{%
+mode $n$の零点エネルギーを求めよ。
+}{周波数$\omega_n=n$の横のmodeは、どれも調和振動子。零点エネルギーは$\omega_n/2$だから、mode $n$一つで$n/2$。}{%
 mode $n$の横の振動子は
 \begin{equation*}
   [\alpha_m^i,\alpha_n^j]=m\,\delta^{ij}\delta_{m+n,0}
@@ -10434,9 +10460,9 @@ Hamiltonianの中では、順番をそろえる前の対称な形で出てくる
 1方向あたり$n/2$。$D-2$方向で$(D-2)n/2$。何も励起してなくても、いつも残ってる。
 }
 \solutionpart{2}{%
-形式的な全零点energyを書け。
-}{零点energy$n/2$を、$n=1$から無限まで足して、横の方向の数$D-2$を掛ける。$\sum n$は、ふつうの意味では発散する。書けるのは、形だけの式。}{%
-設問(1)で、mode $n$一つの零点energyは$n/2$。
+形式的な全零点エネルギーを書け。
+}{零点エネルギー$n/2$を、$n=1$から無限まで足して、横の方向の数$D-2$を掛ける。$\sum n$は、ふつうの意味では発散する。書けるのは、形だけの式。}{%
+設問(1)で、mode $n$一つの零点エネルギーは$n/2$。
 横の方向は$D-2$個あって、どの方向にも$n=1,2,3,\dots$のmodeが一つずつある。全部足すと
 \begin{equation*}
   E_0=\sum_{i=1}^{D-2}\sum_{n=1}^\infty\frac n2
@@ -10470,7 +10496,7 @@ $[\ \ ]_{\mathrm{reg}}$は、ボードに書いた矢印$1+2+3+\cdots\rightsquig
 }
 \solutionpart{4}{%
 $a=\frac{D-2}{24}$との符号関係を説明せよ。
-}{正規順序にする前の零点energyは、$L_0$に$E_0^{\mathrm{reg}}$として入る。条件を$L_0-a=0$と書くと、定数を反対に移した$a=-E_0^{\mathrm{reg}}$。だから符号が逆。}{%
+}{正規順序にする前の零点エネルギーは、$L_0$に$E_0^{\mathrm{reg}}$として入る。条件を$L_0-a=0$と書くと、定数を反対に移した$a=-E_0^{\mathrm{reg}}$。だから符号が逆。}{%
 符号を、式でたどる。正規順序にする前の$L_0$は
 \begin{equation*}
   L_0^{\text{前}}=\alpha'p^2+N+E_0^{\mathrm{reg}},
@@ -10489,7 +10515,7 @@ $a=\frac{D-2}{24}$との符号関係を説明せよ。
 \begin{equation*}
   {a=-\left(-\frac{D-2}{24}\right)=\frac{D-2}{24}}.
 \end{equation*}
-零点energyが負だから、$a$は正。$a>0$だと、真空$N=0$の$\alpha'M^2=-a$は負で、タキオン。
+零点エネルギーが負だから、$a$は正。$a>0$だと、真空$N=0$の$\alpha'M^2=-a$は負で、タキオン。
 }
 \end{solutionbox}
 
@@ -10591,7 +10617,7 @@ $a>0$ならマイナス。偏極の添字がないから、時空のscalar。
 }
 \solutionpart{2}{%
 level 1の一般状態を書け。
-}{level 1は、mode 1の作る演算子$\alpha_{-1}^\mu$を一つ当てる。いちばん一般のvectorにしたいから、係数に偏極$\epsilon_\mu$を付ける。}{%
+}{level 1は、mode 1の作る演算子$\alpha_{-1}^\mu$を一つ当てる。いちばん一般のベクトルにしたいから、係数に偏極$\epsilon_\mu$を付ける。}{%
 level 1は$N=1$。最初の問題「振動子の規格化」(4)で見たとおり、mode $n$の量子一つはlevelを$n$増やす。$N=1$にするには、mode 1の量子を一つだけ入れる。
 \begin{equation*}
   \alpha_{-1}^\mu|0;p\rangle,\qquad \mu=0,\dots,D-1 .
@@ -10601,7 +10627,7 @@ $\mu$ごとに一つずつ、$D$個の状態がある。いちばん一般の状
   {|\epsilon;p\rangle
   =\epsilon_\mu\alpha_{-1}^\mu|0;p\rangle}.
 \end{equation*}
-$\epsilon_\mu$は添字を一つ持つから、時空のvector。電磁場の偏光と同じ役。
+$\epsilon_\mu$は添字を一つ持つから、時空のベクトル。電磁場の偏光と同じ役。
 $\alpha_{-2}$はlevelを2上げるから、level 1には入らない。
 }
 \solutionpart{3}{%
@@ -10625,9 +10651,9 @@ $a=1$ならlevel 1が質量ゼロになることを確かめよ。
   N=0&:\quad M^2=\frac{0-1}{\alpha'}=-\frac1{\alpha'},\\
   N=1&:\quad M^2=\frac{1-1}{\alpha'}={0}.
 \end{align*}
-level 1は質量ゼロのvector。光子と同じ型の、ゲージ場。
+level 1は質量ゼロのベクトル。光子と同じ型の、ゲージ場。
 level 0は質量の2乗が負で、タキオン。
-質量ゼロのvectorなら、本物の偏極は$D-2$個のはず。設問(2)の$\epsilon_\mu$は$D$個あるから、二つ減らさないといけない。それには$L_1|\Psi\rangle=0$（運動量に垂直）と、長さゼロの状態の同一視（$\epsilon\sim\epsilon+\lambda p$）を使う。次の節の「開弦level 1の横条件」で、ちゃんと数える。
+質量ゼロのベクトルなら、本物の偏極は$D-2$個のはず。設問(2)の$\epsilon_\mu$は$D$個あるから、二つ減らさないといけない。それには$L_1|\Psi\rangle=0$（運動量に垂直）と、長さゼロの状態の同一視（$\epsilon\sim\epsilon+\lambda p$）を使う。次の節の「開弦level 1の横条件」で、ちゃんと数える。
 }
 \end{solutionbox}
 
@@ -10700,7 +10726,7 @@ $N=\widetilde N=1$、$a=1$を入れる。
 \end{solutionbox}
 
 \subsubsection*{照合のための到達点}
-いちばん間違えやすいのは、$a$の符号。零点energyは$E_0^{\mathrm{reg}}=-\frac{D-2}{24}$で負。$a=-E_0^{\mathrm{reg}}$は正。
+いちばん間違えやすいのは、$a$の符号。零点エネルギーは$E_0^{\mathrm{reg}}=-\frac{D-2}{24}$で負。$a=-E_0^{\mathrm{reg}}$は正。
 交換関係で作った状態の中から、Virasoroの条件が物理の状態を選ぶ。$L_0$の条件が質量を決めて、開いたひもで$\alpha'M^2=N-a$、閉じたひもで$M^2=\frac4{\alpha'}(N-a)$と$N=\widetilde N$。係数の4は、$\alpha_0$の中身の違いから来る。
 $a=\frac{D-2}{24}$は、横の$D-2$個だけを数える光錐の結果と、$\zeta$のつなぎ方を借りて出した候補。それでいいかは、次の節で別の道から確かめる。
 
@@ -10801,8 +10827,8 @@ $X^\pm$は、時間$X^0$と空間の一つの方向$X^{D-1}$を足し引きし�
 }
 \solutionpart{2}{%
 $a=\frac{D-2}{24}$を評価せよ。
-}{正規順序の定数は、横のbosonの零点energyから$a=(D-2)/24$。横の数24を入れて、$a=1$。}{%
-$a$は、横の振動子の零点energyの符号を変えたもの。
+}{正規順序の定数は、横のbosonの零点エネルギーから$a=(D-2)/24$。横の数24を入れて、$a=1$。}{%
+$a$は、横の振動子の零点エネルギーの符号を変えたもの。
 \begin{equation*}
   a=-E_0^{\mathrm{reg}}=-\frac{D-2}{2}\zeta(-1)=\frac{D-2}{24}.
 \end{equation*}
@@ -10825,8 +10851,8 @@ $N=0$と$N=1$を入れる。
   N=0:&\quad \alpha'M^2=-1\quad\Longrightarrow\quad{M^2=-1/\alpha'},\\
   N=1:&\quad \alpha'M^2=0\quad\Longrightarrow\quad{M^2=0}.
 \end{align*}
-level 0はタキオン、level 1は質量ゼロのvector。
-光錐で数えると、level 1の状態は横の$D-2$個しかない。質量のあるvectorなら、止まって見たときにどの向きにも揺れられて、偏極が空間の$D-1$個ぶん要る。$D-2$個で足りるのは、止まって見られない質量ゼロのときだけ。$a=1$でちょうど質量ゼロになるから、この数え方と矛盾しない。
+level 0はタキオン、level 1は質量ゼロのベクトル。
+光錐で数えると、level 1の状態は横の$D-2$個しかない。質量のあるベクトルなら、止まって見たときにどの向きにも揺れられて、偏極が空間の$D-1$個ぶん要る。$D-2$個で足りるのは、止まって見られない質量ゼロのときだけ。$a=1$でちょうど質量ゼロになるから、この数え方と矛盾しない。
 }
 \solutionpart{4}{%
 閉弦level $(0,0)$と$(1,1)$の質量を求めよ。
@@ -10909,7 +10935,7 @@ $\alpha'\ne0$で、状態もゼロじゃないから
 }
 \solutionpart{4}{%
 gauge同値性を含め物理偏極数を求めよ。
-}{質量ゼロのvectorの偏極は、$D$成分から、垂直の条件$p\cdot\epsilon=0$で一つ減る。長さゼロの状態の同一視$\epsilon\sim\epsilon+\lambda p$で、もう一つ減る。$D-2$を臨界次元で数える。光の偏光の日と同じ2段階。}{%
+}{質量ゼロのベクトルの偏極は、$D$成分から、垂直の条件$p\cdot\epsilon=0$で一つ減る。長さゼロの状態の同一視$\epsilon\sim\epsilon+\lambda p$で、もう一つ減る。$D-2$を臨界次元で数える。光の偏光の日と同じ2段階。}{%
 $D$個の$\epsilon_\mu$から、本物の偏極を2段階で減らす。
 1段目。設問(3)の$p\cdot\epsilon=0$は、$\epsilon$への1次の条件一つ。
 \begin{equation*}
@@ -11012,7 +11038,7 @@ $c$は、traceを取ってゼロになるように決める。$\eta^{\mu\nu}\eta
   S=\delta^{ij}S_{ij}.
 \end{equation*}
 ここで$S_{ij}=\tfrac12(\zeta_{ij}+\zeta_{ji})$、$A_{ij}=\tfrac12(\zeta_{ij}-\zeta_{ji})$。
-それぞれ、低いenergyの場に対応する。
+それぞれ、低いエネルギーの場に対応する。
 \begin{align*}
   S^{\mathrm T}_{ij}&\ \to\ G_{\mu\nu}\ (\text{graviton}),\\
   A_{ij}&\ \to\ B_{\mu\nu}\ (B\text{場}),\\
@@ -11057,7 +11083,7 @@ $d=2$なら$3-1=2$。4次元のgravitonの二つの偏極。
 \begin{equation*}
   {\frac{d(d-1)}2}.
 \end{equation*}
-$d=3$なら3。3次元の反対称tensorは、vectorと同じ数の成分を持つ。角運動量$L_{ij}$を$\vec L$で書けるのは、そのため。
+$d=3$なら3。3次元の反対称tensorは、ベクトルと同じ数の成分を持つ。角運動量$L_{ij}$を$\vec L$で書けるのは、そのため。
 }
 \solutionpart{3}{%
 scalarを足し、合計が$d^2$になることを示せ。
@@ -11097,9 +11123,9 @@ $d=24$だから
 
 \begin{solutionbox}{本気　tachyonic massの意味}
 \solutionpart{1}{%
-scalar場のpotential $V(\phi)=-\frac{\mu^2\phi^2}{2}+\frac{\lambda\phi^4}{4}$を考えよ。
-}{質量の2乗がマイナスの意味を、局所的なpotentialで見る。$V(\phi)=-\mu^2\phi^2/2+\lambda\phi^4/4$。$\lambda>0$なら、$|\phi|$が大きいところでは持ち上がる。展開する点$\phi=0$を調べる。}{%
-potentialは
+scalar場のポテンシャル $V(\phi)=-\frac{\mu^2\phi^2}{2}+\frac{\lambda\phi^4}{4}$を考えよ。
+}{質量の2乗がマイナスの意味を、局所的なポテンシャルで見る。$V(\phi)=-\mu^2\phi^2/2+\lambda\phi^4/4$。$\lambda>0$なら、$|\phi|$が大きいところでは持ち上がる。展開する点$\phi=0$を調べる。}{%
+ポテンシャルは
 \begin{equation*}
   V(\phi)=-\frac{\mu^2}{2}\phi^2+\frac\lambda4\phi^4,\qquad \mu^2>0,\ \lambda>0 .
 \end{equation*}
@@ -11112,11 +11138,11 @@ potentialは
   \phi=0,\ \pm\frac{\mu}{\sqrt\lambda}.
 \end{equation*}
 $\pm\mu/\sqrt\lambda$が谷の底で、$V=-\mu^4/(4\lambda)$。$\phi=0$は二つの谷の間の山。
-ひものタキオンは、この$\phi=0$のような山のてっぺんのまわりで展開している、と読む。ただ、ひもの場合は、このおもちゃのpotentialと違って、谷がどこにあるかは、ここまでの計算からは分からない。
+ひものタキオンは、この$\phi=0$のような山のてっぺんのまわりで展開している、と読む。ただ、ひもの場合は、このおもちゃのポテンシャルと違って、谷がどこにあるかは、ここまでの計算からは分からない。
 }
 \solutionpart{2}{%
 $\phi=0$での2階微分を求めよ。
-}{小さな揺れの質量の2乗は、展開点でのpotentialの曲がり$V''$。2回微分して$\phi=0$を入れれば$-\mu^2$。}{%
+}{小さな揺れの質量の2乗は、展開点でのポテンシャルの曲がり$V''$。2回微分して$\phi=0$を入れれば$-\mu^2$。}{%
 2回微分する。
 \begin{align*}
   V'(\phi)&=-\mu^2\phi+\lambda\phi^3,\\
@@ -11135,12 +11161,12 @@ $\phi=0$を入れると
 \begin{equation*}
   V''(\phi_*)=-\mu^2+3\lambda\cdot\frac{\mu^2}{\lambda}=2\mu^2>0,
 \end{equation*}
-で、ふつうの質量$\sqrt2\mu$の粒子。このpotentialでは、展開する場所を谷の底に変えれば、タキオンは消える。
+で、ふつうの質量$\sqrt2\mu$の粒子。このポテンシャルでは、展開する場所を谷の底に変えれば、タキオンは消える。
 }
 \solutionpart{3}{%
 $M^2<0$が小揺らぎの不安定性を表すことを説明せよ。
 }{$V''(0)<0$なら、$\phi=0$は山のてっぺん。小さな揺れは、振動しないで大きくなって、転がり落ちる。不安定。}{%
-$\phi=0$のまわりで、potentialを2次まで展開する。
+$\phi=0$のまわりで、ポテンシャルを2次まで展開する。
 \begin{equation*}
   V(\phi)\simeq V(0)+\frac12V''(0)\phi^2,
   \qquad
@@ -11213,7 +11239,7 @@ $J^{-i}$は、光錐座標の$X^-$と横の$X^i$を混ぜるboostの生成子。
   \text{光錐のLorentz}&:\ [J^{-i},J^{-j}]=0\ \Rightarrow\ D=26,\ a=1 .\\
   \text{BRST}&:\ Q_{\mathrm B}^2=0\ \Rightarrow\ D=26,\ a=1 .
 \end{align*}
-Weylの計算からは、$a$は出ない。$a$の候補は、前の節で横の零点energyを$\zeta$でつないだ$a=(D-2)/24$で、$D=26$を入れると$a=1$。光錐とBRSTが要求する値と一致する。
+Weylの計算からは、$a$は出ない。$a$の候補は、前の節で横の零点エネルギーを$\zeta$でつないだ$a=(D-2)/24$で、$D=26$を入れると$a=1$。光錐とBRSTが要求する値と一致する。
 \begin{equation*}
   {D=26,\qquad a=1}.
 \end{equation*}
@@ -11307,7 +11333,7 @@ $D=4$と$D=26$で評価せよ。
 \subsubsection*{照合のための到達点}
 Weylの$c_{\mathrm{tot}}=D-26=0$から出るのは、$D=26$だけ。$a=1$は光錐とBRSTが要求する値で（どちらも借りた結果）、前の節の候補$a=\frac{D-2}{24}$に$D=26$を入れた値とも合う。
 古典の作用は、どの$D$でも書ける。$D$を$26$に決めたのは、量子論でもWeyl対称性を残す、という条件。
-$a=1$を質量公式へ戻すと、開いたひもにはタキオンと質量ゼロのvector、閉じたひもにはタキオンと、graviton・$B$場・dilatonが出る。
+$a=1$を質量公式へ戻すと、開いたひもにはタキオンと質量ゼロのベクトル、閉じたひもにはタキオンと、graviton・$B$場・dilatonが出る。
 
 
 \clearpage
@@ -11526,9 +11552,9 @@ $D$について解く。
 }
 \end{solutionbox}
 
-\begin{solutionbox}{誘導付き　NS零点energy}
+\begin{solutionbox}{誘導付き　NS零点エネルギー}
 \solutionpart{1}{%
-bosonとfermionの零点energyの符号を説明せよ。
+bosonとfermionの零点エネルギーの符号を説明せよ。
 }{振動子一つのHamiltonianを、生成と消滅の順番をそろえた形で書いて、真空で値を読む。bosonは交換関係、fermionは反交換関係で並べ替える。並べ替えたときに出る定数の符号を比べる。}{%
 ここでは$\hbar=1$。
 bosonは$[a,a^\dagger]=1$だから、対称に並べたHamiltonianは
@@ -11542,7 +11568,7 @@ fermionの古典的な変数はGrassmann数で、$bb^*=-b^*b$。だから古典�
  H_F=\frac\omega2(b^\dagger b-bb^\dagger)
      =\omega\left(N_F-\frac12\right),\qquad N_F=b^\dagger b.
 \]
-真空では$N_B=N_F=0$だから、一つのmodeの零点energyは、
+真空では$N_B=N_F=0$だから、一つのmodeの零点エネルギーは、
 bosonが$+\omega/2$、fermionが$-\omega/2$。
 }
 \solutionpart{2}{%
@@ -11604,7 +11630,7 @@ $D=10$なら横は$D-2=8$方向だから、
 }
 \solutionpart{4}{%
 $a_{NS}$を求めよ。
-}{物理状態の条件を、正規順序の$L_0$と定数$a_{\mathrm{NS}}$で$(L_0-a_{\mathrm{NS}})|\Psi\rangle=0$と書く。零点energyの定数を反対側に移すと、符号が変わる。}{%
+}{物理状態の条件を、正規順序の$L_0$と定数$a_{\mathrm{NS}}$で$(L_0-a_{\mathrm{NS}})|\Psi\rangle=0$と書く。零点エネルギーの定数を反対側に移すと、符号が変わる。}{%
 物理状態の条件を、正規順序にする前の$L_0$で書くと
 \begin{equation*}
   (L_0+E_0^{\mathrm{NS}})|\Psi\rangle=0 .
@@ -11621,7 +11647,7 @@ NSの開いたひもの質量公式は$\alpha'M^2=N-\frac12$になる。どの�
 }
 \end{solutionbox}
 
-\begin{solutionbox}{本気　R零点energy}
+\begin{solutionbox}{本気　R零点エネルギー}
 R sectorの非zero modeについて
 \solutionpart{1}{%
 bosonとfermionのmode番号を比較せよ。
@@ -11637,10 +11663,10 @@ Rでは、横のbosonもfermionも周期的。展開を並べると
 NSとの違いはここにある。NSではfermionの番号が$\frac12,\frac32,\dots$で、bosonの$1,2,\dots$と同じ番号の相手がいなかった。
 }
 \solutionpart{2}{%
-各modeの零点energyを足せ。
-}{設問(1)で、同じ$n$にboson一つとfermion一つがいた。その1組ごとに、問題「NS零点energy」(1)の符号で零点energyを足す。全部の$n$で足すのは、1組ごとの和を出したあと。}{%
+各modeの零点エネルギーを足せ。
+}{設問(1)で、同じ$n$にboson一つとfermion一つがいた。その1組ごとに、問題「NS零点エネルギー」(1)の符号で零点エネルギーを足す。全部の$n$で足すのは、1組ごとの和を出したあと。}{%
 設問(1)で、Rの横のmodeは、boson $\alpha_n^i$とfermion $\psi_n^i$が同じ$n=1,2,\dots$で一対一に並んでた。
-一つの$n$で、零点energyを足す。
+一つの$n$で、零点エネルギーを足す。
 \begin{align*}
   \text{boson}&:\ +\frac n2,\\
   \text{fermion}&:\ -\frac n2 .
@@ -11656,25 +11682,25 @@ modeごとに0だから、全部の$n$で足しても0。
 }
 \solutionpart{3}{%
 $a_R=0$を示せ。
-}{設問(2)の打ち消しを、横の$D-2$方向の全部に使う。残るのはzero modeの分だけ。最後に、問題「NS零点energy」(4)と同じ$a=-E_0$で$a_{\mathrm R}$に直す。}{%
-設問(2)から、正の整数modeごとにbosonとfermionの零点energyが打ち消すから
+}{設問(2)の打ち消しを、横の$D-2$方向の全部に使う。残るのはzero modeの分だけ。最後に、問題「NS零点エネルギー」(4)と同じ$a=-E_0$で$a_{\mathrm R}$に直す。}{%
+設問(2)から、正の整数modeごとにbosonとfermionの零点エネルギーが打ち消すから
 \begin{equation*}
   E_0^{\mathrm R}
   =\frac{D-2}{2}\sum_{n=1}^{\infty}(n-n)=0.
 \end{equation*}
-Rのzero modeは周波数0だから、零点energyに何も足さない（設問(4)）。だから
+Rのzero modeは周波数0だから、零点エネルギーに何も足さない（設問(4)）。だから
 \begin{equation*}
   {a_R=-E_0^{\mathrm R}=0}.
 \end{equation*}
 }
 \solutionpart{4}{%
-zero modeはenergyでなく基底縮退を作ることを説明せよ。
-}{零点energyは、modeごとに周波数の半分を足したもの。$\psi_0^\mu$の周波数を入れてみる。そのあとで、$\psi_0^\mu$と$L_0$の交換関係と、$\psi_0^\mu$どうしの反交換関係を見る。}{%
-零点energyは、modeごとに周波数の半分を足したもの。$\psi_0^\mu$の周波数は$0$だから、足す分は
+zero modeはエネルギーでなく基底縮退を作ることを説明せよ。
+}{零点エネルギーは、modeごとに周波数の半分を足したもの。$\psi_0^\mu$の周波数を入れてみる。そのあとで、$\psi_0^\mu$と$L_0$の交換関係と、$\psi_0^\mu$どうしの反交換関係を見る。}{%
+零点エネルギーは、modeごとに周波数の半分を足したもの。$\psi_0^\mu$の周波数は$0$だから、足す分は
 \begin{equation*}
   -\frac12\cdot0=0 .
 \end{equation*}
-零点energyには何も足さない。
+零点エネルギーには何も足さない。
 $\psi_0^\mu$について言えるのは、次の二つの関係。
 \begin{equation*}
   \{\psi_0^\mu,\psi_0^\nu\}=\eta^{\mu\nu},
@@ -11684,14 +11710,14 @@ $\psi_0^\mu$について言えるのは、次の二つの関係。
 二つ目から、$|\Omega\rangle$が$L_0$の固有状態なら、$\psi_0^\mu|\Omega\rangle$も同じ固有値。
 だから$\psi_0^\mu$は基底を上に持ち上げない。同じ高さの中で、基底同士を入れ替えるだけ。
 一つ目のClifford代数を満たす組は、一つの状態じゃ足りない（問題「Clifford代数」(4)）。spinorの成分の数だけ、同じ質量の基底が並ぶ。
-zero modeは基底のenergyを動かさずに、基底の数を増やす。
+zero modeは基底のエネルギーを動かさずに、基底の数を増やす。
 }
 \end{solutionbox}
 
 \begin{solutionbox}{本気　最初のNS状態}
 \solutionpart{1}{%
 NS真空の質量を求めよ。
-}{開いたひものNSの質量公式$\alpha'M^2=N-a_{\mathrm{NS}}$を使う。$a_{\mathrm{NS}}$は問題「NS零点energy」(4)で出した値。真空のlevel $N$を入れたとき、質量の2乗は正になる？}{%
+}{開いたひものNSの質量公式$\alpha'M^2=N-a_{\mathrm{NS}}$を使う。$a_{\mathrm{NS}}$は問題「NS零点エネルギー」(4)で出した値。真空のlevel $N$を入れたとき、質量の2乗は正になる？}{%
 NSの開いたひもの質量の式は
 \begin{equation*}
   \alpha'M^2=N-a_{\mathrm{NS}},\qquad a_{\mathrm{NS}}=\frac12 .
@@ -11735,8 +11761,8 @@ NSの質量の式に、設問(2)の$N=\frac12$を入れる。
 \begin{equation*}
   {M^2=0}.
 \end{equation*}
-状態$\psi_{-1/2}^\mu|0;p\rangle$は添字$\mu$を一つ持つ、質量ゼロのvector。ゲージ場。
-ボソン弦では$\alpha_{-1}^\mu$がlevel 1の質量ゼロのvectorだったのが、超弦では$\psi_{-1/2}^\mu$がlevel $\frac12$で同じ役をしてる。
+状態$\psi_{-1/2}^\mu|0;p\rangle$は添字$\mu$を一つ持つ、質量ゼロのベクトル。ゲージ場。
+ボソン弦では$\alpha_{-1}^\mu$がlevel 1の質量ゼロのベクトルだったのが、超弦では$\psi_{-1/2}^\mu$がlevel $\frac12$で同じ役をしてる。
 $a_{\mathrm{NS}}=\frac12$と、いちばん小さい$r=\frac12$がちょうど同じだから、質量ゼロになる。
 }
 \solutionpart{4}{%
@@ -11762,7 +11788,7 @@ $(-1)^F=+1$を残す射影
   |0;p\rangle\to-\frac12,\qquad
   \psi_{-1/2}^\mu|0;p\rangle\to0 .
 \end{equation*}
-タキオンが外れて、質量ゼロのvectorが残る。
+タキオンが外れて、質量ゼロのベクトルが残る。
 決まりの中に、タキオンの名前は出てこない。$\psi$の個数を全部の状態に同じように数えたら、真空が残らなかった。美鈴が名簿に当てた決まりも、同じ作りだった。
 違うのは、ひもでは決まりのほうも好きに選べないところ。タキオンを外したいところから決まりを作っても、ドーナツの面の読み替え（modular不変性）と合わなければ使えない。
 }
@@ -11865,9 +11891,9 @@ $+$がR、$-$がNS。左に2通り、右に2通りで、$2\times2=4$。
 }
 \solutionpart{2}{%
 時空bosonを与えるsectorを答えよ。
-}{GSOのあとのNSでいちばん軽い状態は、時空のvector。Rの基底は、時空のspinor。閉じたひもの状態は、左右の状態の掛け算になる。spinを足すと整数か半整数か、で分ける。}{%
+}{GSOのあとのNSでいちばん軽い状態は、時空のベクトル。Rの基底は、時空のspinor。閉じたひもの状態は、左右の状態の掛け算になる。spinを足すと整数か半整数か、で分ける。}{%
 左右の基底の時空の表現を掛ける。ここでは横の回転$SO(8)$で数える。$SO(8)$の表現の名前と掛け算の分け方は、補習では扱っていないから、結果を借りる。
-GSOのあとのNSの基底は$\mathbf 8_v$（vector）、Rの基底は$\mathbf 8_s$か$\mathbf 8_c$（spinor）。
+GSOのあとのNSの基底は$\mathbf 8_v$（ベクトル）、Rの基底は$\mathbf 8_s$か$\mathbf 8_c$（spinor）。
 NS--NSは
 \begin{equation*}
   \mathbf 8_v\otimes\mathbf 8_v=\mathbf 1\oplus\mathbf{28}\oplus\mathbf{35}_v
@@ -11884,8 +11910,8 @@ R--Rは、spinor二つの積。
 }
 \solutionpart{3}{%
 時空fermionを与えるsectorを答えよ。
-}{片側だけがRなら、vectorとspinorを一つずつ掛ける。整数のspinと半整数のspinを足したら、どちらになる？}{%
-片側だけがRなら、vectorとspinorを一つずつ掛ける（分け方は、設問(2)と同じく借りる）。
+}{片側だけがRなら、ベクトルとspinorを一つずつ掛ける。整数のspinと半整数のspinを足したら、どちらになる？}{%
+片側だけがRなら、ベクトルとspinorを一つずつ掛ける（分け方は、設問(2)と同じく借りる）。
 \begin{equation*}
   \mathbf 8_v\otimes\mathbf 8_s=\mathbf 8_c\oplus\mathbf{56}_c .
 \end{equation*}
@@ -11919,9 +11945,9 @@ R--Rは、spinor二つの積。
 \end{solutionbox}
 
 \subsubsection*{解答を閉じる前に}
-いちばん間違えやすいのは、$(-1)^F$で数えるもの。数えるのは$\psi$を当てた個数だけで、$\alpha$は数えない。真空には$-$をつける。真空に$+$をつけると、タキオンが残ってvectorが消える。
+いちばん間違えやすいのは、$(-1)^F$で数えるもの。数えるのは$\psi$を当てた個数だけで、$\alpha$は数えない。真空には$-$をつける。真空に$+$をつけると、タキオンが残ってベクトルが消える。
 NSとRは、帯の上のfermionが1周で符号を変えるかどうか。zero modeを持つのはRだけで、そのClifford代数から時空のspinorが出てきた。
-中心電荷の打ち消しから$D=10$、零点energyから$a_{\mathrm{NS}}=\frac12$と$a_{\mathrm R}=0$。GSO射影はタキオンを除いて、質量ゼロのvectorとspinorを残す。
+中心電荷の打ち消しから$D=10$、零点エネルギーから$a_{\mathrm{NS}}=\frac12$と$a_{\mathrm R}=0$。GSO射影はタキオンを除いて、質量ゼロのベクトルとspinorを残す。
 
 
 \par\bigskip
@@ -11948,7 +11974,7 @@ $(n_1,n_2)=(0,0)$を入れる。
   (0,0):\quad{m^2=\frac{0+0}{R^2}=0}.
 \end{equation*}
 内部の運動量がない、zero mode。内部の方向に一定で、4次元から見ると質量ゼロの場。
-$R$がどれだけ小さくても、この場は軽いまま残る。低いenergyで見えるのは、これだけ。
+$R$がどれだけ小さくても、この場は軽いまま残る。低いエネルギーで見えるのは、これだけ。
 }
 \solutionpart{2}{%
 $(\pm1,0)$、$(0,\pm1)$の質量を求めよ。
@@ -12485,11 +12511,11 @@ $\mathbf 1$が、$SU(3)$で変わらない$\eta$。
 \end{solutionbox}
 
 \begin{solutionbox}{本気　zero mode近似の範囲}
-energy $E$が最初のKK mass $m_{\mathrm{KK}}$より十分小さいとする。
+エネルギー $E$が最初のKK mass $m_{\mathrm{KK}}$より十分小さいとする。
 \solutionpart{1}{%
 励起可能な内部modeを答えよ。
-}{内部の状態を一つ、本物の粒子として作るのに要るenergyを、4次元の質量で下から見積もる。内部の運動量が保存することも考えに入れる。その値を$E\ll m_{\mathrm{KK}}$と比べる。}{%
-内部の状態$I$を、4次元で静止させて作るのに要るenergyは
+}{内部の状態を一つ、本物の粒子として作るのに要るエネルギーを、4次元の質量で下から見積もる。内部の運動量が保存することも考えに入れる。その値を$E\ll m_{\mathrm{KK}}$と比べる。}{%
+内部の状態$I$を、4次元で静止させて作るのに要るエネルギーは
 \begin{equation*}
   E_I=\sqrt{\bm p^2+m_I^2}\ \ge\ m_I .
 \end{equation*}
@@ -12502,7 +12528,7 @@ energy $E$が最初のKK mass $m_{\mathrm{KK}}$より十分小さいとする。
 円やtorusなら、内部の運動量$n/R$が保存して、4次元からは電荷に見えるから。
 一般の$K$でも、scalarのzero modeは内部で定数（問題「Laplacianと正値性」(4)）で、その二つとKKの状態一つの重なりは$\int_K\sqrt g\,Y_0Y_0Y_I\propto\int_K\sqrt g\,Y_I=0$で消える（$Y_I$は定数の$Y_0$と直交する）。
 だから組で作るしかなくて、要るのは$2m_{\mathrm{KK}}$。
-$E\ll m_{\mathrm{KK}}$ではどっちも足りない。energyの保存で、ゼロじゃないmodeは本物の粒子としては出てこない。
+$E\ll m_{\mathrm{KK}}$ではどっちも足りない。エネルギーの保存で、ゼロじゃないmodeは本物の粒子としては出てこない。
 本当に作れるのは、$m_I=m_0$の内部のzero modeだけ。
 }
 \solutionpart{2}{%
@@ -12534,7 +12560,7 @@ $E$がさらに上がって$E\ge2m_{\mathrm{KK}}$になると、設問(1)の組�
 zero modeだけの4次元の書き方では、このしきい値の上は表せない。KKの状態を場として入れて書き直すか、内部まで含めた高い次元の理論に戻る。
 }
 \solutionpart{4}{%
-compact化の情報が低energy結合にも残り得る理由を述べよ。
+compact化の情報が低エネルギー結合にも残り得る理由を述べよ。
 }{zero modeだけの4次元の作用を作るときは、内部の方向で積分する。その積分から出てくる数（内部の体積、内部の波の形の重なり）が、4次元の作用の係数に入るかを見る。}{%
 例を一つ作る。$D=4+n$次元の重力の作用を、体積$V_K$の内部で積分する。zero modeは内部で定数だから
 \begin{equation*}
@@ -12552,7 +12578,7 @@ compact化の情報が低energy結合にも残り得る理由を述べよ。
   y_{ijk}\propto\int_K\sqrt g\,\psi_i\,\psi_j\,\phi_k .
 \end{equation*}
 どれも、重いmodeを作らなくても決まってる数。
-内部の大きさや形は、低いenergyの定数の中に残ってる。
+内部の大きさや形は、低いエネルギーの定数の中に残ってる。
 }
 \end{solutionbox}
 
@@ -12629,7 +12655,7 @@ gaugeの代数の次元を出しておく。
   \dim\mathfrak{so}(32)&=\frac{32\cdot31}2=496,\\
   \dim(\mathfrak e_8\oplus\mathfrak e_8)&=248+248=496 .
 \end{align*}
-Type Iでは、Chan--Patonの添字$i,j=1,\dots,32$を持つ開いたひもの質量ゼロのvectorが、$\Omega$で反対称な行列$\lambda^{\mathsf T}=-\lambda$だけ残る。その数が$32\cdot31/2$で$\mathfrak{so}(32)$。
+Type Iでは、Chan--Patonの添字$i,j=1,\dots,32$を持つ開いたひもの質量ゼロのベクトルが、$\Omega$で反対称な行列$\lambda^{\mathsf T}=-\lambda$だけ残る。その数が$32\cdot31/2$で$\mathfrak{so}(32)$。
 heteroticでは、左の16次元の格子で長さの2乗が$2$の点（480個）と、16個の$\partial X^I$がgauge bosonになる。格子で$\mathfrak{so}(32)$か$\mathfrak e_8\oplus\mathfrak e_8$。
 Type IIの摂動的な閉じたひもにはChan--Patonの添字も内部の格子もない。RRのp形式のgauge場はあるけど可換で、その電荷を持つ摂動的なひもの状態がない。だから非可換の代数は出てこない。
 }
@@ -12895,7 +12921,7 @@ $N^2$通り。行列$\lambda_{ij}$で足し合わせると
 \begin{equation*}
   |\Psi;\lambda\rangle=\sum_{i,j}\lambda_{ij}|\Psi;ij\rangle .
 \end{equation*}
-質量ゼロのvectorでは、この$\lambda$が$U(N)$の$N\times N$行列の役をする。端の番号が、gaugeの添字になる。
+質量ゼロのベクトルでは、この$\lambda$が$U(N)$の$N\times N$行列の役をする。端の番号が、gaugeの添字になる。
 Type Iでは、設問(1)の$\Omega$が端を裏返して、$i$と$j$を入れ替える。
 }
 \solutionpart{4}{%
@@ -12925,9 +12951,9 @@ $N=32$は、打ち消されていないR--Rの源を消すのに要る数。
 \begin{solutionbox}{本気　閉弦sectorと時空統計}
 \solutionpart{1}{%
 NS--NSとR--Rが時空bosonを与える理由を述べよ。
-}{GSOのあとのNSでいちばん軽い状態はvectorで、spinは整数。Rの基底はspinorで、spinは半整数。左右の積のspinが整数になるかを、NS--NSとR--Rで別々に見る。}{%
-GSOのあとのNSの基底は$\psi_{-1/2}^\mu|0\rangle$で、vector。spinは整数。
-NS--NSはvector二つの積だから（$SO(8)$の掛け算の分け方は、問題「閉弦の四sector」と同じく借りる）
+}{GSOのあとのNSでいちばん軽い状態はベクトルで、spinは整数。Rの基底はspinorで、spinは半整数。左右の積のspinが整数になるかを、NS--NSとR--Rで別々に見る。}{%
+GSOのあとのNSの基底は$\psi_{-1/2}^\mu|0\rangle$で、ベクトル。spinは整数。
+NS--NSはベクトル二つの積だから（$SO(8)$の掛け算の分け方は、問題「閉弦の四sector」と同じく借りる）
 \begin{equation*}
   \mathbf 8_v\otimes\mathbf 8_v=\mathbf 1\oplus\mathbf{28}\oplus\mathbf{35}_v .
 \end{equation*}
@@ -12944,8 +12970,8 @@ spinで言えば、$\tfrac12+\tfrac12$も$\tfrac12-\tfrac12$も整数。
 }
 \solutionpart{2}{%
 NS--RとR--NSが時空fermionを与える理由を述べよ。
-}{NS--RとR--NSは、左右の片方だけがRのspinor。vectorとspinorを掛けたあと、spinorの添字は残る？spinで言うと、整数と半整数を足したもの。}{%
-NS--Rは、vectorとspinorの積。
+}{NS--RとR--NSは、左右の片方だけがRのspinor。ベクトルとspinorを掛けたあと、spinorの添字は残る？spinで言うと、整数と半整数を足したもの。}{%
+NS--Rは、ベクトルとspinorの積。
 \begin{equation*}
   \mathbf 8_v\otimes\mathbf 8_s=\mathbf 8_c\oplus\mathbf{56}_c .
 \end{equation*}
@@ -14640,7 +14666,7 @@ type I/heterotic $SO(32)$双対性について、ここの三つの照合
 「低エネルギー場と作用」「type I D1の張力」「D1上のworldsheet spectrum」を、
 BPS保護へ直接依存するもの、低エネルギー有効理論の照合、worldsheet量子数の照合へ分類せよ。
 また、三つが一致しても一般的な数学的証明とは呼ばない理由を述べよ。
-}{三つの照合が何を比べているかを分ける。「質量ゼロの場と有効作用」「BPSの張力」「世界面のchiralityと表現」。それぞれが、低いenergyの有効理論、BPSの守り、世界面の量子数のどれに頼っているかを見る。そのあとで、三つで比べていないものを挙げる。}{%
+}{三つの照合が何を比べているかを分ける。「質量ゼロの場と有効作用」「BPSの張力」「世界面のchiralityと表現」。それぞれが、低いエネルギーの有効理論、BPSの守り、世界面の量子数のどれに頼っているかを見る。そのあとで、三つで比べていないものを挙げる。}{%
 分けるとこうなる。
 \begin{description}[style=nextline,leftmargin=0pt,labelindent=0pt]
   \item[\sffamily\bfseries 低エネルギー有効理論の照合]
@@ -14703,8 +14729,8 @@ $\e^{\mathrm iny/R}$が一価（1周で同じ値）なのは$n$が整数のと�
 \solutionpart{2}{%
 高次元でmass $m_*$ のmodeが、低次元で
     $M_n^2=m_*^2+\frac{n^2}{R^2}$ を持つことを示せ。
-}{高い次元のenergyと運動量の関係を、広がった方向の$\bm p$と、円周の$p_y=n/R$に分ける。低い次元の$E^2=\bm p^2+M_n^2$と比べると、円周の運動量が質量の2乗に足される。}{%
-高い次元の質量$m_*$の粒子の、energyと運動量の関係。空間の運動量を、広がった方向の$\bm p$と、円の方向の$p_y$に分ける。
+}{高い次元のエネルギーと運動量の関係を、広がった方向の$\bm p$と、円周の$p_y=n/R$に分ける。低い次元の$E^2=\bm p^2+M_n^2$と比べると、円周の運動量が質量の2乗に足される。}{%
+高い次元の質量$m_*$の粒子の、エネルギーと運動量の関係。空間の運動量を、広がった方向の$\bm p$と、円の方向の$p_y$に分ける。
 \begin{equation}
   E^2=\bm p^2+p_y^2+m_*^2 .
 \end{equation}
@@ -14777,7 +14803,7 @@ D0の電荷$n$は、D0を$n$個集めたもの。BPSの状態では、質量が�
    =\frac{|n|}{\gs\ls}.
 \end{align}
 絶対値があるから、$n<0$ の反D0でも質量は正。
-$n$個の離れたD0の質量の和と、ちょうど同じ。BPSの状態は、束縛のenergyで軽くならない。
+$n$個の離れたD0の質量の和と、ちょうど同じ。BPSの状態は、束縛のエネルギーで軽くならない。
 ここで決めたのは、電荷$n$の状態があるとしたときの質量。その状態が本当にあるかは、この節の最後の問題「threshold束縛状態はなぜ必要か」で扱う。
 \answerconclusion{電荷$n$のBPS状態があれば、その質量は$M_n^{D0}=|n|/(\gs\ls)$。}
 }
@@ -14808,8 +14834,8 @@ $\gs\to0$ と $\gs\to\infty$ で $\Relf$ とKK間隔がどうなるか答えよ�
   \gs\to\infty:&\quad \Relf\to\infty,
   &\Delta M_{\mathrm{KK}}\to0.
 \end{align}
-弱い結合では円が小さく縮んで、ゼロじゃないKK mode（D0の状態）がすごく重くなる。低いenergyで残るのは$n=0$だけで、10次元のIIAに見える。
-強い結合では円がふくらんで、段が細かくなって連続に近づく。低いenergyにも無限個のKKの状態が入ってきて、11次元の書き方が要る。
+弱い結合では円が小さく縮んで、ゼロじゃないKK mode（D0の状態）がすごく重くなる。低いエネルギーで残るのは$n=0$だけで、10次元のIIAに見える。
+強い結合では円がふくらんで、段が細かくなって連続に近づく。低いエネルギーにも無限個のKKの状態が入ってきて、11次元の書き方が要る。
 有限の$\gs$なら、半径も有限で、11番目の方向は円のまま。まっすぐな方向になるのは、$\gs\to\infty$の極限。
 }
 \end{solutionbox}
@@ -14984,20 +15010,20 @@ $\gs^{-1}$は、世界面の形で数えたdiskの重みと同じで、Dブレ�
 charge $n>1$ のD0状態のBPS massが、D01個のmassの $n$ 倍に等しいとする。
 \solutionpart{1}{%
 この等式だけではnormalizableな1粒子束縛状態の存在を証明できない理由を述べよ。
-}{BPSの等式$M_n=nM_{D0}$は、離れた$n$個のD0の連続spectrumの、いちばん下と同じenergyを言っているだけ。相対座標の方向で波動関数が規格化できる、1粒子の束縛状態かどうかは、質量の値からは決まらない。}{%
+}{BPSの等式$M_n=nM_{D0}$は、離れた$n$個のD0の連続spectrumの、いちばん下と同じエネルギーを言っているだけ。相対座標の方向で波動関数が規格化できる、1粒子の束縛状態かどうかは、質量の値からは決まらない。}{%
 BPSの等式は
 \begin{equation}
   M_n=\frac{n}{\gs\ls}=nM_{D0}
   \qquad(n>1).
 \end{equation}
-比べる相手を書く。$n$個のD0が互いに遠く離れて、ほとんど止まってる状態のenergyは
+比べる相手を書く。$n$個のD0が互いに遠く離れて、ほとんど止まってる状態のエネルギーは
 \begin{equation*}
-  E=nM_{D0}+(\text{相対運動の運動energy})\ \ge\ nM_{D0}.
+  E=nM_{D0}+(\text{相対運動の運動エネルギー})\ \ge\ nM_{D0}.
 \end{equation*}
 いちばん下は$nM_{D0}$で、その上に連続spectrumが続く。
 BPSの値$M_n=nM_{D0}$は、ちょうどこの下端と同じ。
 ふつうの束縛状態なら$E<nM_{D0}$で、連続spectrumの下に離れた1点として見える。ここでは隙間がゼロ（threshold）。
-だから「その値のenergyの状態がある」だけでは、それが相対座標の方向で規格化できる1粒子の束縛状態なのか、連続spectrumの端の、広がった状態なのか、区別できない。
+だから「その値のエネルギーの状態がある」だけでは、それが相対座標の方向で規格化できる1粒子の束縛状態なのか、連続spectrumの端の、広がった状態なのか、区別できない。
 本当にあるかは、D0がたくさん集まった系の量子力学で決まる。その分け方は、設問(3)で書く。
 }
 \solutionpart{2}{%
@@ -15017,7 +15043,7 @@ D0の電荷は、11番目の円の運動量の数。電荷$n$の状態は
   p_{11}=\frac n{\Relf}
 \end{equation*}
 の段にいるはずの、11次元のsupergravityの質量ゼロの多重項（重力子とその超対称の相手）が、そっくり抜ける。
-$n$個の離れたD0は同じenergyだけど、それは$n$個の粒子の連続の状態で、1粒子の段の代わりにはならない。
+$n$個の離れたD0は同じエネルギーだけど、それは$n$個の粒子の連続の状態で、1粒子の段の代わりにはならない。
 全部の整数$n$で1粒子の束縛状態があって、やっと11次元の粒子の段が全部そろう。
 }
 \solutionpart{3}{%
@@ -15577,15 +15603,15 @@ $M^2$を微分した$2$があるから、$4\pi$が$8\pi$になる。温度を掛
   C=\frac{\dd M}{\dd\THawk}
 \]
 を求め、その符号の意味を述べよ。
-}{温度の式を$M=1/(8\pi\GN\THawk)$とひっくり返して、$\THawk$で微分する。符号は、energyを出して軽くなったときに、温度がどちらへ動くかで読む。}{%
+}{温度の式を$M=1/(8\pi\GN\THawk)$とひっくり返して、$\THawk$で微分する。符号は、エネルギーを出して軽くなったときに、温度がどちらへ動くかで読む。}{%
 $M=(8\pi\GN\THawk)^{-1}$ を微分して
 \begin{equation}
   {C=\frac{dM}{d\THawk}
   =-\frac{1}{8\pi\GN\THawk^2}
   =-8\pi\GN M^2=-2\SBH<0}.
 \end{equation}
-放射でenergyを失うと $M$ が減って、$\THawk\propto M^{-1}$ はかえって上がる。
-熱容量が負、というのはこのこと。energyを出すほど熱くなって、出ていく速さも増える。
+放射でエネルギーを失うと $M$ が減って、$\THawk\propto M^{-1}$ はかえって上がる。
+熱容量が負、というのはこのこと。エネルギーを出すほど熱くなって、出ていく速さも増える。
 }
 \end{solutionbox}
 
@@ -16001,10 +16027,10 @@ $L_0$ の固有値が $h$ の状態では
 \begin{equation}
   {E_L=h-\frac{c}{24}}.
 \end{equation}
-\answerconclusion{円筒のenergyは、平面のweight $h$から$c/24$だけ下がる。この差はどの状態にも同じだけ付くから、状態どうしのenergyの差は変えない。}
+\answerconclusion{円筒のエネルギーは、平面のweight $h$から$c/24$だけ下がる。この差はどの状態にも同じだけ付くから、状態どうしのエネルギーの差は変えない。}
 }
 \solutionpart{4}{%
-実スカラー $d$ 個だけの理論で、円筒真空の左移動energyを求めよ。
+実スカラー $d$ 個だけの理論で、円筒真空の左移動エネルギーを求めよ。
 }{自由な実scalar一つの中心電荷は$1$。互いに相互作用しない場の中心電荷は足し算だから、$d$個で$c=d$。平面の真空$h=0$を、設問(3)の$E_L=h-c/24$に入れる。}{%
 自由な実scalar一つの中心電荷は$c=1$。違うscalarは相互作用しないから、中心電荷は足し算。
 \begin{equation*}
@@ -16015,10 +16041,10 @@ $L_0$ の固有値が $h$ の状態では
 \begin{equation}
   {E_{\mathrm{vac},L}=0-\frac{d}{24}=-\frac{d}{24}}.
 \end{equation}
-円周$2\pi$の円筒の上の真空は、負のCasimir energyを持つ。
+円周$2\pi$の円筒の上の真空は、負のCasimirエネルギーを持つ。
 
-二十六を出した日の、横の振動子の零点energy$-\frac{D-2}{24}$と同じ形で、$d=D-2=24$なら$-1$。ボードでは、scalar一つの片側の零点の和から$\frac12\zeta(-1)=-\frac1{24}$を出して、$c=1$の$-c/24$と合うのを確かめた。ここのSchwarzianの計算は、$\zeta$の正則化を使っていない。同じ$-1/24$が、座標の付け替えで$T$に足される定数から出てきた。
-\answerconclusion{$c=d$だから、円筒真空の左移動energyは$E_{\mathrm{vac},L}=-d/24$。}
+二十六を出した日の、横の振動子の零点エネルギー$-\frac{D-2}{24}$と同じ形で、$d=D-2=24$なら$-1$。ボードでは、scalar一つの片側の零点の和から$\frac12\zeta(-1)=-\frac1{24}$を出して、$c=1$の$-c/24$と合うのを確かめた。ここのSchwarzianの計算は、$\zeta$の正則化を使っていない。同じ$-1/24$が、座標の付け替えで$T$に足される定数から出てきた。
+\answerconclusion{$c=d$だから、円筒真空の左移動エネルギーは$E_{\mathrm{vac},L}=-d/24$。}
 }
 \end{solutionbox}
 
@@ -16074,7 +16100,7 @@ $\beta\ll2\pi$なら右は1よりずっと大きい。
 数で見ると、$\beta=0.1\cdot2\pi$なら$\beta'=10\cdot2\pi$で、二つの逆温度は100倍違う。
 
 torusには空間の輪（長さ$2\pi$）と熱の輪（長さ$\beta$）がある。$S$で二つを入れ替えてから、空間の輪の長さを$2\pi$に戻すと、短かった熱の輪が長い輪になる。
-だから、高い温度（短い$\beta$）の計算を、低い温度（長い$\beta'$）の計算に置き換えられる。低い温度なら、いちばんenergyの低い状態だけ見ればいい。次の問題「真空から高温へ」は、ここから始まる。
+だから、高い温度（短い$\beta$）の計算を、低い温度（長い$\beta'$）の計算に置き換えられる。低い温度なら、いちばんエネルギーの低い状態だけ見ればいい。次の問題「真空から高温へ」は、ここから始まる。
 \answerconclusion{$\beta/(2\pi)$と$\beta'/(2\pi)$は互いに逆数だから、高温の$\beta\ll2\pi$は低温の$\beta'\gg2\pi$に移る。}
 }
 \solutionpart{4}{%
@@ -16101,7 +16127,7 @@ compactなユニタリーCFTで真空が $h=\bar h=0$ を持つとする。
 \solutionpart{1}{%
 $E_{\mathrm{vac}}=-\frac{c+\bar c}{24}$ を求めよ。
 }{円周$2\pi$の円筒のHamiltonian $H=L_0+\bar L_0-(c+\bar c)/24$に、真空の$h=\bar h=0$を入れる。}{%
-左と右の円筒のenergyは、「Schwarzianと円筒真空」(3)で出したとおり
+左と右の円筒のエネルギーは、「Schwarzianと円筒真空」(3)で出したとおり
 \begin{equation*}
   E_L=h-\frac c{24},\qquad E_R=\bar h-\frac{\bar c}{24}.
 \end{equation*}
@@ -16115,14 +16141,14 @@ $E_{\mathrm{vac}}=-\frac{c+\bar c}{24}$ を求めよ。
 \end{equation}
 負で、中心電荷が大きいほど深い。
 
-この真空がいちばん低いことも確かめておく。ユニタリーなら、どの状態も$h\ge0$、$\bar h\ge0$。$T$そのもののように$(h,\bar h)=(2,0)$の状態もあるから、両方が正とは限らない。いちばん低いと言うには、和で足りる。問題の仮定どおり$h=\bar h=0$が真空だけなら、ほかの状態は$h+\bar h>0$で、energy $h+\bar h-(c+\bar c)/24$は真空より高い。
+この真空がいちばん低いことも確かめておく。ユニタリーなら、どの状態も$h\ge0$、$\bar h\ge0$。$T$そのもののように$(h,\bar h)=(2,0)$の状態もあるから、両方が正とは限らない。いちばん低いと言うには、和で足りる。問題の仮定どおり$h=\bar h=0$が真空だけなら、ほかの状態は$h+\bar h>0$で、エネルギー $h+\bar h-(c+\bar c)/24$は真空より高い。
 \answerconclusion{$E_{\mathrm{vac}}=-(c+\bar c)/24$。ほかの状態は$h+\bar h>0$だけ上にいる。}
 }
 \solutionpart{2}{%
 $\beta'\gg1$ で $Z(\beta')\simeq\exp[\frac{\beta'(c+\bar c)}{24}]$ を示せ。
 }{分配関数の和から、真空の重み$\e^{-\beta'E_{\mathrm{vac}}}$をくくり出す。残る項は、真空との差$\Delta E>0$の分だけ$\e^{-\beta'\Delta E}$で小さい。}{%
 CFTのspectrumを固定して$\beta'\to\infty$にする。
-励起のenergyを
+励起のエネルギーを
 $E_a=E_{\mathrm{vac}}+\Delta E_a$、
 $\Delta E_a>0$と書くと
 \begin{align}
@@ -16172,10 +16198,10 @@ $c=\bar c$なら$c+\bar c=2c$だから、
  =2\frac{\pi^2c}{6\beta}.
 \]
 右の$\pi^2c/(6\beta)$一つ分が、片側の$\log Z_L(\beta)$の先頭の項。
-係数が2倍なのは、真空のenergy$-(c+\bar c)/24$に、左と右の中心電荷が同じ大きさで入っているから。
+係数が2倍なのは、真空のエネルギー$-(c+\bar c)/24$に、左と右の中心電荷が同じ大きさで入っているから。
 比べてるのは高い温度の先頭の項だけ。
 どの温度でも$Z=Z_LZ_R$と分かれる、とまでは使ってない。
-\answerconclusion{$c=\bar c$なら、全体の高温の先頭係数は片側の2倍。左右の真空energyが、同じだけ足されているから。}
+\answerconclusion{$c=\bar c$なら、全体の高温の先頭係数は片側の2倍。左右の真空エネルギーが、同じだけ足されているから。}
 }
 \end{solutionbox}
 
@@ -16225,7 +16251,7 @@ $\Phi(\beta_*)=2\sqrt{AE}$ を示せ。
    ={2\sqrt{AE}}.
 \end{align}
 $x+1/x$が$x=1$で、二つの項が等しいところで最小になるのと同じ形。
-\answerconclusion{鞍点では、energyの項と温度の項がちょうど等しくて、$\Phi(\beta_*)=2\sqrt{AE}$。}
+\answerconclusion{鞍点では、エネルギーの項と温度の項がちょうど等しくて、$\Phi(\beta_*)=2\sqrt{AE}$。}
 }
 \solutionpart{3}{%
 $A=\frac{\pi^2c}{6}$ を戻し、$\log\rho(E)\simeq2\pi\sqrt{\frac{cE}{6}}$ を導け。
@@ -16269,7 +16295,7 @@ $E\to\lambda E$を入れる。
   \qquad
   {\beta_*\to\lambda^{-1/2}\beta_*}.
 \end{equation}
-energyを4倍にすると、entropyは2倍、温度$1/\beta_*$も2倍。
+エネルギーを4倍にすると、entropyは2倍、温度$1/\beta_*$も2倍。
 温度で書き直すと、$T=1/\beta_*\propto\sqrt E$だから$E\propto T^2$、$S\propto T$。空間が1次元の、質量のない粒子の気体と同じ増え方。
 \answerconclusion{$S\to\sqrt\lambda\,S$、$\beta_*\to\lambda^{-1/2}\beta_*$。$S$と$1/\beta_*$は、同じ$\sqrt\lambda$倍になる。}
 }
@@ -16279,8 +16305,8 @@ energyを4倍にすると、entropyは2倍、温度$1/\beta_*$も2倍。
 左移動sectorの最低weightを $h_{\min}$ とする。
 \solutionpart{1}{%
 低温の支配項を $h_{\min}-\frac{c}{24}$ で書け。
-}{いちばん低いweightは、真空の$0$とは限らない。円筒のenergy $E=h-c/24$に$h_{\min}$を入れたものが、いちばん低いenergy。低い温度の分配関数では、そのBoltzmann因子が残る。}{%
-片側の円筒のenergyは$E=h-c/24$。いちばん低いweightが$h_{\min}$なら、いちばん低いenergyは
+}{いちばん低いweightは、真空の$0$とは限らない。円筒のエネルギー $E=h-c/24$に$h_{\min}$を入れたものが、いちばん低いエネルギー。低い温度の分配関数では、そのBoltzmann因子が残る。}{%
+片側の円筒のエネルギーは$E=h-c/24$。いちばん低いweightが$h_{\min}$なら、いちばん低いエネルギーは
 \begin{equation}
   E_{\min}=h_{\min}-\frac{c}{24}.
 \end{equation}
@@ -16295,7 +16321,7 @@ $d_{\min}$は、いちばん低い状態の数。$\beta'\to\infty$で、かっ�
   \exp\!\left[-\beta'\left(h_{\min}-\frac{c}{24}\right)\right].
 \end{equation}
 真空が$h=0$なら、「真空から高温へ」(2)の片側の形、$\exp[\beta'c/24]$に戻る。
-\answerconclusion{低い温度でいちばん効くのは、いちばん低い円筒のenergy $h_{\min}-c/24$ の項。}
+\answerconclusion{低い温度でいちばん効くのは、いちばん低い円筒のエネルギー $h_{\min}-c/24$ の項。}
 }
 \solutionpart{2}{%
 modular $S$ 変換後の高温分配関数を求めよ。
@@ -16350,7 +16376,7 @@ $\ceff>0$、$E>0$として、$\beta$で微分すると
   &\simeq2\sqrt{A_{\mathrm{eff}}E}\\
   &=2\pi\sqrt{\frac{\ceff E}{6}}.
 \end{align}
-\answerconclusion{Cardyの公式の$c$は、$\ceff=c-24h_{\min}$に置き換わる。状態の増え方を決めるのは、$c$そのものより、低い温度で残る最低energyのほう。}
+\answerconclusion{Cardyの公式の$c$は、$\ceff=c-24h_{\min}$に置き換わる。状態の増え方を決めるのは、$c$そのものより、低い温度で残る最低エネルギーのほう。}
 }
 \solutionpart{4}{%
 compactなユニタリーCFTで $\ceff=c$ となる条件を述べよ。
@@ -16525,7 +16551,7 @@ $S^1$ の上の運動量の固有関数を
 \end{equation}
 }
 \solutionpart{4}{%
-2電荷系に運動量 $\Np$ を加えると3電荷になることを、charge vectorとして書け。
+2電荷系に運動量 $\Np$ を加えると3電荷になることを、電荷ベクトルとして書け。
 }{D1の数$N_1$、D5の数$N_5$に、円の運動量の数$N_p$を三つ目の電荷として足す。$P_5=N_p/R$と一緒に、整数の組$(N_1,N_5,N_p)$を書く。}{%
 2電荷の系は、D1の数$N_1$とD5の数$N_5$で決まる。
 \begin{equation*}
@@ -16624,7 +16650,7 @@ $N_1=N_5=1$ なら
 $N=N_1N_5$ とし、$\Sym^N(T^4)=(T^4)^N/S_N$ を考える。
 \solutionpart{1}{%
 copy一つの実boson 4個と実fermion 4個から $c=6$ を求めよ。
-}{copy一つの低いenergyのCFTには、実boson 4個とMajorana--Weylの実fermion 4個。一つずつの中心電荷を、個数の分だけ足す。}{%
+}{copy一つの低いエネルギーのCFTには、実boson 4個とMajorana--Weylの実fermion 4個。一つずつの中心電荷を、個数の分だけ足す。}{%
 copy一つは、$T^4$の上の自由な場。中心電荷を、場の種類ごとに足す。
 \begin{align*}
   \text{実boson}\ 4\ \text{個}&:\ 4\times1=4,\\
@@ -16711,7 +16737,7 @@ $\cL=\cR=6N_1N_5$ とする。
 \solutionpart{1}{%
 Ramond基底 $h_R=\bar h_R=\frac{c}{24}$ に対し、$\EL=\ER=0$ を示せ。
 }{Ramondの基底の平面のweight $h_R=c/24$、$\bar h_R=\bar c/24$を、円筒のlevel $\EL=L_0-c/24$、$\ER=\bar L_0-\bar c/24$に入れる。}{%
-円筒のenergyは、平面のweightから$c/24$を引いたもの。
+円筒のエネルギーは、平面のweightから$c/24$を引いたもの。
 \begin{equation*}
   \EL=L_0-\frac c{24},\qquad \ER=\bar L_0-\frac{\bar c}{24}.
 \end{equation*}
@@ -16722,15 +16748,15 @@ Ramondの基底のweight $h_R=c/24$、$\bar h_R=\bar c/24$を入れる。
   \ER&=\bar h_R-\frac{\bar c}{24}
   =\frac{\bar c}{24}-\frac{\bar c}{24}=0.
 \end{align}
-NSの真空なら$h=0$で、円筒のenergyは$-c/24$。Ramondの基底は、ちょうど$c/24$だけ持ち上がってて、Casimirのずれを打ち消す。
-Ramondの基底は、BPSの真空。energyゼロの、超対称性を保った状態。その上に左向きの励起を積んだものが、D1--D5--Pのblack holeの微視的状態になる。
+NSの真空なら$h=0$で、円筒のエネルギーは$-c/24$。Ramondの基底は、ちょうど$c/24$だけ持ち上がってて、Casimirのずれを打ち消す。
+Ramondの基底は、BPSの真空。エネルギーゼロの、超対称性を保った状態。その上に左向きの励起を積んだものが、D1--D5--Pのblack holeの微視的状態になる。
 \answerconclusion{Ramondの基底では、Casimirのずれがweightと打ち消し合って、$\EL=\ER=0$。}
 }
 \solutionpart{2}{%
 $E_{\mathrm{phys}}=\frac{\EL+\ER}{R}$、$P_5=\frac{\EL-\ER}{R}$ を用い、
     $P_5=\frac{\Np}{R}$ のBPS状態で $\EL=\Np$, $\ER=0$ を導け。
-}{補習のBPSの条件を、正の運動量での励起energyの下限が、ちょうど等号になることとして使う。$E_{\mathrm{phys}}-P_5$を二つのlevelで書いて、右のlevelを決める。残った運動量の式から左のlevelを出す。}{%
-ここの$E_{\mathrm{phys}}$は、D1--D5の基底からの励起のenergy。
+}{補習のBPSの条件を、正の運動量での励起エネルギーの下限が、ちょうど等号になることとして使う。$E_{\mathrm{phys}}-P_5$を二つのlevelで書いて、右のlevelを決める。残った運動量の式から左のlevelを出す。}{%
+ここの$E_{\mathrm{phys}}$は、D1--D5の基底からの励起のエネルギー。
 ブレーンの静止質量を含めた全部の質量じゃない。
 補習で使った「正の運動量$\Np/R$を持つBPS状態は、右を基底に置いたまま、左だけを励起する」という条件は、
 この励起で$E_{\mathrm{phys}}\ge|P_5|$の下限がちょうど等号になること。
@@ -16749,7 +16775,7 @@ $R>0$だから$\ER=0$。これを運動量の式に戻すと
 \begin{equation}
  {\EL=\Np,\qquad\ER=0}.
 \end{equation}
-超対称性からくるBPSの下限は入力。energyと運動量の2本の式だけからは、BPSの条件は出てこない。
+超対称性からくるBPSの下限は入力。エネルギーと運動量の2本の式だけからは、BPSの条件は出てこない。
 }
 \solutionpart{3}{%
 片側Cardy公式から $S_{\mathrm{micro}}$ を求めよ。
@@ -16766,7 +16792,7 @@ $S_{\mathrm{micro}}\simeq2\pi\sqrt{N_1N_5\Np}$。}
 \solutionpart{4}{%
 略記「$L_0=\Np$」を、円筒shiftを明示する形へ書き直せ。
 }{省略して書いた$L_0=\Np$は、円筒のCasimirのずれを省いてる。まず円筒のlevel $\EL$、$\ER$で書いて、それから平面のweightの式に戻す。}{%
-略記の$L_0=\Np$は、「左向きの励起が$\Np$だけ乗ってる」という意味。円筒のenergyの言葉で書くと
+略記の$L_0=\Np$は、「左向きの励起が$\Np$だけ乗ってる」という意味。円筒のエネルギーの言葉で書くと
 \begin{equation*}
   \EL=L_0-\frac c{24}=\Np,\qquad \ER=\bar L_0-\frac{\bar c}{24}=0 .
 \end{equation*}
@@ -16789,7 +16815,7 @@ $c=6N_1N_5$は大きいから、$c/24$を一つ落とすだけで、平面のwei
 }
 \solutionpart{5}{%
 直接のCardy極限が安全となる十分条件を述べよ。
-}{ふつうのCardyの鞍点をそのまま使える条件を、励起のenergyと中心電荷の大小で書く。そこにこの系の$c_L$と$E_L$を入れる。}{%
+}{ふつうのCardyの鞍点をそのまま使える条件を、励起のエネルギーと中心電荷の大小で書く。そこにこの系の$c_L$と$E_L$を入れる。}{%
 中心電荷を固定したふつうのCardyの極限では $\EL\gg\cL$ を取る。
 この系では
 \begin{equation}
@@ -17112,7 +17138,7 @@ D1--D5--Pの系の $2\pi$ を出すには、Cardyの公式のちゃんとした�
 $x^{4},\ldots,x^{9}$ への依存を落として4次元へ次元縮約する。
 \solutionpart{1}{%
 $A_M$ を $A_\mu$ と $\Phi^I$ へ分解し、各々の個数を答えよ。
-}{10次元のゲージ場の添字$M=0,\ldots,9$を、D3の世界体積$\mu=0,\ldots,3$と、横の$I=4,\ldots,9$に分ける。前のは4次元のvector、後の六つはscalarとして数える。}{%
+}{10次元のゲージ場の添字$M=0,\ldots,9$を、D3の世界体積$\mu=0,\ldots,3$と、横の$I=4,\ldots,9$に分ける。前のは4次元のベクトル、後の六つはscalarとして数える。}{%
 10次元のgauge場$A_M$、$M=0,\dots,9$を、D3の世界体積$x^0,\dots,x^3$と、横$x^4,\dots,x^9$に分ける。
 \begin{equation}
   A_M\longrightarrow
@@ -17124,18 +17150,18 @@ $A_M$ を $A_\mu$ と $\Phi^I$ へ分解し、各々の個数を答えよ。
 \begin{equation*}
   \#\mu=4,\qquad \#I=10-4=6 .
 \end{equation*}
-4次元のLorentz変換では、$A_\mu$は添字$\mu$を持つからvector。$A_I$は4次元の添字を持たないからscalar。
-$A_\mu$ は4次元のvector1個、$\Phi^I\equiv A_I$ は
+4次元のLorentz変換では、$A_\mu$は添字$\mu$を持つからベクトル。$A_I$は4次元の添字を持たないからscalar。
+$A_\mu$ は4次元のベクトル1個、$\Phi^I\equiv A_I$ は
 4次元の実scalar6個。ブレーンの横に動ける方向が、scalarになる。
 $\Phi^I$の値は、ブレーンの横の位置$x^I=2\pi\alpha'\Phi^I$として読める。
 }
 \solutionpart{2}{%
-massless4次元vectorのon-shell実自由度が2である理由を述べよ。
-}{質量ゼロの4次元のvectorは4成分あるけど、ゲージの冗長性とGaussの拘束で二つ抜ける。抜けるのがどの成分かを言ってから、$D-2$に$D=4$を入れる。}{%
-4次元のvector $A_\mu$ は、見た目は4成分。
+massless4次元ベクトルのon-shell実自由度が2である理由を述べよ。
+}{質量ゼロの4次元のベクトルは4成分あるけど、ゲージの冗長性とGaussの拘束で二つ抜ける。抜けるのがどの成分かを言ってから、$D-2$に$D=4$を入れる。}{%
+4次元のベクトル $A_\mu$ は、見た目は4成分。
 でも質量ゼロのゲージ場では、ゲージの冗長性と拘束の条件で
 時間の成分と、進む向きの成分は物理的な状態から抜けて、進む向きに垂直な偏極二つだけ残る。
-$D$ 次元の質量ゼロのvectorの自由度は $D-2$ だから、
+$D$ 次元の質量ゼロのベクトルの自由度は $D-2$ だから、
 $D=4$ では
 \begin{equation}
   4-2={2}.
@@ -17143,8 +17169,8 @@ $D=4$ では
 }
 \solutionpart{3}{%
 四つのWeyl fermionを含め、bosonとfermionのon-shell実自由度を数えよ。
-}{boson側は、設問(2)のvectorの偏極と、設問(1)の六つのscalarを足す。fermion側は、Weyl fermion1個のon-shellの実自由度を数えて、4個分にする。二つを比べる。}{%
-boson側。設問(2)のvectorが2、設問(1)のscalarが一つ1で6個。
+}{boson側は、設問(2)のベクトルの偏極と、設問(1)の六つのscalarを足す。fermion側は、Weyl fermion1個のon-shellの実自由度を数えて、4個分にする。二つを比べる。}{%
+boson側。設問(2)のベクトルが2、設問(1)のscalarが一つ1で6個。
 \begin{equation}
   n_B=2+6\times1={8}.
 \end{equation}
@@ -17244,21 +17270,21 @@ $L^4=4\pi g_sN\alpha'^2$ を用いて
 $L^4/\alpha'^2=\lambda$、同値に $L^2/\alpha'=\sqrt\lambda$。}
 }
 \solutionpart{4}{%
-$N=1$ でcommutator potentialが消える理由を説明せよ。
-}{$N=1$では、gauge群が$U(1)$で、adjointのscalarは$1\times1$の行列。それが交換するかどうかを、交換子のpotentialに入れて見る。}{%
+$N=1$ で交換子のポテンシャルが消える理由を説明せよ。
+}{$N=1$では、gauge群が$U(1)$で、adjointのscalarは$1\times1$の行列。それが交換するかどうかを、交換子のポテンシャルに入れて見る。}{%
 $N=1$なら、gauge群は$U(1)$。adjointの場$\Phi^I$は$1\times1$の行列、つまりただの数。
 数どうしは、掛ける順番を入れ替えても同じ。
 \begin{equation}
   [\Phi^I,\Phi^J]=\Phi^I\Phi^J-\Phi^J\Phi^I=0 .
 \end{equation}
-だから交換子のpotential
+だから交換子のポテンシャル
 \begin{equation*}
   V\propto-\sum_{I,J}\Tr[\Phi^I,\Phi^J]^2=0
 \end{equation*}
 は、どんな$\Phi^I$でもゼロ。
-$\Phi^I$を横の位置と読むと、D31枚はどこに置いてもenergyが同じ。平らな方向。
+$\Phi^I$を横の位置と読むと、D31枚はどこに置いてもエネルギーが同じ。平らな方向。
 これは、自由な重心のscalar。
-$N\ge2$なら、交換しない行列が位置の「ずれ」を表して、potentialがゼロじゃなくなる。
+$N\ge2$なら、交換しない行列が位置の「ずれ」を表して、ポテンシャルがゼロじゃなくなる。
 }
 \end{solutionbox}
 
@@ -17306,7 +17332,7 @@ $r>0$ で $r^{d_\perp-1}$ を掛けて、
 \end{align}
 ここで定数を $c_1=C/(2-d_\perp)$ と置き直した。
 確かめ。微分すると$c_1(2-d_\perp)r^{1-d_\perp}=Cr^{-(d_\perp-1)}$。合ってる。
-$d_\perp=3$なら$c_0+c_1/r$で、3次元のCoulombのpotential。横の次元が増えると、遠くで速く減る。
+$d_\perp=3$なら$c_0+c_1/r$で、3次元のCoulombのポテンシャル。横の次元が増えると、遠くで速く減る。
 }
 \solutionpart{3}{%
 D$p$-braneの横次元
@@ -17351,7 +17377,7 @@ $r\gg L$では$H\simeq1$で平ら、$r\ll L$では$H\simeq L^4/r^4$で、のど�
 }
 \end{solutionbox}
 
-\begin{solutionbox}{本気　赤方偏移とlow energy}
+\begin{solutionbox}{本気　赤方偏移と低エネルギー}
 $g_{tt}=-H^{-\frac{1}{2}}$ とする。
 \solutionpart{1}{%
 静止観測者の固有時が
@@ -17373,7 +17399,7 @@ $g_{tt}=-H^{-1/2}$ を入れると
 \solutionpart{2}{%
 位相を比較して
 $E_\infty=H^{-\frac{1}{4}}E_{\local}$ を導け。
-}{その場の観測者が見る波の位相$\e^{-\imunit E_{\local}\tau}$に、設問(1)の$\dd\tau=H^{-1/4}\dd t$を入れる。$\e^{-\imunit E_\infty t}$の係数と比べて、赤方偏移したenergyを読む。}{%
+}{その場の観測者が見る波の位相$\e^{-\imunit E_{\local}\tau}$に、設問(1)の$\dd\tau=H^{-1/4}\dd t$を入れる。$\e^{-\imunit E_\infty t}$の係数と比べて、赤方偏移したエネルギーを読む。}{%
 その場の観測者が測る位相を
 \begin{equation}
   \exp(-\imunit E_{\local}\tau)
@@ -17391,7 +17417,7 @@ $E_\infty=H^{-\frac{1}{4}}E_{\local}$ を導け。
 \solutionpart{3}{%
 $H\simeq \frac{L^4}{r^4}$ では
     $E_\infty\simeq\frac{r}{L}E_{\local}$ となることを示せ。
-}{地平面の近くで$H\simeq L^4/r^4$を4分の1乗して、設問(2)のenergyの関係に入れる。その場のenergyを決めたまま$r$を小さくしたとき、遠くから測ったenergyがどうなるかを見る。}{%
+}{地平面の近くで$H\simeq L^4/r^4$を4分の1乗して、設問(2)のエネルギーの関係に入れる。その場のエネルギーを決めたまま$r$を小さくしたとき、遠くから測ったエネルギーがどうなるかを見る。}{%
 地平面の近く$r\ll L$では、$H=1+L^4/r^4$の1が無視できる。
 \begin{equation}
   H\simeq\frac{L^4}{r^4}
@@ -17402,19 +17428,19 @@ $H\simeq \frac{L^4}{r^4}$ では
 \begin{equation}
   {E_\infty\simeq\frac rL E_{\local}}.
 \end{equation}
-その場のenergyを決めて $r\to0$ にすると $E_\infty\to0$。
-のどの奥に置いた励起は、遠くから見ると、赤くずれて、どんどん低いenergyに見える。だから遠くの観測者の低いenergyの世界に、のどの奥の自由度が全部残る。
-これが、低いenergyの極限でthroatを取り出す理由の一つ。もう一つの、外の波がthroatに吸いこまれなくなることは、補習で借りた計算のほう。
+その場のエネルギーを決めて $r\to0$ にすると $E_\infty\to0$。
+のどの奥に置いた励起は、遠くから見ると、赤くずれて、どんどん低いエネルギーに見える。だから遠くの観測者の低いエネルギーの世界に、のどの奥の自由度が全部残る。
+これが、低いエネルギーの極限でthroatを取り出す理由の一つ。もう一つの、外の波がthroatに吸いこまれなくなることは、補習で借りた計算のほう。
 }
 \solutionpart{4}{%
-「throatの任意の励起が絶対的にlow energyである」という文の誤りを、
+「throatの任意の励起が絶対的に低エネルギーである」という文の誤りを、
     観測者を明示して訂正せよ。
-}{energyは、どの観測者の時刻で測るかで変わる。その場の観測者が測る$E_{\local}$と、遠くの時刻$t$で測る$E_\infty$を分けて、$r\to0$でどちらが小さくなるかを書く。}{%
-「絶対に低いenergy」っていう、観測者によらない言い方は間違い。
+}{エネルギーは、どの観測者の時刻で測るかで変わる。その場の観測者が測る$E_{\local}$と、遠くの時刻$t$で測る$E_\infty$を分けて、$r\to0$でどちらが小さくなるかを書く。}{%
+「絶対に低いエネルギー」っていう、観測者によらない言い方は間違い。
 ちゃんと言うと、
 \begin{quote}
-その場のenergyを決めたのどの中の励起は、奥の $r\ll L$ に置くほど、
-遠くの時刻 $t$ で測ったenergyが小さく見える。
+その場のエネルギーを決めたのどの中の励起は、奥の $r\ll L$ に置くほど、
+遠くの時刻 $t$ で測ったエネルギーが小さく見える。
 \end{quote}
 その場の観測者は、同じ励起を、決めたとおりの $E_{\local}$ と測る。小さく見えるのは、遠くの時刻で測ったときだけ。
 }
@@ -17615,8 +17641,8 @@ $r=\alpha'U$を入れる。
 \end{equation*}
 $\alpha'$が消えた。
 $\alpha'\to0$ と一緒に $r\to0$ にしても、$U=r/\alpha'$ を固定すれば、この質量は有限に残る。
-ゲージの側から見ると、これはブレーンを離して$U(N+1)\to U(N)\times U(1)$に破ったときの、W bosonの質量。$U$は、ゲージ理論のenergyの目盛り。
-だから$U$を止める極限は、「ゲージ理論の有限なenergyの物理を残す」極限。止めるのは時空の距離$r$じゃなくて、伸びたひもの質量$U/(2\pi)$。
+ゲージの側から見ると、これはブレーンを離して$U(N+1)\to U(N)\times U(1)$に破ったときの、W bosonの質量。$U$は、ゲージ理論のエネルギーの目盛り。
+だから$U$を止める極限は、「ゲージ理論の有限なエネルギーの物理を残す」極限。止めるのは時空の距離$r$じゃなくて、伸びたひもの質量$U/(2\pi)$。
 }
 \solutionpart{3}{%
 計量のworldvolume項、radial項、5球項を個別に変形せよ。
@@ -17746,16 +17772,16 @@ $\lambda=10^2$、$N=1$ では、曲率だけが小さくても
 古典のtype IIB超重力は使えない。古典の超重力に要るのは、$\lambda\gg1$と$g_s\ll1$の両方。
 }
 \solutionpart{4}{%
-開弦側のlow-energy limitで4次元$\mathcal N=4$ SYMが残ること、
-重力側のlow-energy limitで$\AdS_5\times S^5$上の
+開弦側の低エネルギー極限で4次元$\mathcal N=4$ SYMが残ること、
+重力側の低エネルギー極限で$\AdS_5\times S^5$上の
 type IIB string theoryが残ること、
 両者を同一視するMaldacena予想を、論理的に分けて3文で書け。
 }{二つの切り離しの極限が、それぞれ何を残すかを、1文ずつ言う。3文目には、残った二つを同じとみなす1段が、どこから来るかを書く。}{%
 \begin{enumerate}
-  \item open-string記述のlow-energy limitでは、
+  \item open-string記述の低エネルギー極限では、
     自由なbulkから切り離された4次元の
     $\mathcal N=4\ U(N)$ super Yang--Millsが残る。
-  \item supergravity記述のlow-energy limitでは、
+  \item supergravity記述の低エネルギー極限では、
     同じ自由なbulkから切り離された、地平面の近くの
     $\AdS_5\times S^5$ の上のtype IIBのひもの理論が残る。
   \item free bulkを除いた二つのinteracting sectorが同じ量子論である、
@@ -17770,7 +17796,7 @@ type IIB string theoryが残ること、
 いちばん間違えやすいのは、$H$の指数。横が6次元でも、$r^{-6}$にはならない。動径のLaplacianを1回ずつ積分すると、指数は$d_\perp-2=4$。
 
 横の6方向は、開いたひもの側では六つのscalar $\Phi^I$に、重力の側では$SO(6)$と$S^5$になる。
-「low energy」は、どの観測者の時刻で測って、何を決めておいたかを書いたときだけ意味がある。奥の励起が小さく見えるのは、遠くの時刻で測った$E_\infty$。
+「低エネルギー」は、どの観測者の時刻で測って、何を決めておいたかを書いたときだけ意味がある。奥の励起が小さく見えるのは、遠くの時刻で測った$E_\infty$。
 $U=r/\alpha'$を止めるのは、伸びたひもの質量$U/(2\pi)$を有限に残すため。
 $\lambda\gg1$は曲率の補正を、$g_s\ll1$はひものloopを抑える。二つは別の条件で、古典の超重力には両方要る。
 
@@ -18028,7 +18054,7 @@ $\cN=4$ SYMには、四つの超電荷$Q^A$（$A=1,\dots,4$）を回すR対称�
 \begin{equation*}
   Q^A\ \to\ U^A{}_BQ^B,\qquad U\in SU(4)_R .
 \end{equation*}
-六つのscalar $\Phi^I$は$SO(6)$のvector $\mathbf6$、四つのfermionは$SU(4)$の$\mathbf4$。
+六つのscalar $\Phi^I$は$SO(6)$のベクトル $\mathbf6$、四つのfermionは$SU(4)$の$\mathbf4$。
 \begin{equation}
   {\Isom(S^5)=SO(6)}
   \quad\longleftrightarrow\quad
@@ -18249,7 +18275,7 @@ $m^2L^2$について解く。
 \end{equation*}
 これがBreitenlohner--Freedmanの下限。
 $m^2$は負でもいいけど、$-d^2/4$より下には行けない。$d=4$（AdS$_5$）なら$m^2L^2\ge-4$。
-下限より下だと、$\nu=\sqrt{d^2/4+m^2L^2}$が純虚数になって、$\Delta$が複素数になる。場は境界の近くで$z^{d/2}\cos(|\nu|\log z)$みたいに振動しながら無限に揺れる。energyが下で止まらない。
+下限より下だと、$\nu=\sqrt{d^2/4+m^2L^2}$が純虚数になって、$\Delta$が複素数になる。場は境界の近くで$z^{d/2}\cos(|\nu|\log z)$みたいに振動しながら無限に揺れる。エネルギーが下で止まらない。
 }
 \solutionpart{2}{%
 $d=4$、$m^2L^2=-4,-3,0,5$ について、標準量子化の $\Delta$ を求めよ。
@@ -18290,7 +18316,7 @@ $d=4$ のBFの下限は $m^2L^2\ge-4$。$-5$ はこれを破って、
 \begin{equation}
   \Delta=2\pm\imunit
 \end{equation}
-と複素数になる。energyが下で止まる、ふつうのAdSのscalarの量子化ができなくなって、
+と複素数になる。エネルギーが下で止まる、ふつうのAdSのscalarの量子化ができなくなって、
 背景が不安定になる。
 }
 \solutionpart{4}{%
@@ -18313,7 +18339,7 @@ AdSでは負の $m^2$ が直ちに不安定を意味しない理由を、flat sp
 $m^2<0$ なら $|\bm k|$ が十分小さいと $\omega$ が虚数になって、指数的に育つ。
 AdSでは、全体の幾何と、時間的な境界の条件が、許されるmodeを変える。
 負の曲率が実効的に正の分を足す。だからBFの下限より上なら、$m^2$ が負でも
-energyを下で止められる。補習で佑芽が言った「タキオンのときは、坂の上で、不安定だったよ」は、平らな時空の話。AdSでは、下限より上の負の$m^2$なら、坂の上にいても転げ落ちない。
+エネルギーを下で止められる。補習で佑芽が言った「タキオンのときは、坂の上で、不安定だったよ」は、平らな時空の話。AdSでは、下限より上の負の$m^2$なら、坂の上にいても転げ落ちない。
 }
 \end{solutionbox}
 
@@ -18336,11 +18362,11 @@ $\int\dd^dx\,\phi_0\cO$ が無次元であることから $[\phi_0]=d-\Delta$ �
 }
 \solutionpart{2}{%
 $\Delta<d$、$\Delta=d$、$\Delta>d$ のsource変形を分類せよ。
-}{結合定数としての源の次元 \([\phi_0]=d-\Delta\) の符号を見る。一定の源の強さをenergy \(E\)で無次元にして、\(E\)を下げたときに大きくなるか、変わらないか、小さくなるかで分ける。}{%
-設問(1)で$[\phi_0]=d-\Delta$。源$\phi_0$は、作用に足した結合定数。結合の次元の符号で、低いenergyに下りたときの強さの変わり方が決まる。
-energy $E$での無次元の強さは$\phi_0E^{-[\phi_0]}=\phi_0E^{\Delta-d}$。
+}{結合定数としての源の次元 \([\phi_0]=d-\Delta\) の符号を見る。一定の源の強さをエネルギー \(E\)で無次元にして、\(E\)を下げたときに大きくなるか、変わらないか、小さくなるかで分ける。}{%
+設問(1)で$[\phi_0]=d-\Delta$。源$\phi_0$は、作用に足した結合定数。結合の次元の符号で、低いエネルギーに下りたときの強さの変わり方が決まる。
+エネルギー $E$での無次元の強さは$\phi_0E^{-[\phi_0]}=\phi_0E^{\Delta-d}$。
 \begin{itemize}
-  \item $\Delta<d$：$[\phi_0]>0$。$E\to0$で$\phi_0E^{\Delta-d}\to\infty$。低いenergyで強くなる。relevant。
+  \item $\Delta<d$：$[\phi_0]>0$。$E\to0$で$\phi_0E^{\Delta-d}\to\infty$。低いエネルギーで強くなる。relevant。
   \item $\Delta=d$：$[\phi_0]=0$。$E$によらない。marginal。
   \item $\Delta>d$：$[\phi_0]<0$。$E\to0$で弱くなる。irrelevant。
 \end{itemize}
@@ -19328,7 +19354,7 @@ $k$ と物理的な蒸発時刻を同一視できない理由を二つ挙げよ�
 }{$k$は放射に移った実効的なqubitの数で、時計で測った時刻とは別に定義した数。二つを結ぶには、時刻ごとに何個のqubitが移るかが要る。その数を決めるものを、Hawkingの放射の側から二つ探す。}{%
 たとえば、二つある。
 \begin{enumerate}
-  \item Hawkingの放射の量子一つが持ち出すenergyとentropyは、1個ごとに同じとは限らない。
+  \item Hawkingの放射の量子一つが持ち出すエネルギーとentropyは、1個ごとに同じとは限らない。
     粒子の種類と振動数で変わるから、量子1個を一つのqubitと数えることはできない。
   \item 放射の出る速さは、black holeの質量と温度、それに、Hawking対を書くときに捨てた、地平面のまわりで跳ね返されて戻る分（greybody factor）で変わる。
     Schwarzschildなら、質量が減ると温度が上がるから、単位時間に移る実効的なqubitの数は一定じゃない。
@@ -20519,7 +20545,7 @@ replicaがつながったwormholeの鞍点も入れる。
 \solutionpart{1}{%
 $[\partial_\mu]=1$、作用が無次元であることから、
     $\Mpl,\phi,A_\mu,V,g$ の質量次元を求めよ。
-}{作用に単位がないことから、まずLagrangianの密度の質量次元が決まる。そのあと、Einstein--Hilbertの項、scalarの運動項、ゲージの運動項を一つずつ見て、\(\Mpl,\phi,A_\mu,g\) を出す。potentialは、括弧の中で運動項と並んでる項だから、密度と同じ次元を持つ。}{%
+}{作用に単位がないことから、まずLagrangianの密度の質量次元が決まる。そのあと、Einstein--Hilbertの項、scalarの運動項、ゲージの運動項を一つずつ見て、\(\Mpl,\phi,A_\mu,g\) を出す。ポテンシャルは、括弧の中で運動項と並んでる項だから、密度と同じ次元を持つ。}{%
 自然単位では作用に単位がなくて、
 \[
   [\dd^4x]=-4,
@@ -20562,7 +20588,7 @@ $F_{\mu\nu}=\partial_\mu A_\nu-\partial_\nu A_\mu$ だから
 \[
   {[A_\mu]=1,\quad[F_{\mu\nu}]=2,\quad[g]=0}.
 \]
-potentialはLagrangianの密度と同じ次元だから
+ポテンシャルはLagrangianの密度と同じ次元だから
 \begingroup\postdisplaypenalty=10000
 \[
   {[V]=4}.
@@ -20572,7 +20598,7 @@ potentialはLagrangianの密度と同じ次元だから
 \solutionpart{2}{%
 $V=\mu^4 f(\frac{\phi}{f_0})$ と書くとき、
     $\mu$ と $f_0$ の質量次元を求めよ。
-}{関数 \(f\) の中身 \(\phi/f_0\) には単位がないこと。potential全体は質量次元4。この二つを別々に使って、\(f_0\) と \(\mu\) の次元を出す。}{%
+}{関数 \(f\) の中身 \(\phi/f_0\) には単位がないこと。ポテンシャル全体は質量次元4。この二つを別々に使って、\(f_0\) と \(\mu\) の次元を出す。}{%
 一つ目の条件。関数$f$の中身は無次元。たとえば$f(u)=\cos u$や$u^2$で、$u$に単位があると、$\cos u$の展開の項どうしで単位がそろわない。
 \begin{equation*}
   \left[\frac{\phi}{f_0}\right]=0
@@ -20581,7 +20607,7 @@ $V=\mu^4 f(\frac{\phi}{f_0})$ と書くとき、
 \end{equation*}
 4次元の正準scalarは$[\phi]=1$（設問(1)）。
 
-二つ目の条件。potentialはLagrangianの密度と同じ次元で$[V]=4$。$f$は無次元の数だから、次元は全部$\mu^4$が持つ。
+二つ目の条件。ポテンシャルはLagrangianの密度と同じ次元で$[V]=4$。$f$は無次元の数だから、次元は全部$\mu^4$が持つ。
 \begin{equation*}
   [\mu^4]=4
   \quad\Longrightarrow\quad
@@ -20594,12 +20620,12 @@ $V=\mu^4 f(\frac{\phi}{f_0})$ と書くとき、
 \[
   {[\mu]=1,\qquad[f_0]=1}.
 \]
-$\mu$はpotentialの高さの目盛り、$f_0$は場の値の目盛り。potentialが周期的なaxionは、まだ扱ってない。たとえばそういうaxionなら、$f_0$は崩壊定数と呼ばれて、potentialの周期は$2\pi f_0$になる。
+$\mu$はポテンシャルの高さの目盛り、$f_0$は場の値の目盛り。ポテンシャルが周期的なaxionは、まだ扱ってない。たとえばそういうaxionなら、$f_0$は崩壊定数と呼ばれて、ポテンシャルの周期は$2\pi f_0$になる。
 }
 \solutionpart{3}{%
 Distance Conjecture、WGC、de Sitter conjectureが、
     それぞれ作用のどの係数を主に調べるか答えよ。
-}{三つの予想が、それぞれ何についての主張だったかを思い出す。それを、作用の項（Einstein--Hilbert、scalarの運動項、potential、ゲージの運動項）のどれの係数の話かに対応させる。最初の日に作用の下に書いた表が、手がかりになる。}{%
+}{三つの予想が、それぞれ何についての主張だったかを思い出す。それを、作用の項（Einstein--Hilbert、scalarの運動項、ポテンシャル、ゲージの運動項）のどれの係数の話かに対応させる。最初の日に作用の下に書いた表が、手がかりになる。}{%
 作用の項ごとに並べる。
 \begin{center}
 \small
@@ -20612,7 +20638,7 @@ scalar kinetic termの $G_{ij}(\phi)$ とfield-space distance。\\
 Weak Gravity Conjecture &
 gauge coupling $g$、整数charge $q$、state mass $m$。\\
 de Sitter conjecture &
-potential $V$、gradient $\nabla_iV$、Hessian $\nabla_i\nabla_jV$。\\
+ポテンシャル $V$、gradient $\nabla_iV$、Hessian $\nabla_i\nabla_jV$。\\
 \bottomrule
 \end{tabularx}
 \end{center}
@@ -20860,8 +20886,8 @@ species cutoffの見積もりが正確な等号でない理由を二つ挙げよ
 とする。
 \solutionpart{1}{%
 net long-range forceが斥力または0となるmass boundを導け。
-}{同じ符号の電荷のゲージの反発 \(g^2q^2/(4\pi r)\) と、重力の引力 \(-m^2/(8\pi\Mpl^2r)\) を足す。力の向きは、足したpotentialを \(r\) で微分した \(F_r=-\dd V/\dd r\) の符号で決める。}{%
-全体のpotentialは
+}{同じ符号の電荷のゲージの反発 \(g^2q^2/(4\pi r)\) と、重力の引力 \(-m^2/(8\pi\Mpl^2r)\) を足す。力の向きは、足したポテンシャルを \(r\) で微分した \(F_r=-\dd V/\dd r\) の符号で決める。}{%
+全体のポテンシャルは
 \begin{align}
   V_{\mathrm{net}}(r)
   &=
@@ -20877,7 +20903,7 @@ net long-range forceが斥力または0となるmass boundを導け。
     \frac{m^2}{2\Mpl^2}
   \right).
 \end{align}
-potentialの符号を力の向きにつなげたいから、距離$r$で微分する。
+ポテンシャルの符号を力の向きにつなげたいから、距離$r$で微分する。
 二つの粒子が離れる向きを正にした、動径の方向の力は
 \[
  F_r=-\frac{\dd V_{\mathrm{net}}}{\dd r}
@@ -20991,14 +21017,14 @@ $Q>q>0$だから、最後のblack holeも正の電荷を持ってる。同じ符
 \answerconclusion{最終black holeのchargeは $Q_{\mathrm f}=Q-q$ で、まだ正。}
 }
 \solutionpart{2}{%
-energy conservationと最終black holeのextremal boundから
+エネルギー保存と最終black holeのextremal boundから
     \[
       M_{\mathrm{ext}}(Q)
       \ge m+M_{\mathrm{ext}}(Q-q)
     \]
     を使い、$m$ の条件を求めよ。
-}{最初と最後のblack holeにextremalな質量 \(M_{\mathrm{ext}}(Q)=\sqrt2g|Q|\Mpl\) を使って、出ていく粒子の静止質量も入れたenergyの保存の不等式に入れる。\(Q>q>0\) で絶対値を外して、両辺に共通の項を引く。}{%
-energyの保存。止まったblack holeの質量（最初のenergy）が、出た粒子の静止質量と、残ったblack holeの質量以上でないといけない。運動のenergyは負にならないから、不等式になる。
+}{最初と最後のblack holeにextremalな質量 \(M_{\mathrm{ext}}(Q)=\sqrt2g|Q|\Mpl\) を使って、出ていく粒子の静止質量も入れたエネルギーの保存の不等式に入れる。\(Q>q>0\) で絶対値を外して、両辺に共通の項を引く。}{%
+エネルギーの保存。止まったblack holeの質量（最初のエネルギー）が、出た粒子の静止質量と、残ったblack holeの質量以上でないといけない。運動のエネルギーは負にならないから、不等式になる。
 \begin{align}
   M_{\mathrm{ext}}(Q)
   &\ge
@@ -21047,18 +21073,18 @@ $m$が設問(2)で得たboundを厳しく上回る場合、
   =
   M_{\mathrm{ext}}(Q).
 \end{align}
-左辺は、放電のあとの静止質量のいちばん小さい値。残ったblack holeは$M_{\mathrm{ext}}(Q-q)$より軽くなれないし、運動のenergyは足されるだけだから、あとのenergyは左辺以上になる。それが最初の質量$M_{\mathrm{ext}}(Q)$を越えるから、
-この1段の放電はenergyの保存と両立しない。粒子が重すぎて、出ていけない。
+左辺は、放電のあとの静止質量のいちばん小さい値。残ったblack holeは$M_{\mathrm{ext}}(Q-q)$より軽くなれないし、運動のエネルギーは足されるだけだから、あとのエネルギーは左辺以上になる。それが最初の質量$M_{\mathrm{ext}}(Q)$を越えるから、
+この1段の放電はエネルギーの保存と両立しない。粒子が重すぎて、出ていけない。
 }
 \solutionpart{4}{%
-設問(2)で用いたenergy inequalityだけでは
+設問(2)で用いたエネルギー不等式だけでは
 decay rateを求められない理由を説明せよ。
-}{energyの不等式が決めるのは、最後の状態に行けるかどうかの二択。崩壊の速さには、時間あたりに何が起きるかを決める量が要る。そういう量が不等式に入ってるかを見る。}{%
-不等式は、最後の状態に行けるだけのenergyの余裕があるかを決めるだけ。時間あたりに何回起きるかは、入ってない。
+}{エネルギーの不等式が決めるのは、最後の状態に行けるかどうかの二択。崩壊の速さには、時間あたりに何が起きるかを決める量が要る。そういう量が不等式に入ってるかを見る。}{%
+不等式は、最後の状態に行けるだけのエネルギーの余裕があるかを決めるだけ。時間あたりに何回起きるかは、入ってない。
 本当の速さには、少なくとも
 \begin{itemize}
   \item black-hole backgroundで、粒子が作られる振幅、
-  \item black holeのまわりの重力のpotentialの山を、粒子が抜けて遠くまで届く割合（跳ね返されて戻る分を除いた割合で、greybody factorと呼ぶ）、
+  \item black holeのまわりの重力のポテンシャルの山を、粒子が抜けて遠くまで届く割合（跳ね返されて戻る分を除いた割合で、greybody factorと呼ぶ）、
   \item 角運動量と、出ていく粒子がblack holeの時空を変える効果（backreaction）
 \end{itemize}
 が要る。どれも、静止質量と電荷の勘定には出てこない量。だから、行けると分かっても、速さは決まらない。
@@ -21072,12 +21098,12 @@ magnetic WGCのparametric cutoff
 \]
 を仮定する。
 \solutionpart{1}{%
-fixed experimental energy $E=10^{-6}\Mpl$ をEFT内に保つには、
+固定した実験のエネルギー $E=10^{-6}\Mpl$ をEFT内に保つには、
     $g$ にどんな下限が必要か。
-}{実験を有効理論で書く条件 \(E<\Lambda\) と、magnetic WGCのcutoff \(\Lambda\lesssim g\Mpl\) を一緒に課す。決めたenergy \(E=10^{-6}\Mpl\) がcutoffより下に入るための、\(g\) の大きさの下限を出す。}{%
+}{実験を有効理論で書く条件 \(E<\Lambda\) と、magnetic WGCのcutoff \(\Lambda\lesssim g\Mpl\) を一緒に課す。決めたエネルギー \(E=10^{-6}\Mpl\) がcutoffより下に入るための、\(g\) の大きさの下限を出す。}{%
 二つの条件を並べる。
 \begin{itemize}
-  \item 実験を有効理論で書けるには、energyがcutoffより下：$E<\Lambda$。
+  \item 実験を有効理論で書けるには、エネルギーがcutoffより下：$E<\Lambda$。
   \item magnetic WGCの上限：$\Lambda\lesssim g\Mpl$。
 \end{itemize}
 つなぐと
@@ -21093,18 +21119,18 @@ fixed experimental energy $E=10^{-6}\Mpl$ をEFT内に保つには、
   {g\gtrsim10^{-6}}
 \]
 が要る。$\lesssim$で書いた上限だから、1くらいの係数は決めてない。
-gaugeの結合が$10^{-6}$より弱いと、新しい物理が出てくるenergy（cutoff）が、$10^{-6}\Mpl$の実験のenergyより下に来る。
+gaugeの結合が$10^{-6}$より弱いと、新しい物理が出てくるエネルギー（cutoff）が、$10^{-6}\Mpl$の実験のエネルギーより下に来る。
 }
 \solutionpart{2}{%
 $g=10^{-8}$へ下げたとき、
-設問(1)のfixed energy $E=10^{-6}\Mpl$の実験を
+設問(1)の固定したエネルギー $E=10^{-6}\Mpl$の実験を
 EFTだけで記述できるか。
-}{magnetic WGCの \(\Lambda\lesssim g\Mpl\) に \(g=10^{-8}\) を入れる。出てきたcutoffの上限と、設問(1)の決めた実験のenergy \(E=10^{-6}\Mpl\) を比べる。}{%
+}{magnetic WGCの \(\Lambda\lesssim g\Mpl\) に \(g=10^{-8}\) を入れる。出てきたcutoffの上限と、設問(1)の決めた実験のエネルギー \(E=10^{-6}\Mpl\) を比べる。}{%
 magneticのcutoffに$g=10^{-8}$を入れる。
 \[
   \Lambda\lesssim g\Mpl=10^{-8}\Mpl.
 \]
-実験のenergyと比べる。
+実験のエネルギーと比べる。
 \[
   \frac{E}{\Lambda}\gtrsim\frac{10^{-6}\Mpl}{10^{-8}\Mpl}=10^2 .
 \]
@@ -21112,13 +21138,13 @@ magneticのcutoffに$g=10^{-8}$を入れる。
   E=10^{-6}\Mpl>\Lambda
 \]
 だから、この有効理論だけでは同じ実験を書けない。
-実験はcutoffより100倍以上高いenergyで、$g=10^{-8}$は設問(1)の下限$g\gtrsim10^{-6}$を2桁下回ってる。
+実験はcutoffより100倍以上高いエネルギーで、$g=10^{-8}$は設問(1)の下限$g\gtrsim10^{-6}$を2桁下回ってる。
 
 cutoffより下に、新しい自由度か、別の書き方が要る。magnetic WGCの見積もりでは、モノポールの芯の大きさ$1/\Lambda$のところで、この$U(1)$の有効理論に入ってない新しい物理（荷電状態の塔や、ひもなど）が出てくる。モノポール自身は$m_{\mathrm{mon}}\sim\Lambda/g^2$で、$\Lambda$より$1/g^2=10^{16}$倍くらい重いから、$\Lambda$のあたりにはまだ出てこない。
 }
 \solutionpart{3}{%
 $g\to0$ で固定cutoffを保てないことを式で示せ。
-}{magneticのcutoffの関係 \(\Lambda\lesssim g\Mpl\) で、\(\Mpl\) を固定して \(g\to0\) にする。そのとき上限がどこへ行くかを書いて、決めた実験のenergy \(E>0\) と比べる。}{%
+}{magneticのcutoffの関係 \(\Lambda\lesssim g\Mpl\) で、\(\Mpl\) を固定して \(g\to0\) にする。そのとき上限がどこへ行くかを書いて、決めた実験のエネルギー \(E>0\) と比べる。}{%
 $\Mpl$を固定すると
 \[
   \lim_{g\to0}g\Mpl=0
@@ -21131,7 +21157,7 @@ $\Mpl$を固定すると
 \[
   E>\Lambda
 \]
-になる。だから、cutoffを固定したまま$g\to0$で大域対称性に近づく極限は、取れない。$g$を小さくするほど、この有効理論で書けるenergyの範囲が狭くなって、$g\to0$でその範囲は消える。
+になる。だから、cutoffを固定したまま$g\to0$で大域対称性に近づく極限は、取れない。$g$を小さくするほど、この有効理論で書けるエネルギーの範囲が狭くなって、$g\to0$でその範囲は消える。
 }
 \solutionpart{4}{%
 設問(3)の$g\to0$に関する結論は、
@@ -21151,7 +21177,7 @@ no-global-symmetry principleの一般証明か。
 }
 \end{solutionbox}
 
-\begin{solutionbox}{本気　positive potentialを分類する}
+\begin{solutionbox}{本気　正のポテンシャルを分類する}
 正準scalar $x=\frac{\phi}{\Mpl}$ と $V_0>0$ を使い、
 \[
   V_A=V_0(1+x^2),
@@ -21171,14 +21197,14 @@ $x=\frac{\phi}{\Mpl}$ なので
 }
 \solutionpart{1}{%
 $A,B$ のstationary pointと $V''$ の符号を求めよ。
-}{二つのpotential \(V_A,V_B\) を \(\phi\) で1回微分して、\(V'=0\) から止まる点を探す。そこで2回微分 \(V''\) も出して、符号から曲がり方の向きを決める。}{%
+}{二つのポテンシャル \(V_A,V_B\) を \(\phi\) で1回微分して、\(V'=0\) から止まる点を探す。そこで2回微分 \(V''\) も出して、符号から曲がり方の向きを決める。}{%
 primeは$\phi$での微分。$x=\phi/\Mpl$だから、合成関数の微分で
 \[
  \frac{\dd}{\dd\phi}=\frac1{\Mpl}\frac{\dd}{\dd x},
  \qquad
  \frac{\dd^2}{\dd\phi^2}=\frac1{\Mpl^2}\frac{\dd^2}{\dd x^2}.
 \]
-この係数をつけて二つのpotentialを微分すると、
+この係数をつけて二つのポテンシャルを微分すると、
 
 \begin{align}
   V_A'
@@ -21205,10 +21231,10 @@ $V_0>0$だから、$V'=0$になるのはどっちも $x=0$ だけ。そこで
 }
 \solutionpart{2}{%
 $A,B$ の $H^2$ を求め、local minimumとhilltopを分類せよ。
-}{場が止まる点でじっとしてる解では、運動のenergyはゼロで、potentialの値だけが膨張を決める。\(x=0\) での値を比べると、\(A\) と \(B\) は区別がつかない。区別には、設問(1)の2回微分の符号を使う。}{%
+}{場が止まる点でじっとしてる解では、運動のエネルギーはゼロで、ポテンシャルの値だけが膨張を決める。\(x=0\) での値を比べると、\(A\) と \(B\) は区別がつかない。区別には、設問(1)の2回微分の符号を使う。}{%
 $x=0$では$V_A(0)=V_B(0)=V_0$。
 場が止まる点でじっとしてる解では$\dot\phi=0$だから、
-指数potentialの宇宙を解いたときに借りた、平らなFLRWのFriedmann方程式に入れると
+指数ポテンシャルの宇宙を解いたときに借りた、平らなFLRWのFriedmann方程式に入れると
 \[
  3\Mpl^2H^2=\frac12\dot\phi^2+V(\phi)=V_0.
 \]
@@ -21247,7 +21273,7 @@ $c>0$ なら
 \[
   {A,B\text{ともoriginal criterionを満たさない}}.
 \]
-止まる点で正のpotentialを持つ（de Sitterの真空を作る）なら、勾配はゼロだから、元の条件はいつも破れる。谷の底（$A$）も山の頂上（$B$）も、同じ理由で除かれる。
+止まる点で正のポテンシャルを持つ（de Sitterの真空を作る）なら、勾配はゼロだから、元の条件はいつも破れる。谷の底（$A$）も山の頂上（$B$）も、同じ理由で除かれる。
 山の頂上はもともと不安定なのに、それまで除いてしまう。そこを直したのが、設問(4)のrefined criterion。
 }
 \solutionpart{4}{%
@@ -21281,7 +21307,7 @@ $B$ は
 }
 \solutionpart{5}{%
 $C$ のgradient ratioを求めよ。
-}{指数のpotential \(V_C=V_0e^{-\lambda\phi/\Mpl}\) を \(\phi\) で微分する。\(V_C'\) を \(V_C\) で書いて、元のpotentialとの比を取る。勾配の比には絶対値が付いてることに気をつける。}{%
+}{指数のポテンシャル \(V_C=V_0e^{-\lambda\phi/\Mpl}\) を \(\phi\) で微分する。\(V_C'\) を \(V_C\) で書いて、元のポテンシャルとの比を取る。勾配の比には絶対値が付いてることに気をつける。}{%
 primeは$\phi$での微分だから、$x=\phi/\Mpl$を使うと
 \[
  V_C'=V_0\e^{-\lambda x}\left(-\frac{\lambda}{\Mpl}\right)
@@ -21293,12 +21319,12 @@ $V_0>0$だから$V_C>0$。だから、絶対値を取って$V_C$で割ると
  =\Mpl\frac{|\lambda|V_C/\Mpl}{V_C}
  =|\lambda|.
 \]
-$V_C$が消えるから、$x=0$に限らず、どこでも同じ値。de Sitterの予想を三つのpotentialで試したとき、千奈が$\lambda>0$と置いた。そうすると、これは$\lambda$。
+$V_C$が消えるから、$x=0$に限らず、どこでも同じ値。de Sitterの予想を三つのポテンシャルで試したとき、千奈が$\lambda>0$と置いた。そうすると、これは$\lambda$。
 \answerconclusion{$C$の勾配の比は、どこでも$|\lambda|$。$\lambda>0$なら$\lambda$。}
 }
 \end{solutionbox}
 
-\begin{solutionbox}{総合　指数potentialの宇宙}
+\begin{solutionbox}{総合　指数ポテンシャルの宇宙}
 \[
   V(\varphi)=V_0\e^{-\frac{\lambda\varphi}{\Mpl}},
   \qquad
@@ -21307,14 +21333,14 @@ $V_C$が消えるから、$x=0$に限らず、どこでも同じ値。de Sitter�
 とする。
 \solutionpart{1}{%
 $\epsilon_V,\eta_V$ を求めよ。
-}{potentialのslow-rollのparameter \(\epsilon_V=\frac{\Mpl^2}{2}(V'/V)^2\)、\(\eta_V=\Mpl^2V''/V\) を使う。指数のpotentialの1回、2回の微分を元の \(V\) で割って、\(\lambda\) だけの式にする。}{%
+}{ポテンシャルのslow-rollのparameter \(\epsilon_V=\frac{\Mpl^2}{2}(V'/V)^2\)、\(\eta_V=\Mpl^2V''/V\) を使う。指数のポテンシャルの1回、2回の微分を元の \(V\) で割って、\(\lambda\) だけの式にする。}{%
 primeを$\varphi$での微分とすると、指数関数は1回微分するたびに
 $-\lambda/\Mpl$が掛かるから、
 \[
  V'=-\frac\lambda{\Mpl}V,\qquad
  V''=\frac{\lambda^2}{\Mpl^2}V.
 \]
-potentialから作るslow-rollのparameterの定義に、それぞれ入れる。
+ポテンシャルから作るslow-rollのparameterの定義に、それぞれ入れる。
 \begin{align*}
  \epsilon_V
  &=\frac{\Mpl^2}{2}\left(\frac{V'}V\right)^2
@@ -21361,7 +21387,7 @@ $V_0>0$、$0<\lambda^2<6$の枝を使ってる（$\lambda^2<6$は、千奈が$\o
 \]
 $\dot\varphi$と$V$から直接出した$w=\frac{\frac12\dot\varphi^2-V}{\frac12\dot\varphi^2+V}$の値と一致する。
 
-$\lambda=0$ではpotentialが定数になって、このべきの式にはそのまま入れられない。
+$\lambda=0$ではポテンシャルが定数になって、このべきの式にはそのまま入れられない。
 場が止まってる解では$w=-1$で、膨張は指数関数になる。
 }
 \solutionpart{3}{%
@@ -21414,14 +21440,14 @@ $2$ & $1/3$ & no & なし\\
 \end{center}
 確かめ。設問(3)で、加速は$w<-1/3$と同じだった。$-11/12$と$-2/3$は$-1/3$より小さく、$1/3$は大きい。表と合う。
 指数は$p=2/\lambda^2=8,\ 2,\ 1/2$。
-$\lambda=2$は$w=1/3$で、放射と同じ$w$の減速。$w=\frac{\frac12\dot\varphi^2-V}{\frac12\dot\varphi^2+V}=\frac13$から、運動のenergyがpotentialの2倍ある。坂が急で、場が速く転がる。
+$\lambda=2$は$w=1/3$で、放射と同じ$w$の減速。$w=\frac{\frac12\dot\varphi^2-V}{\frac12\dot\varphi^2+V}=\frac13$から、運動のエネルギーがポテンシャルの2倍ある。坂が急で、場が速く転がる。
 }
 \solutionpart{5}{%
 original de Sitter criterionを $c=1$ と仮定した場合、
     設問(4)の$\lambda=\frac{1}{2},\ 1,\ 2$のうち
     どれが条件を満たすか。
-}{指数のpotentialの勾配の比 \(\Mpl|V'|/V\) を、設問(1)の \(V'\) から出す。それを \(c=1\) と比べて、三つの例それぞれで不等式が成り立つか見る。\(c=1\) は設問で置いた仮定で、証明された定数じゃないことも残しておく。}{%
-設問(1)の$V'=-(\lambda/\Mpl)V$から、指数のpotentialの勾配の比は、どこでも同じ$\lambda$（$\lambda>0$）。
+}{指数のポテンシャルの勾配の比 \(\Mpl|V'|/V\) を、設問(1)の \(V'\) から出す。それを \(c=1\) と比べて、三つの例それぞれで不等式が成り立つか見る。\(c=1\) は設問で置いた仮定で、証明された定数じゃないことも残しておく。}{%
+設問(1)の$V'=-(\lambda/\Mpl)V$から、指数のポテンシャルの勾配の比は、どこでも同じ$\lambda$（$\lambda>0$）。
 \begin{equation*}
   \Mpl\frac{|V'|}{V}=\lambda .
 \end{equation*}
@@ -21463,7 +21489,7 @@ $c=1$ はこの設問で置いた仮定で、証明された決まった値じ�
 厳密な普遍係数は決まってない。\\
 導出 &
 「scaling solutionの式は、canonical scalar、positive exponential
-potential、scalar-dominated flat FLRWという仮定の下で得られた」。\\
+ポテンシャル、scalar-dominated flat FLRWという仮定の下で得られた」。\\
 未解決 &
 「string theoryにcontrolled stable de Sitter vacuumが存在するか」。\\
 \bottomrule
@@ -21476,7 +21502,7 @@ potential、scalar-dominated flat FLRWという仮定の下で得られた」。
 \begin{checkpointbox}{導出と予想の区別}
 解答で等号を使った部分と、parametricな $\sim,\lesssim$ を使った部分を区別する。
 field distance、force comparison、Einstein equation、
-toy potential、scaling solutionは、与えた作用と仮定から計算した。
+toyモデルのポテンシャル、scaling solutionは、与えた作用と仮定から計算した。
 Distance Conjecture、electric / magnetic WGC、
 de Sitter conjectureは、それらの計算を動機にした一般の予想で、証明はまだない。
 \end{checkpointbox}
