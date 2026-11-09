@@ -14,6 +14,7 @@ import { page, siteHeader } from './site/layout.mjs';
 import { html, raw, esc } from './site/html.mjs';
 import { haloOblique, haloMark } from './site/art/noa-halo.mjs';
 import { hairpins } from './site/art/hiro-motifs.mjs';
+import { loadWritings, sortWritings, writingsSummary, writingEntry } from './site/writings.mjs';
 import { PERMANENT } from '../content/permanent-urls.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
@@ -70,7 +71,7 @@ const report = { pages: [], answers: {} };
 
 // ---------------- 総合トップ ----------------
 const profile = readJson('content/profile.json');
-const contributions = readJson('content/contributions.json');
+const writings = sortWritings(loadWritings(readJson('content/writings/works.json'), readJson('content/writings/anthologies.json')));
 
 function workEntry(w) {
   const published = w.sections.filter((s) => s.status === 'published');
@@ -87,19 +88,6 @@ ${pending.map((s) => html`<li class="pending">${s.label}<span>準備中</span></
 </ul>
 </div>
 </li>`;
-}
-
-function contributionList() {
-  return html`<ul class="contrib-list">
-${contributions.items.map((c) => html`<li>
-<p class="contrib-title">${c.title}${c.short ? html`<span class="contrib-short">（${c.short}）</span>` : ''}</p>
-<p class="contrib-meta"><span>${c.circle}</span>${c.event ? html`<span>${c.event}</span>` : ''}</p>
-<p class="contrib-topic">担当: ${c.topic}</p>
-${c.sequel ? html`<p class="contrib-sequel">${c.sequel}</p>` : ''}
-${c.outline ? html`<details class="contrib-outline"><summary>目次</summary><ol>${c.outline.map((o) => html`<li>${o}</li>`)}</ol></details>` : ''}
-<p class="contrib-src"><a href="${c.evidence[0].url}" rel="noopener">告知のポスト</a></p>
-</li>`)}
-</ul>`;
 }
 
 function buildHome() {
@@ -136,9 +124,8 @@ ${works.map(workEntry)}
 
 <div class="ledger-pair">
 <section class="ledger" aria-labelledby="contrib-h">
-<h2 id="contrib-h">寄稿した合同誌</h2>
-${contributionList()}
-<p class="ledger-note">寄稿した原稿のWeb公開は準備中です。</p>
+<h2 id="contrib-h">寄稿作品</h2>
+${writingsSummary(writings)}
 </section>
 <section class="ledger profile" aria-labelledby="prof-h">
 <h2 id="prof-h">書いている人</h2>
@@ -350,6 +337,28 @@ function buildChapterToc(c, probs, r) {
   return raw(`<nav class="chapter-toc" aria-label="この章の問題"><details open><summary>この章の問題（${probs.length}問）</summary><ol>${items.join('')}</ol></details></nav>`);
 }
 
+// ---------------- 寄稿作品 ----------------
+function buildWritings() {
+  const body = html`${raw(siteHeader({ current: 'writings' }))}
+<main id="main" class="writings">
+<header class="writings-head">
+<p class="home-circle">${profile.circle}</p>
+<h1>寄稿作品</h1>
+<p class="home-lead">${profile.name} が合同誌に寄稿した作品の一覧です。頒布の情報は主催・本人の告知によります。本文はこのサイトでは公開していません。</p>
+</header>
+<nav class="writings-toc" aria-label="作品の一覧"><ol>
+${writings.map((w) => html`<li><a href="#${w.id}">${w.title}</a><span>${w.bookData.title}</span></li>`)}
+</ol></nav>
+${writings.map((w, i) => writingEntry(w, i))}
+</main>`;
+  write('writings/index.html', page({
+    site, title: '寄稿作品', path: '/writings/', theme: 'noa', css: ['/assets/css/themes/noa.css'], body, assets,
+    description: `${profile.name}（${profile.circle}）が合同誌に寄稿した作品の一覧。`,
+    breadcrumbs: [{ label: '作品一覧', href: '/' }, { label: '寄稿作品' }],
+  }));
+  report.pages.push('/writings/');
+}
+
 // ---------------- 固定URL ----------------
 async function buildPermanent() {
   const qrInfo = [];
@@ -401,6 +410,7 @@ for (const w of works) {
   if (w.sections.some((s) => s.kind === 'answers' && s.status === 'published')) answersInfo[w.slug] = buildAnswers(w);
 }
 buildHome();
+buildWritings();
 for (const w of works) buildWork(w, answersInfo[w.slug]);
 await buildPermanent();
 build404();

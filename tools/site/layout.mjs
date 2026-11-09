@@ -38,6 +38,7 @@ export function siteHeader({ current }) {
 <nav aria-label="サイト">
 <ul>
 <li><a href="/"${current === 'home' ? raw(' aria-current="page"') : ''}>作品一覧</a></li>
+<li><a href="/writings/"${current === 'writings' ? raw(' aria-current="page"') : ''}>寄稿作品</a></li>
 </ul>
 </nav>
 </header>`;

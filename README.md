@@ -23,7 +23,8 @@ npm ci
 |---|---|
 | `content/site.json` | サイト名、注記、権利表記 |
 | `content/profile.json` | トップのプロフィール、外部リンク、次の頒布（出典つき） |
-| `content/contributions.json` | 寄稿した合同誌（本人の X のポストを出典に付ける） |
+| `content/writings/works.json` | 寄稿作品（題名・紹介文・登場人物・主題・章立て・公開状態）。原稿の生データと照合したもの |
+| `content/writings/anthologies.json` | 寄稿先の合同誌と、頒布の機会（イベント・日付・配置）と出典 |
 | `content/permanent-urls.mjs` | 固定 URL（QR コードの行き先）の定義 |
 | `content/<作品>/work.json` | 作品の情報と、資料ごとの公開状態 |
 | `content/<作品>/answers/source/answers.tex` | 公開用スナップショット（別冊解答の TeX のコピー） |
@@ -120,6 +121,15 @@ GitHub Pages の公開元は、いま `main` ブランチのルート（従来�
 1. Settings → Pages → Build and deployment → Source を「GitHub Actions」にする。
 2. `main` に push すると、CI が `npm ci → npm run build → npm test` を通したうえで `dist/` を公開する。
 3. 公開後、総合トップ、作品ページ、解答編の目次、`/q/hiro-string/` を開いて確かめる。
+
+## 寄稿作品を足す・直す
+
+1. 収録先の合同誌が新しければ、`content/writings/anthologies.json` の `books` に足す。頒布の機会（`distributions`）ごとに、イベント・日付・配置・状態・出典を書く。告知されていないことは `null` のままにする（表示は「日付は未告知」「配置は未告知」）。会期全体の日付を、その合同誌の頒布日として書かない。
+2. 作品を `content/writings/works.json` の `works` に足す。題名・章立て・登場人物は原稿の生データ（TeX・Markdown・Word。PDF ではない）から取る。
+3. 告知の前の作品は、題名や紹介文をこのリポジトリに入れない（`visibility: "hold"` で非表示にするだけでは、公開リポジトリから見えてしまう）。下書きは `.private/`（Git の対象外）に置く。
+4. `npm run build && npm test`。公開しない作品の題名がどのページにも出ないこと、全作品に出典があることを確かめる。
+
+本文・PDF は配らない。サイトに出すのは書誌情報と紹介文だけ。
 
 ## X の情報を使うとき
 

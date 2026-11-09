@@ -1,0 +1,223 @@
+{
+  "_note": "寄稿先の合同誌と頒布イベント。合同誌（books）・頒布の機会（distributions）・寄稿作品（../writings/works.json）は別に持つ。各項目に出典（X のポストは FxTwitter API v2 で取得、2026-11-09）。確かめられないことは null にし、推測で埋めない。",
+  "events": {
+    "c107": {
+      "name": "コミックマーケット107",
+      "venue": "東京ビッグサイト"
+    },
+    "c108": {
+      "name": "コミックマーケット108",
+      "venue": "東京ビッグサイト"
+    },
+    "c109": {
+      "name": "コミックマーケット109",
+      "venue": "東京ビッグサイト"
+    },
+    "bunfree43": {
+      "name": "文学フリマ東京43",
+      "venue": null
+    },
+    "gsf04": {
+      "name": "GSF04",
+      "venue": null
+    }
+  },
+  "books": {
+    "shinosawa-physics-2": {
+      "title": "篠澤広に物理学を解説してもらう合同Ⅱ",
+      "short": "篠澤物理2",
+      "circle": "篠澤研究室",
+      "organizer": "500mL（@0500mL）",
+      "distributions": [
+        {
+          "event": "c107",
+          "date": null,
+          "day": "2日目",
+          "space": "東カ24a",
+          "status": "頒布済み",
+          "source": "https://x.com/0500mL/status/1986727677869576488",
+          "note": "ポストは「冬コミ」「2日目東カ24a」。2025年の冬コミを C107 と判断した。日付はポストにない"
+        }
+      ]
+    },
+    "shinosawa-physics-3": {
+      "title": "篠澤広に物理学を解説してもらう合同Ⅲ",
+      "short": "篠澤物理3",
+      "circle": "篠澤研究室",
+      "organizer": "500mL（@0500mL）",
+      "distributions": [
+        {
+          "event": "c108",
+          "date": "2026-08-16",
+          "day": "2日目",
+          "space": "東ア80ab",
+          "status": "頒布済み",
+          "source": "https://x.com/0500mL/status/2086392801332515109",
+          "note": "日付は、本人のポスト（2088836677569847798「12:51に完売」、2026-08-16 03:54Z）から"
+        }
+      ]
+    },
+    "gakujutsu-imas-3": {
+      "title": "学術アイドルマスター合同 Vol.3",
+      "short": "学術アイマス合同",
+      "circle": "学術アイドルマスター合同準備会",
+      "organizer": null,
+      "distributions": [
+        {
+          "event": "c108",
+          "date": "2026-08-16",
+          "day": "2日目（日曜日）",
+          "space": "東3ホール ア-76ab",
+          "status": "頒布済み",
+          "source": "https://x.com/kusa_gomi/status/2086392041685332160",
+          "note": "日付は、主催の完売のポスト（2088854141154238498、2026-08-16）から"
+        }
+      ]
+    },
+    "gakujutsu-imas-4": {
+      "title": "学術アイドルマスター合同 Vol.4",
+      "short": "学術アイマス合同",
+      "circle": "学術アイドルマスター合同準備会",
+      "organizer": null,
+      "distributions": [
+        {
+          "event": "c109",
+          "date": "2026-12-29",
+          "day": null,
+          "space": "西2ホール あ43ab",
+          "status": "頒布予定",
+          "source": "https://x.com/TachibanaIone/status/2118644662630277275",
+          "note": null
+        }
+      ]
+    },
+    "mo-seminar-3": {
+      "title": "完全理解！篠澤広の機械学習・数理最適化ゼミ合同～3限目～",
+      "short": "篠澤MOゼミ",
+      "circle": "Silent//Azure",
+      "organizer": "橘いおね（@TachibanaIone）",
+      "distributions": [
+        {
+          "event": "c108",
+          "date": null,
+          "day": "2日目",
+          "space": "東3ホール ア75b",
+          "status": "頒布済み",
+          "source": "https://x.com/TachibanaIone/status/2085669824353693745",
+          "note": "BOOTH で電子版あり（https://booth.pm/ja/items/8751483 、目次に寄稿題名）"
+        }
+      ]
+    },
+    "kivotlas-3": {
+      "title": "KIVOTLAS Vol.3",
+      "short": "学術ブルアカ合同",
+      "circle": "河川敷観測所",
+      "organizer": "ちさとし（@cst_oshino）",
+      "distributions": [
+        {
+          "event": "c108",
+          "date": "2026-08-15",
+          "day": "1日目",
+          "space": "東1ホール コ44b",
+          "status": "頒布済み",
+          "source": "https://x.com/cst_oshino/status/2085719979799023805",
+          "note": "1日目と日付は本人のポスト（2088418504345313730「一日目：東1ホール “コ” 44b」、2026-08-15 09:12 JST）から"
+        }
+      ]
+    },
+    "kivotlas-4": {
+      "title": "KIVOTLAS Vol.4",
+      "short": "学術ブルアカ合同",
+      "circle": "河川敷観測所",
+      "organizer": "ちさとし（@cst_oshino）",
+      "distributions": [
+        {
+          "event": "c109",
+          "date": "2026-12-29",
+          "day": null,
+          "space": "東2ホール ツ34b",
+          "status": "頒布予定",
+          "source": "https://x.com/cst_oshino/status/2118643491748327653",
+          "note": "配置は「火曜日」。C109 の火曜日は 12月29日"
+        }
+      ]
+    },
+    "genpaku-2": {
+      "title": "ブルアカ現パロ合同2",
+      "short": null,
+      "circle": "投擲組",
+      "organizer": "群青（@gunzyou_5300）",
+      "distributions": [
+        {
+          "event": "c109",
+          "date": "2026-12-29",
+          "day": null,
+          "space": "東2ホール ツ15ab",
+          "status": "頒布予定",
+          "source": "https://x.com/nenchakki_san/status/2119662754198085853",
+          "note": "日付と配置は本人のポスト（「12/29（火）東2「ツ15ab」」）から"
+        }
+      ]
+    },
+    "shinosawa-math-4": {
+      "title": "篠澤広と数学しよう！4さつめ！",
+      "short": "篠澤数学4",
+      "circle": "篠澤理数研究所",
+      "organizer": "五十嵐悠紀（@Yuki1gr5）",
+      "distributions": [
+        {
+          "event": "c109",
+          "date": "2026-12-29",
+          "day": null,
+          "space": "西2ホール あ44ab",
+          "status": "頒布予定",
+          "source": "https://x.com/Yuki1gr5/status/2118633926839447782",
+          "note": "配置は「火曜日」。C109 の火曜日は 12月29日"
+        }
+      ]
+    },
+    "shinosawa-philosophy": {
+      "title": "篠澤広科学哲学合同",
+      "short": null,
+      "circle": null,
+      "organizer": "イカ爆弾（@Esqrt2）",
+      "distributions": [
+        {
+          "event": "bunfree43",
+          "date": "2026-11-08",
+          "day": null,
+          "space": "き-40",
+          "status": "初頒布",
+          "source": "https://x.com/Esqrt2/status/2118659911718449267",
+          "note": "日付は本人のポスト（2119663203206811871「11/8文フリ東京43で初頒布」）から"
+        },
+        {
+          "event": "gsf04",
+          "date": "2026-11-15",
+          "day": null,
+          "space": "3組06",
+          "status": "頒布予定",
+          "source": "https://x.com/nenchakki_san/status/2119663203206811871",
+          "note": null
+        }
+      ]
+    },
+    "imas-geo": {
+      "title": "アイドルマスター地学・地理合同誌",
+      "short": null,
+      "circle": null,
+      "organizer": "秋風（@iza_mishaguzi）",
+      "distributions": [
+        {
+          "event": "c109",
+          "date": null,
+          "day": null,
+          "space": null,
+          "status": "頒布予定",
+          "source": "https://x.com/iza_mishaguzi/status/2119048613011812408",
+          "note": "主催のポストは「コミックマーケット109にてでっかく出展できることが確定」「後日、頒布について案内」。日付・配置はまだ告知されていない。題名は本人のポストの表記「アイドルマスター地学・地理合同誌」"
+        }
+      ]
+    }
+  }
+}

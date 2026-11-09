@@ -181,3 +181,49 @@ body[data-theme="noa"] :focus-visible { outline: 2px solid var(--focus); outline
 /* ヘイローは画面の右端ではみ出させ、はみ出した分は横スクロールにしない */
 .home-halo-clip { position: absolute; top: 0; left: 0; right: 0; height: 40rem; overflow: hidden; pointer-events: none; }
 .home-halo-box { position: relative; max-width: 64rem; height: 100%; margin: 0 auto; }
+
+/* ---------- 寄稿作品（/writings/） ----------
+   議事録の台帳の形: 左に番号、右に記載事項。項目名（登場人物・主題・頒布・章立て・告知）を左の列に置く。 */
+.ledger-more { margin: 0.9rem 0 0; font-size: 0.9rem; }
+.ledger-more a::before { content: "→ "; color: var(--blue); }
+.contrib-title a { color: var(--ink); text-decoration: none; }
+.contrib-title a:hover { text-decoration: underline; text-decoration-color: var(--blue); }
+
+.writings { max-width: 64rem; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2.5rem); }
+.writings-head { padding: clamp(3rem, 8vw, 5rem) 0 1.5rem; max-width: 40rem; }
+.writings-head h1 { margin: 0.1rem 0 0.8rem; font-size: clamp(1.8rem, 5vw, 2.6rem); font-weight: 600; letter-spacing: 0.04em; }
+.writings-toc { margin: 0 0 2rem; padding: 1rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.writings-toc ol { margin: 0; padding: 0; list-style: none; columns: 2 22rem; column-gap: 2rem; counter-reset: wt; }
+.writings-toc li { counter-increment: wt; break-inside: avoid; padding: 0.3rem 0; font-size: 0.92rem; }
+.writings-toc li::before { content: counter(wt, decimal-leading-zero); margin-right: 0.7em; font-variant-numeric: tabular-nums; color: var(--ink-soft); font-size: 0.8rem; }
+.writings-toc a { color: var(--ink); }
+.writings-toc span { display: block; margin-left: 2.1em; font-size: 0.8rem; color: var(--ink-soft); }
+
+.writing { padding: 2rem 0 2.2rem; border-bottom: 1px solid var(--rule); scroll-margin-top: 1rem; }
+.writing-head { display: grid; grid-template-columns: 3.5rem minmax(0, 1fr); gap: 0 1.25rem; align-items: start; }
+.writing-no { margin: 0.35rem 0 0; font-size: 0.85rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; border-top: 3px solid var(--mark); width: 1.2rem; line-height: 2; }
+.writing-head h2 { margin: 0; font-family: var(--serif); font-size: clamp(1.25rem, 3vw, 1.6rem); line-height: 1.5; font-weight: 600; }
+.writing-book { margin: 0.3rem 0 0; font-size: 0.88rem; color: var(--ink-soft); display: flex; flex-wrap: wrap; gap: 0 1rem; }
+.writing-short { margin: 1rem 0 0 4.75rem; font-weight: 600; max-width: 40rem; }
+.writing-body { margin-left: 4.75rem; padding-left: 1.25rem; border-left: 1px solid var(--rule); margin-top: 0.8rem; }
+.writing-detail p { margin: 0 0 0.6rem; max-width: 42rem; }
+.writing-meta { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: 0.55rem 1rem; margin: 1rem 0 0; font-size: 0.92rem; }
+.writing-meta dt { color: var(--ink-soft); font-size: 0.85rem; padding-top: 0.1rem; }
+.writing-meta dd { margin: 0; }
+.writing-meta ul, .writing-meta ol { margin: 0; padding: 0; list-style: none; }
+.tags { display: flex; flex-wrap: wrap; gap: 0.35rem 0.5rem; }
+.tags li { padding: 0.05rem 0.55rem; border: 1px solid var(--rule); background: var(--plane); font-size: 0.85rem; }
+.dists li { padding: 0.1rem 0; }
+.d-status { display: inline-block; min-width: 4.6em; margin-right: 0.6em; font-size: 0.78rem; padding: 0 0.4em; border-left: 3px solid var(--blue); background: var(--plane); }
+.outline { counter-reset: ol; border-left: 2px solid var(--cyan); padding-left: 0.8rem !important; }
+.outline li { padding: 0.1rem 0; }
+.srcs li { display: inline; }
+.srcs li + li::before { content: "／"; margin: 0 0.4em; color: var(--rule); }
+
+@media (max-width: 40rem) {
+  .writing-head { grid-template-columns: 2rem minmax(0, 1fr); gap: 0 0.8rem; }
+  .writing-short { margin-left: 0; }
+  .writing-body { margin-left: 0; padding-left: 0.8rem; }
+  .writing-meta { grid-template-columns: 1fr; gap: 0.15rem 0; }
+  .writing-meta dt { margin-top: 0.6rem; }
+}

@@ -128,6 +128,33 @@ for (const [slug, a] of Object.entries(report.answers)) {
   check(`${slug}: 章の URL が ch01 から連番`, a.chapters.every((c, i) => c.slug === 'ch' + String(i + 1).padStart(2, '0')));
 }
 
+// ---------- 4b. 寄稿作品 ----------
+{
+  const works = JSON.parse(fs.readFileSync(path.join(ROOT, 'content/writings/works.json'), 'utf8')).works;
+  const anth = JSON.parse(fs.readFileSync(path.join(ROOT, 'content/writings/anthologies.json'), 'utf8'));
+  const page = fs.readFileSync(path.join(DIST, 'writings/index.html'), 'utf8');
+  const home = fs.readFileSync(path.join(DIST, 'index.html'), 'utf8');
+  const pub = works.filter((w) => w.visibility === 'public');
+  const hold = works.filter((w) => w.visibility !== 'public');
+  check('寄稿作品: id が重複しない', new Set(works.map((w) => w.id)).size === works.length);
+  check('寄稿作品: 公開する作品がすべて詳細ページにある', pub.every((w) => page.includes(`id="${w.id}"`)), `${pub.length} 作品`);
+  check('寄稿作品: 公開しない作品の題名がどのページにも出ない', hold.every((w) => !htmlFiles.some((f) => fs.readFileSync(f, 'utf8').includes(w.title))), `${hold.length} 作品`);
+  check('寄稿作品: トップから全作品へリンクしている', pub.every((w) => home.includes(`href="/writings/#${w.id}"`)));
+  const missingSrc = pub.filter((w) => !w.sources?.length || w.sources.some((s) => !/^https:\/\//.test(s.url)));
+  check('寄稿作品: 告知の出典 URL がある', missingSrc.length === 0, missingSrc.map((w) => w.id).join(', '));
+  const badDist = [];
+  for (const [k, b] of Object.entries(anth.books)) for (const d of b.distributions) {
+    if (!anth.events[d.event]) badDist.push(`${k}:${d.event}`);
+    if (!d.source) badDist.push(`${k}: 出典なし`);
+    if (d.date && !/^\d{4}-\d{2}-\d{2}$/.test(d.date)) badDist.push(`${k}: 日付の書式`);
+  }
+  check('合同誌: 頒布の機会にイベントと出典がある', badDist.length === 0, badDist.join(', '));
+  // 会期全体を個別の頒布日として表示していないこと（C109 の 3 日間をまとめて書かない）
+  check('寄稿作品: 会期の範囲を頒布日として書いていない', !/12月29日〜31日|12\/29〜31|29〜31日/.test(page));
+  // 本文の PDF・TeX・Word を配っていないこと
+  check('寄稿作品: 原稿ファイルを配布していない', !files.some((f) => /\.(pdf|docx?|md)$/i.test(f) && rel(f).startsWith('/writings')));
+}
+
 // ---------- 5. 公開対象外 ----------
 const forbidden = files.filter((f) => /\.(tex|aux|log|toc|out|synctex\.gz|fls|fdb_latexmk|md|mjs|json|lock|py|sh)$/i.test(f) || /\.DS_Store$/.test(f) || /(^|\/)(\.private|content|tools|tests|node_modules|docs)(\/|$)/.test(rel(f).slice(1)));
 check('公開対象外のファイル（TeX・中間ファイル・メモなど）が dist に入っていない', forbidden.length === 0, forbidden.slice(0, 5).map(rel).join(', '));
