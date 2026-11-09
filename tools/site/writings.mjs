@@ -19,9 +19,11 @@ export function loadWritings(worksData, anthData) {
   const items = worksData.works.map((w) => {
     const book = anthData.books[w.book];
     if (!book) problems.push(`作品 ${w.id} の収録先 ${w.book} が anthologies.json にない`);
-    for (const k of ['id', 'title', 'book', 'short', 'detail', 'characters', 'subjects', 'outline', 'visibility']) {
+    for (const k of ['id', 'title', 'book', 'short', 'characters', 'subjects', 'outline', 'visibility']) {
       if (w[k] === undefined || w[k] === null || (Array.isArray(w[k]) && !w[k].length)) problems.push(`作品 ${w.id} に ${k} がない`);
     }
+    if (!w.synopsis && !w.detail) problems.push(`作品 ${w.id} にあらすじ（synopsis）がない`);
+    for (const m of w.motifs ?? []) if (!m.name || !m.note) problems.push(`作品 ${w.id} のモチーフに name / note がない`);
     if (!['public', 'hold'].includes(w.visibility)) problems.push(`作品 ${w.id} の visibility が public / hold でない`);
     if (!w.body || !['planned', 'published'].includes(w.body.status)) problems.push(`作品 ${w.id} の body.status が planned / published でない`);
     if (w.body?.status === 'published' && !/^\/[^/]/.test(w.body.url ?? '')) problems.push(`作品 ${w.id} は本文を公開済みなのに、サイト内の url がない`);
@@ -93,9 +95,10 @@ export function writingEntry(w, index) {
 </header>
 <p class="writing-short">${w.short}</p>
 <div class="writing-body">
-<div class="writing-detail">${w.detail.split('\n').filter(Boolean).map((p) => html`<p>${p}</p>`)}</div>
+<section class="writing-detail" aria-label="あらすじ"><h3 class="w-label">あらすじ</h3>${(w.synopsis ?? w.detail).split('\n').filter(Boolean).map((p) => html`<p>${p}</p>`)}</section>
 <dl class="writing-meta">
 <dt>登場人物</dt><dd>${w.characters.join('、')}</dd>
+${w.motifs?.length ? html`<dt>モチーフ</dt><dd><ul class="motifs">${w.motifs.map((m) => html`<li><span class="m-name">${m.name}</span><span class="m-note">${m.note}</span></li>`)}</ul></dd>` : ''}
 <dt>主題</dt><dd><ul class="tags">${w.subjects.map((s) => html`<li>${s}</li>`)}</ul></dd>
 <dt>頒布</dt><dd><ul class="dists">${w.dists.map(distLine)}</ul></dd>
 <dt>章立て</dt><dd><ol class="outline">${w.outline.map((o) => html`<li>${o}</li>`)}</ol></dd>
