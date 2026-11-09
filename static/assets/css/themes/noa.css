@@ -230,7 +230,3 @@ body[data-theme="noa"] :focus-visible { outline: 2px solid var(--focus); outline
 
 .body-planned { display: inline-block; margin-right: 0.6em; font-size: 0.78rem; padding: 0 0.4em; border: 1px dashed var(--rule); color: var(--ink-soft); }
 .w-label { margin: 0 0 0.4rem; font-size: 0.85rem; font-weight: 400; color: var(--ink-soft); letter-spacing: 0.08em; }
-.motifs li { padding: 0.15rem 0; }
-.motifs .m-name { font-weight: 600; margin-right: 0.8em; }
-.motifs .m-name::before { content: ""; display: inline-block; width: 0.5em; height: 0.5em; margin-right: 0.45em; border: 1.5px solid var(--cyan); border-radius: 50%; transform: translateY(-0.05em); }
-.motifs .m-note { color: var(--ink-soft); font-size: 0.88rem; }
