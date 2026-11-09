@@ -151,6 +151,9 @@ for (const [slug, a] of Object.entries(report.answers)) {
   check('合同誌: 頒布の機会にイベントと出典がある', badDist.length === 0, badDist.join(', '));
   // 会期全体を個別の頒布日として表示していないこと（C109 の 3 日間をまとめて書かない）
   check('寄稿作品: 会期の範囲を頒布日として書いていない', !/12月29日〜31日|12\/29〜31|29〜31日/.test(page));
+  // 本文を公開済みにした作品は、そのページが実在すること
+  const badBody = pub.filter((w) => w.body?.status === 'published' && !fs.existsSync(path.join(DIST, w.body.url.replace(/^\//, ''), w.body.url.endsWith('/') ? 'index.html' : '')));
+  check('寄稿作品: 本文を公開済みにした作品のページがある', badBody.length === 0, badBody.map((w) => w.id).join(', '));
   // 本文の PDF・TeX・Word を配っていないこと
   check('寄稿作品: 原稿ファイルを配布していない', !files.some((f) => /\.(pdf|docx?|md)$/i.test(f) && rel(f).startsWith('/writings')));
 }

@@ -227,3 +227,5 @@ body[data-theme="noa"] :focus-visible { outline: 2px solid var(--focus); outline
   .writing-meta { grid-template-columns: 1fr; gap: 0.15rem 0; }
   .writing-meta dt { margin-top: 0.6rem; }
 }
+
+.body-planned { display: inline-block; margin-right: 0.6em; font-size: 0.78rem; padding: 0 0.4em; border: 1px dashed var(--rule); color: var(--ink-soft); }

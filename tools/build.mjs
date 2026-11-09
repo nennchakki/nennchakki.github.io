@@ -344,7 +344,7 @@ function buildWritings() {
 <header class="writings-head">
 <p class="home-circle">${profile.circle}</p>
 <h1>寄稿作品</h1>
-<p class="home-lead">${profile.name} が合同誌に寄稿した作品の一覧です。頒布の情報は主催・本人の告知によります。本文はこのサイトでは公開していません。</p>
+<p class="home-lead">${profile.name} が合同誌に寄稿した作品の一覧です。頒布の情報は主催・本人の告知によります。本文は、頒布のあと、合同誌の主催の許可が取れたものから順に、このサイトで公開します。</p>
 </header>
 <nav class="writings-toc" aria-label="作品の一覧"><ol>
 ${writings.map((w) => html`<li><a href="#${w.id}">${w.title}</a><span>${w.bookData.title}</span></li>`)}

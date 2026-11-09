@@ -23,6 +23,8 @@ export function loadWritings(worksData, anthData) {
       if (w[k] === undefined || w[k] === null || (Array.isArray(w[k]) && !w[k].length)) problems.push(`作品 ${w.id} に ${k} がない`);
     }
     if (!['public', 'hold'].includes(w.visibility)) problems.push(`作品 ${w.id} の visibility が public / hold でない`);
+    if (!w.body || !['planned', 'published'].includes(w.body.status)) problems.push(`作品 ${w.id} の body.status が planned / published でない`);
+    if (w.body?.status === 'published' && !/^\/[^/]/.test(w.body.url ?? '')) problems.push(`作品 ${w.id} は本文を公開済みなのに、サイト内の url がない`);
     const dists = (book?.distributions ?? []).map((d) => {
       const ev = anthData.events[d.event];
       if (!ev) problems.push(`合同誌 ${w.book} のイベント ${d.event} がない`);
@@ -97,6 +99,7 @@ export function writingEntry(w, index) {
 <dt>主題</dt><dd><ul class="tags">${w.subjects.map((s) => html`<li>${s}</li>`)}</ul></dd>
 <dt>頒布</dt><dd><ul class="dists">${w.dists.map(distLine)}</ul></dd>
 <dt>章立て</dt><dd><ol class="outline">${w.outline.map((o) => html`<li>${o}</li>`)}</ol></dd>
+<dt>本文</dt><dd>${w.body.status === 'published' ? html`<a href="${w.body.url}">Web 版を読む</a>` : html`<span class="body-planned">公開予定</span>頒布のあと、主催の許可が取れたら公開します。`}</dd>
 ${w.sequelOf ? html`<dt>前作</dt><dd><a href="#${w.sequelOf.id}">${w.sequelOf.title}</a></dd>` : ''}
 <dt>告知</dt><dd><ul class="srcs">${w.sources.map((s) => html`<li><a href="${s.url}" rel="noopener">${s.label}</a></li>`)}</ul></dd>
 </dl>

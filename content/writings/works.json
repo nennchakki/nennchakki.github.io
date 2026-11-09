@@ -1,5 +1,5 @@
 {
-  "_note": "寄稿作品。題名・章立て・登場人物・主題は原稿の生データ（TeX・Markdown・Word。PDF ではない）と照合した（2026-11-09）。manuscript は原稿ディレクトリ（C108原稿/）からの相対パスで、照合の記録のためだけに残す。原稿の本文はこのリポジトリに置かず、サイトにも出さない。visibility が hold の作品は、題名を含めて一切出力しない。",
+  "_note": "寄稿作品。題名・章立て・登場人物・主題は原稿の生データ（TeX・Markdown・Word。PDF ではない）と照合した（2026-11-09）。manuscript は原稿ディレクトリ（C108原稿/）からの相対パスで、照合の記録のためだけに残す。原稿の本文はこのリポジトリに置かず、サイトにも出さない。visibility が hold の作品は、題名を含めて一切出力しない。 body は本文の Web 公開の状態。planned（公開予定。頒布のあと、主催の許可が取れたら公開する）か published（url にサイト内のパスを書く）。",
   "verifiedAt": "2026-11-09",
   "works": [
     {
@@ -42,7 +42,12 @@
           "label": "主催の告知"
         }
       ],
-      "visibility": "public"
+      "visibility": "public",
+      "body": {
+        "status": "planned",
+        "url": null,
+        "note": null
+      }
     },
     {
       "id": "prima-stella",
@@ -89,7 +94,12 @@
           "label": "主催の告知"
         }
       ],
-      "visibility": "public"
+      "visibility": "public",
+      "body": {
+        "status": "planned",
+        "url": null,
+        "note": null
+      }
     },
     {
       "id": "ugokanai",
@@ -130,7 +140,12 @@
           "label": "主催の配置の告知"
         }
       ],
-      "visibility": "public"
+      "visibility": "public",
+      "body": {
+        "status": "planned",
+        "url": null,
+        "note": null
+      }
     },
     {
       "id": "magure",
@@ -175,7 +190,12 @@
           "label": "主催の告知"
         }
       ],
-      "visibility": "public"
+      "visibility": "public",
+      "body": {
+        "status": "planned",
+        "url": null,
+        "note": null
+      }
     },
     {
       "id": "gakushu",
@@ -217,7 +237,12 @@
           "label": "電子版（BOOTH、目次に掲載）"
         }
       ],
-      "visibility": "public"
+      "visibility": "public",
+      "body": {
+        "status": "planned",
+        "url": null,
+        "note": null
+      }
     },
     {
       "id": "muzukashii",
@@ -260,7 +285,12 @@
           "label": "本人の告知（通販）"
         }
       ],
-      "visibility": "public"
+      "visibility": "public",
+      "body": {
+        "status": "planned",
+        "url": null,
+        "note": null
+      }
     },
     {
       "id": "jigen-1",
@@ -299,7 +329,12 @@
           "label": "主催の告知"
         }
       ],
-      "visibility": "public"
+      "visibility": "public",
+      "body": {
+        "status": "planned",
+        "url": null,
+        "note": null
+      }
     },
     {
       "id": "jigen-2",
@@ -342,7 +377,12 @@
           "label": "主催の告知"
         }
       ],
-      "visibility": "public"
+      "visibility": "public",
+      "body": {
+        "status": "planned",
+        "url": null,
+        "note": null
+      }
     },
     {
       "id": "aoi-kousaten",
@@ -379,7 +419,12 @@
           "label": "主催の告知"
         }
       ],
-      "visibility": "public"
+      "visibility": "public",
+      "body": {
+        "status": "planned",
+        "url": null,
+        "note": null
+      }
     },
     {
       "id": "touban",
@@ -419,7 +464,12 @@
         }
       ],
       "visibility": "public",
-      "subjectsNote": "本文は「秘密分散」「有限体」「しきい値」などの術語を使わず、「37で割った余り」「読める組」で説明している。術語は参考文献（Shamir 1979 など）にだけある"
+      "subjectsNote": "本文は「秘密分散」「有限体」「しきい値」などの術語を使わず、「37で割った余り」「読める組」で説明している。術語は参考文献（Shamir 1979 など）にだけある",
+      "body": {
+        "status": "planned",
+        "url": null,
+        "note": null
+      }
     },
     {
       "id": "shiro-no-shitaji",
@@ -457,7 +507,12 @@
           "label": "主催の告知"
         }
       ],
-      "visibility": "public"
+      "visibility": "public",
+      "body": {
+        "status": "planned",
+        "url": null,
+        "note": null
+      }
     }
   ]
 }
